@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ღონისძიება · IBERIA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <svg class="grain">
+      <filter id="g">
+        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#g)" />
+    </svg>
+    <svg id="reticle" viewBox="0 0 46 46" fill="none">
+      <circle
+        cx="23"
+        cy="23"
+        r="16"
+        stroke="#b8913c"
+        stroke-width="1"
+        opacity=".85"
+      />
+      <circle cx="23" cy="23" r="1.5" fill="#b8913c" />
+      <path
+        d="M23 0v13M23 33v13M0 23h13M33 23h13"
+        stroke="#b8913c"
+        stroke-width="1"
+        opacity=".85"
+      />
+    </svg>
+    <nav id="nav">
+      <a class="logo" href="index.html"
+        ><img class="mark-img" src="assets/mark-bone.png" alt="" /><span
+          ><b>Iberia</b><i data-ka>სამონადირეო კლუბი</i
+          ><i data-en>Hunters Club</i></span
+        ></a
+      >
+      <ul class="links" id="links">
+        <li>
+          <a href="index.html" data-ka>მთავარი</a
+          ><a href="index.html" data-en>Home</a>
+        </li>
+        <li>
+          <a href="about.html" data-ka>ჩვენ შესახებ</a
+          ><a href="about.html" data-en>About</a>
+        </li>
+        <li>
+          <a href="members.html" data-ka>წევრები</a
+          ><a href="members.html" data-en>Members</a>
+        </li>
+        <li>
+          <a href="expeditions.html" data-ka>ნადირობები</a
+          ><a href="expeditions.html" data-en>Expeditions</a>
+        </li>
+        <li>
+          <a href="events.html" data-ka>ღონისძიებები</a
+          ><a href="events.html" data-en>Events</a>
+        </li>
+        <li>
+          <a href="gallery.html" data-ka>გალერეა</a
+          ><a href="gallery.html" data-en>Gallery</a>
+        </li>
+        <li>
+          <a href="news.html" data-ka>სიახლეები</a
+          ><a href="news.html" data-en>News</a>
+        </li>
+        <li>
+          <a href="contact.html" data-ka>კონტაქტი</a
+          ><a href="contact.html" data-en>Contact</a>
+        </li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang">
+          <button id="b-ka" class="on" onclick="setLang('ka')">ქარ</button
+          ><button id="b-en" onclick="setLang('en')">ENG</button>
+        </div>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <header class="banner">
+      <div class="wrap">
+        <div class="crumb">
+          <a href="index.html" data-ka>მთავარი</a
+          ><a href="index.html" data-en>Home</a> —
+          <span data-ka>ღონისძიება</span><span data-en>Event</span>
+        </div>
+        <div class="tag" data-ka>ღონისძიება</div>
+        <div class="tag" data-en>Event</div>
+        <h1 data-ka>[ღონისძიების<br /><em>სახელი</em>]</h1>
+        <h1 data-en>[Event<br /><em>name</em>]</h1>
+      </div>
+    </header>
+    <section>
+      <div
+        class="wrap"
+        style="
+          display: grid;
+          grid-template-columns: 1.4fr 1fr;
+          gap: 60px;
+          align-items: start;
+        "
+      >
+        <div class="reveal">
+          <div class="ph" style="aspect-ratio: 16/9; margin-bottom: 40px">
+            <span data-ka>ფოტო — ღონისძიების მთავარი სურათი</span
+            ><span data-en>Photo — event hero image</span>
+          </div>
+          <h2 data-ka>რას მოიცავს ღონისძიება</h2>
+          <h2 data-en>What the event includes</h2>
+          <p data-ka>
+            [ჩანაცვლებადი ტექსტი] სრული აღწერა — რა ხდება, სად, რამდენ ხანს
+            გრძელდება, ვისთვისაა განკუთვნილი.
+          </p>
+          <p style="margin-top: 16px" data-ka>
+            [ჩანაცვლებადი] მეორე აბზაცი — დღის განრიგი, ტრანსპორტი, განთავსება,
+            კვება.
+          </p>
+          <p data-en>
+            [Placeholder copy] Full description — what happens, where, how long
+            it runs, who it's for.
+          </p>
+          <p style="margin-top: 16px" data-en>
+            [Placeholder] Second paragraph — daily schedule, transport,
+            accommodation, meals.
+          </p>
+          <div style="margin-top: 40px; border-top: 1px solid var(--line-lt)">
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                gap: 24px;
+                padding: 18px 0;
+                border-bottom: 1px solid var(--line-lt);
+              "
+            >
+              <span
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                "
+                data-ka
+                >თარიღი</span
+              >
+              <span
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                "
+                data-en
+                >Date</span
+              >
+              <span style="color: var(--bone-dim); font-size: 14px"
+                >[XX.XX.20XX]</span
+              >
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                gap: 24px;
+                padding: 18px 0;
+                border-bottom: 1px solid var(--line-lt);
+              "
+            >
+              <span
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                "
+                data-ka
+                >ადგილი</span
+              >
+              <span
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                "
+                data-en
+                >Location</span
+              >
+              <span style="color: var(--bone-dim); font-size: 14px">[—]</span>
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                gap: 24px;
+                padding: 18px 0;
+                border-bottom: 1px solid var(--line-lt);
+              "
+            >
+              <span
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                "
+                data-ka
+                >ხანგრძლივობა</span
+              >
+              <span
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                "
+                data-en
+                >Duration</span
+              >
+              <span style="color: var(--bone-dim); font-size: 14px">[—]</span>
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                gap: 24px;
+                padding: 18px 0;
+                border-bottom: 1px solid var(--line-lt);
+              "
+            >
+              <span
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                "
+                data-ka
+                >სახეობები</span
+              >
+              <span
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                "
+                data-en
+                >Species</span
+              >
+              <span style="color: var(--bone-dim); font-size: 14px">[—]</span>
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                gap: 24px;
+                padding: 18px 0;
+                border-bottom: 1px solid var(--line-lt);
+              "
+            >
+              <span
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                "
+                data-ka
+                >ადგილების რაოდენობა</span
+              >
+              <span
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                "
+                data-en
+                >Capacity</span
+              >
+              <span style="color: var(--bone-dim); font-size: 14px">[—]</span>
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                gap: 24px;
+                padding: 18px 0;
+                border-bottom: 1px solid var(--line-lt);
+              "
+            >
+              <span
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                "
+                data-ka
+                >ღირებულება</span
+              >
+              <span
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                "
+                data-en
+                >Cost</span
+              >
+              <span style="color: var(--bone-dim); font-size: 14px">[—]</span>
+            </div>
+          </div>
+          <h2 style="margin-top: 56px" data-ka>რა უნდა თან იქონიოთ</h2>
+          <h2 style="margin-top: 56px" data-en>What to bring</h2>
+          <p data-ka>[ჩანაცვლებადი] აღჭურვილობის სია, დოკუმენტები, ლიცენზია.</p>
+          <p data-en>
+            [Placeholder] Equipment list, documents, licence requirements.
+          </p>
+        </div>
+
+        <div class="reveal" style="position: sticky; top: 100px">
+          <div class="panel">
+            <div class="steps">
+              <div class="step on" data-ka>1 · ვინ ხართ</div>
+              <div class="step on" data-en>1 · Who you are</div>
+              <div class="step" data-ka>2 · დეტალები</div>
+              <div class="step" data-en>2 · Details</div>
+              <div class="step" data-ka>3 · გაგზავნა</div>
+              <div class="step" data-en>3 · Submit</div>
+            </div>
+
+            <div id="reg-form">
+              <h3 style="margin-bottom: 6px" data-ka>რეგისტრაცია</h3>
+              <h3 style="margin-bottom: 6px" data-en>Register</h3>
+              <p style="font-size: 13px; margin-bottom: 30px" data-ka>
+                აირჩიეთ, რომელი აღწერს თქვენ.
+              </p>
+              <p style="font-size: 13px; margin-bottom: 30px" data-en>
+                Choose which describes you.
+              </p>
+
+              <div class="choice">
+                <div>
+                  <input
+                    type="radio"
+                    name="aff"
+                    id="aff-solo"
+                    onchange="affil('solo')"
+                  />
+                  <label for="aff-solo"
+                    ><b data-ka>ფიზიკური პირი</b><b data-en>Individual</b>
+                    <span data-ka>არ ვარ კლუბის წევრი</span
+                    ><span data-en>Not a member of any club</span></label
+                  >
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="aff"
+                    id="aff-club"
+                    onchange="affil('club')"
+                  />
+                  <label for="aff-club"
+                    ><b data-ka>კლუბიდან</b><b data-en>From a club</b>
+                    <span data-ka>წარმოვადგენ სამონადირეო კლუბს</span
+                    ><span data-en>I represent a hunting club</span></label
+                  >
+                </div>
+              </div>
+
+              <div class="cond" id="c-solo">
+                <div class="field">
+                  <label data-ka>სახელი</label><label data-en>First name</label
+                  ><input type="text" />
+                </div>
+                <div class="field">
+                  <label data-ka>გვარი</label><label data-en>Last name</label
+                  ><input type="text" />
+                </div>
+                <div class="field">
+                  <label data-ka>ელ. ფოსტა</label><label data-en>Email</label
+                  ><input type="email" />
+                </div>
+                <div class="field">
+                  <label data-ka>ტელეფონი</label><label data-en>Phone</label
+                  ><input type="tel" />
+                </div>
+              </div>
+
+              <div class="cond" id="c-club">
+                <div class="field">
+                  <label data-ka>სახელი</label><label data-en>First name</label
+                  ><input type="text" />
+                </div>
+                <div class="field">
+                  <label data-ka>გვარი</label><label data-en>Last name</label
+                  ><input type="text" />
+                </div>
+                <div class="field">
+                  <label data-ka>ელ. ფოსტა</label><label data-en>Email</label
+                  ><input type="email" />
+                </div>
+                <div class="field">
+                  <label data-ka>ტელეფონი</label><label data-en>Phone</label
+                  ><input type="tel" />
+                </div>
+                <div class="field">
+                  <label data-ka>რომელი კლუბიდან</label
+                  ><label data-en>Which club</label>
+                  <select id="club-select">
+                    <option data-ka>აირჩიეთ კლუბი…</option>
+                    <option data-en>Select your club…</option>
+                  </select>
+                </div>
+              </div>
+
+              <button
+                class="btn"
+                style="width: 100%; margin-top: 26px"
+                onclick="return submitReg();"
+                data-ka
+              >
+                რეგისტრაცია
+              </button>
+              <button
+                class="btn"
+                style="width: 100%; margin-top: 26px"
+                onclick="return submitReg();"
+                data-en
+              >
+                Register
+              </button>
+              <p class="note" data-ka>
+                [დემო] ფორმა ვიზუალურია — მონაცემები არსად იგზავნება.
+              </p>
+              <p class="note" data-en>
+                [Demo] Visual only — nothing is submitted anywhere yet.
+              </p>
+            </div>
+
+            <div class="ok" id="reg-ok">
+              <svg
+                viewBox="0 0 46 46"
+                fill="none"
+                stroke="#b8913c"
+                stroke-width="1.2"
+              >
+                <circle cx="23" cy="23" r="22" />
+                <path d="M14 23l6 6 12-14" />
+              </svg>
+              <h3 data-ka>განაცხადი მიღებულია</h3>
+              <h3 data-en>Application received</h3>
+              <p style="font-size: 13px; margin: 0 auto" data-ka>
+                [დემო] რეალურ საიტზე კლუბი მიიღებს შეტყობინებას და
+                დაგიკავშირდებათ.
+              </p>
+              <p style="font-size: 13px; margin: 0 auto" data-en>
+                [Demo] On the live site the club gets notified and contacts you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="wrap foot">
+        <div>
+          <a class="logo-full" href="index.html"
+            ><img src="assets/logo-bone.png" alt="Iberia — Hunters' Club"
+          /></a>
+          <p style="font-size: 13px" data-ka>
+            [ჩანაცვლებადი] კლუბის მოკლე აღწერა, მისამართი და სამუშაო საათები.
+          </p>
+          <p style="font-size: 13px" data-en>
+            [Placeholder] Short club description, address and opening hours.
+          </p>
+        </div>
+        <div>
+          <h4 data-ka>კლუბი</h4>
+          <h4 data-en>Club</h4>
+          <a href="about.html" data-ka>ჩვენ შესახებ</a
+          ><a href="about.html" data-en>About</a>
+          <a href="expeditions.html" data-ka>ნადირობები</a
+          ><a href="expeditions.html" data-en>Expeditions</a>
+          <a href="gallery.html" data-ka>გალერეა</a
+          ><a href="gallery.html" data-en>Gallery</a>
+        </div>
+        <div>
+          <h4 data-ka>ღონისძიებები</h4>
+          <h4 data-en>Events</h4>
+          <a href="events.html" data-ka>ყველა ღონისძიება</a
+          ><a href="events.html" data-en>All events</a>
+          <a href="event.html" data-ka>რეგისტრაცია</a
+          ><a href="event.html" data-en>Registration</a>
+          <a href="news.html" data-ka>სიახლეები</a
+          ><a href="news.html" data-en>News</a>
+        </div>
+        <div>
+          <h4 data-ka>კონტაქტი</h4>
+          <h4 data-en>Contact</h4>
+          <a href="tel:#">+995 XXX XX XX XX</a
+          ><a href="mailto:#">info@iberia.ge</a><a href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="wrap copy">
+        <span>© 20XX Iberia Hunters Club</span
+        ><span data-ka>ყველა უფლება დაცულია</span
+        ><span data-en>All rights reserved</span>
+      </div>
+    </footer>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

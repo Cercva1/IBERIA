@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>კონტაქტი · IBERIA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <svg class="grain">
+      <filter id="g">
+        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#g)" />
+    </svg>
+    <svg id="reticle" viewBox="0 0 46 46" fill="none">
+      <circle
+        cx="23"
+        cy="23"
+        r="16"
+        stroke="#b8913c"
+        stroke-width="1"
+        opacity=".85"
+      />
+      <circle cx="23" cy="23" r="1.5" fill="#b8913c" />
+      <path
+        d="M23 0v13M23 33v13M0 23h13M33 23h13"
+        stroke="#b8913c"
+        stroke-width="1"
+        opacity=".85"
+      />
+    </svg>
+    <nav id="nav">
+      <a class="logo" href="index.html"
+        ><img class="mark-img" src="assets/mark-bone.png" alt="" /><span
+          ><b>Iberia</b><i data-ka>სამონადირეო კლუბი</i
+          ><i data-en>Hunters Club</i></span
+        ></a
+      >
+      <ul class="links" id="links">
+        <li>
+          <a href="index.html" data-ka>მთავარი</a
+          ><a href="index.html" data-en>Home</a>
+        </li>
+        <li>
+          <a href="about.html" data-ka>ჩვენ შესახებ</a
+          ><a href="about.html" data-en>About</a>
+        </li>
+        <li>
+          <a href="members.html" data-ka>წევრები</a
+          ><a href="members.html" data-en>Members</a>
+        </li>
+        <li>
+          <a href="expeditions.html" data-ka>ნადირობები</a
+          ><a href="expeditions.html" data-en>Expeditions</a>
+        </li>
+        <li>
+          <a href="events.html" data-ka>ღონისძიებები</a
+          ><a href="events.html" data-en>Events</a>
+        </li>
+        <li>
+          <a href="gallery.html" data-ka>გალერეა</a
+          ><a href="gallery.html" data-en>Gallery</a>
+        </li>
+        <li>
+          <a href="news.html" data-ka>სიახლეები</a
+          ><a href="news.html" data-en>News</a>
+        </li>
+        <li>
+          <a href="contact.html" data-ka>კონტაქტი</a
+          ><a href="contact.html" data-en>Contact</a>
+        </li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang">
+          <button id="b-ka" class="on" onclick="setLang('ka')">ქარ</button
+          ><button id="b-en" onclick="setLang('en')">ENG</button>
+        </div>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <header class="banner">
+      <div class="wrap">
+        <div class="crumb">
+          <a href="index.html" data-ka>მთავარი</a
+          ><a href="index.html" data-en>Home</a> — <span data-ka>კონტაქტი</span
+          ><span data-en>Contact</span>
+        </div>
+        <div class="tag" data-ka>კონტაქტი</div>
+        <div class="tag" data-en>Contact</div>
+        <h1 data-ka>დაგვიკავშირდით</h1>
+        <h1 data-en>Get in touch</h1>
+      </div>
+    </header>
+    <section>
+      <div
+        class="wrap"
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1.2fr;
+          gap: 70px;
+          align-items: start;
+        "
+      >
+        <div class="reveal">
+          <h2 data-ka>კლუბი</h2>
+          <h2 data-en>The club</h2>
+          <div style="margin-top: 30px; border-top: 1px solid var(--line-lt)">
+            <div
+              style="padding: 20px 0; border-bottom: 1px solid var(--line-lt)"
+            >
+              <div
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.24em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                  margin-bottom: 6px;
+                "
+                data-ka
+              >
+                მისამართი
+              </div>
+              <div
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.24em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                  margin-bottom: 6px;
+                "
+                data-en
+              >
+                Address
+              </div>
+              <div style="color: var(--bone)">
+                [ჩანაცვლებადი] — Tbilisi, Georgia
+              </div>
+            </div>
+            <div
+              style="padding: 20px 0; border-bottom: 1px solid var(--line-lt)"
+            >
+              <div
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.24em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                  margin-bottom: 6px;
+                "
+                data-ka
+              >
+                ტელეფონი
+              </div>
+              <div
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.24em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                  margin-bottom: 6px;
+                "
+                data-en
+              >
+                Phone
+              </div>
+              <div style="color: var(--bone)">+995 XXX XX XX XX</div>
+            </div>
+            <div
+              style="padding: 20px 0; border-bottom: 1px solid var(--line-lt)"
+            >
+              <div
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.24em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                  margin-bottom: 6px;
+                "
+                data-ka
+              >
+                ელ. ფოსტა
+              </div>
+              <div
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.24em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                  margin-bottom: 6px;
+                "
+                data-en
+              >
+                Email
+              </div>
+              <div style="color: var(--bone)">info@iberia.ge</div>
+            </div>
+            <div
+              style="padding: 20px 0; border-bottom: 1px solid var(--line-lt)"
+            >
+              <div
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.24em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                  margin-bottom: 6px;
+                "
+                data-ka
+              >
+                სოციალური
+              </div>
+              <div
+                style="
+                  font-size: 10px;
+                  letter-spacing: 0.24em;
+                  text-transform: uppercase;
+                  color: var(--brass);
+                  margin-bottom: 6px;
+                "
+                data-en
+              >
+                Social
+              </div>
+              <div style="color: var(--bone)">Facebook</div>
+            </div>
+          </div>
+          <div class="ph" style="aspect-ratio: 16/10; margin-top: 34px">
+            <span data-ka>რუკა</span><span data-en>Map</span>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="panel">
+            <h3 data-ka>შეტყობინების გაგზავნა</h3>
+            <h3 data-en>Send a message</h3>
+            <div style="margin-top: 28px">
+              <div class="row">
+                <div class="field">
+                  <label data-ka>სახელი</label><label data-en>First name</label
+                  ><input type="text" />
+                </div>
+                <div class="field">
+                  <label data-ka>გვარი</label><label data-en>Last name</label
+                  ><input type="text" />
+                </div>
+              </div>
+              <div class="field">
+                <label data-ka>ელ. ფოსტა</label><label data-en>Email</label
+                ><input type="email" />
+              </div>
+              <div class="field">
+                <label data-ka>ტელეფონი</label><label data-en>Phone</label
+                ><input type="tel" />
+              </div>
+              <div class="field">
+                <label data-ka>შეტყობინება</label><label data-en>Message</label
+                ><textarea rows="4"></textarea>
+              </div>
+              <button
+                class="btn"
+                style="width: 100%"
+                onclick="return false;"
+                data-ka
+              >
+                გაგზავნა
+              </button>
+              <button
+                class="btn"
+                style="width: 100%"
+                onclick="return false;"
+                data-en
+              >
+                Send
+              </button>
+              <p class="note" data-ka>[დემო] ფორმა ვიზუალურია.</p>
+              <p class="note" data-en>[Demo] Visual only.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="wrap foot">
+        <div>
+          <a class="logo-full" href="index.html"
+            ><img src="assets/logo-bone.png" alt="Iberia — Hunters' Club"
+          /></a>
+          <p style="font-size: 13px" data-ka>
+            [ჩანაცვლებადი] კლუბის მოკლე აღწერა, მისამართი და სამუშაო საათები.
+          </p>
+          <p style="font-size: 13px" data-en>
+            [Placeholder] Short club description, address and opening hours.
+          </p>
+        </div>
+        <div>
+          <h4 data-ka>კლუბი</h4>
+          <h4 data-en>Club</h4>
+          <a href="about.html" data-ka>ჩვენ შესახებ</a
+          ><a href="about.html" data-en>About</a>
+          <a href="expeditions.html" data-ka>ნადირობები</a
+          ><a href="expeditions.html" data-en>Expeditions</a>
+          <a href="gallery.html" data-ka>გალერეა</a
+          ><a href="gallery.html" data-en>Gallery</a>
+        </div>
+        <div>
+          <h4 data-ka>ღონისძიებები</h4>
+          <h4 data-en>Events</h4>
+          <a href="events.html" data-ka>ყველა ღონისძიება</a
+          ><a href="events.html" data-en>All events</a>
+          <a href="event.html" data-ka>რეგისტრაცია</a
+          ><a href="event.html" data-en>Registration</a>
+          <a href="news.html" data-ka>სიახლეები</a
+          ><a href="news.html" data-en>News</a>
+        </div>
+        <div>
+          <h4 data-ka>კონტაქტი</h4>
+          <h4 data-en>Contact</h4>
+          <a href="tel:#">+995 XXX XX XX XX</a
+          ><a href="mailto:#">info@iberia.ge</a><a href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="wrap copy">
+        <span>© 20XX Iberia Hunters Club</span
+        ><span data-ka>ყველა უფლება დაცულია</span
+        ><span data-en>All rights reserved</span>
+      </div>
+    </footer>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
