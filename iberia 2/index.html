@@ -229,6 +229,11 @@ C884 660 872 666 848 668 C806 672 758 670 736 662 C722 656 716 634 722 610 Z"
         "
       ></div>
       <div class="hero-copy">
+        <img
+          class="hero-crest"
+          src="assets/logo-bone.png"
+          alt="იბერია — მონადირეთა კლუბი"
+        />
         <div class="eyebrow" data-ka>დაარსდა 19XX · საქართველო</div>
         <div class="eyebrow" data-en>Est. 19XX · Georgia</div>
         <h1 data-ka>ტრადიცია,<br /><em>რომელსაც</em> ვატარებთ</h1>
@@ -527,7 +532,11 @@ C884 660 872 666 848 668 C806 672 758 670 736 662 C722 656 716 634 722 610 Z"
         setTimeout(function () {
           var l = document.getElementById("loader");
           if (l) l.classList.add("gone");
-        }, 1500);
+          /* Hero reveal starts mid-dissolve, so the crest carries across. */
+          setTimeout(function () {
+            document.body.classList.add("ready");
+          }, 300);
+        }, 1600);
       });
       (function () {
         var stag = document.getElementById("stag"),
