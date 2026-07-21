@@ -1,217 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ka">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>სიახლეები · IBERIA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="apple-touch-icon" href="assets/favicon.png" />
-    <link rel="stylesheet" href="assets/style.css" />
-  </head>
-  <body>
-    <svg class="grain">
-      <filter id="g">
-        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#g)" />
-    </svg>
-    <svg id="reticle" viewBox="0 0 46 46" fill="none">
-      <circle
-        cx="23"
-        cy="23"
-        r="16"
-        stroke="#b8913c"
-        stroke-width="1"
-        opacity=".85"
-      />
-      <circle cx="23" cy="23" r="1.5" fill="#b8913c" />
-      <path
-        d="M23 0v13M23 33v13M0 23h13M33 23h13"
-        stroke="#b8913c"
-        stroke-width="1"
-        opacity=".85"
-      />
-    </svg>
-    <nav id="nav">
-      <a class="logo" href="index.html"
-        ><img
-          class="crest-img"
-          src="assets/logo-bone.png"
-          alt="Iberia — Hunters' Club"
-      /></a>
-      <ul class="links" id="links">
-        <li>
-          <a href="index.html" data-ka lang="ka">მთავარი</a
-          ><a href="index.html" data-en lang="en">Home</a>
-        </li>
-        <li>
-          <a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a
-          ><a href="about.html" data-en lang="en">About</a>
-        </li>
-        <li>
-          <a href="members.html" data-ka lang="ka">წევრები</a
-          ><a href="members.html" data-en lang="en">Members</a>
-        </li>
-        <li>
-          <a href="expeditions.html" data-ka lang="ka">ნადირობები</a
-          ><a href="expeditions.html" data-en lang="en">Expeditions</a>
-        </li>
-        <li>
-          <a href="events.html" data-ka lang="ka">ღონისძიებები</a
-          ><a href="events.html" data-en lang="en">Events</a>
-        </li>
-        <li>
-          <a href="gallery.html" data-ka lang="ka">გალერეა</a
-          ><a href="gallery.html" data-en lang="en">Gallery</a>
-        </li>
-        <li>
-          <a href="news.html" data-ka lang="ka">სიახლეები</a
-          ><a href="news.html" data-en lang="en">News</a>
-        </li>
-        <li>
-          <a href="contact.html" data-ka lang="ka">კონტაქტი</a
-          ><a href="contact.html" data-en lang="en">Contact</a>
-        </li>
-      </ul>
-      <div class="nav-right">
-        <div class="lang">
-          <button id="b-ka" class="on" onclick="setLang('ka')">ქარ</button
-          ><button id="b-en" onclick="setLang('en')">ENG</button>
-        </div>
-        <button class="burger" id="burger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-    <header class="banner">
-      <div class="wrap">
-        <div class="crumb">
-          <a href="index.html" data-ka lang="ka">მთავარი</a
-          ><a href="index.html" data-en lang="en">Home</a> —
-          <span data-ka lang="ka">სიახლეები</span
-          ><span data-en lang="en">News</span>
-        </div>
-        <div class="tag" data-ka lang="ka">სიახლეები</div>
-        <div class="tag" data-en lang="en">News</div>
-        <h1 data-ka lang="ka">კლუბის<br /><em>სიახლეები</em></h1>
-        <h1 data-en lang="en">Club<br /><em>news</em></h1>
-      </div>
-    </header>
-    <section>
-      <div class="wrap">
-        <div class="evt-grid reveal">
-          <a class="card" href="#">
-            <div class="ph thumb">
-              <span data-ka lang="ka">ფოტო — სიახლე 01</span
-              ><span data-en lang="en">Photo — news 01</span>
-            </div>
-            <div class="body">
-              <div class="date">XX.XX.20XX</div>
-              <h3 data-ka lang="ka">[სათაური 01]</h3>
-              <h3 data-en lang="en">[Headline 01]</h3>
-              <p data-ka lang="ka">[მოკლე ანონსი.]</p>
-              <p data-en lang="en">[Short standfirst.]</p>
-              <div class="foot">
-                <span data-ka lang="ka">წაკითხვა</span
-                ><span data-en lang="en">Read</span><span class="go">→</span>
-              </div>
-            </div></a
-          ><a class="card" href="#">
-            <div class="ph thumb">
-              <span data-ka lang="ka">ფოტო — სიახლე 02</span
-              ><span data-en lang="en">Photo — news 02</span>
-            </div>
-            <div class="body">
-              <div class="date">XX.XX.20XX</div>
-              <h3 data-ka lang="ka">[სათაური 02]</h3>
-              <h3 data-en lang="en">[Headline 02]</h3>
-              <p data-ka lang="ka">[მოკლე ანონსი.]</p>
-              <p data-en lang="en">[Short standfirst.]</p>
-              <div class="foot">
-                <span data-ka lang="ka">წაკითხვა</span
-                ><span data-en lang="en">Read</span><span class="go">→</span>
-              </div>
-            </div></a
-          ><a class="card" href="#">
-            <div class="ph thumb">
-              <span data-ka lang="ka">ფოტო — სიახლე 03</span
-              ><span data-en lang="en">Photo — news 03</span>
-            </div>
-            <div class="body">
-              <div class="date">XX.XX.20XX</div>
-              <h3 data-ka lang="ka">[სათაური 03]</h3>
-              <h3 data-en lang="en">[Headline 03]</h3>
-              <p data-ka lang="ka">[მოკლე ანონსი.]</p>
-              <p data-en lang="en">[Short standfirst.]</p>
-              <div class="foot">
-                <span data-ka lang="ka">წაკითხვა</span
-                ><span data-en lang="en">Read</span><span class="go">→</span>
-              </div>
-            </div></a
-          >
-        </div>
-        <p class="note reveal" style="margin-top: 40px" data-ka lang="ka">
-          შენიშვნა: სიახლეების გვერდი მხოლოდ მაშინ ღირს, თუ ვინმე რეგულარულად
-          განაახლებს. მიტოვებული სიახლეები კლუბს მკვდრად აჩვენებს.
-        </p>
-        <p class="note reveal" style="margin-top: 40px" data-en lang="en">
-          Note: a news page is only worth having if someone updates it. An
-          abandoned news feed makes the club look dormant.
-        </p>
-      </div>
-    </section>
-    <footer>
-      <div class="wrap foot">
-        <div>
-          <a class="logo-full" href="index.html"
-            ><img src="assets/logo-bone.png" alt="Iberia — Hunters' Club"
-          /></a>
-          <p style="font-size: 13px" data-ka lang="ka">
-            [ჩანაცვლებადი] კლუბის მოკლე აღწერა, მისამართი და სამუშაო საათები.
-          </p>
-          <p style="font-size: 13px" data-en lang="en">
-            [Placeholder] Short club description, address and opening hours.
-          </p>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">კლუბი</h4>
-          <h4 data-en lang="en">Club</h4>
-          <a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a
-          ><a href="about.html" data-en lang="en">About</a>
-          <a href="expeditions.html" data-ka lang="ka">ნადირობები</a
-          ><a href="expeditions.html" data-en lang="en">Expeditions</a>
-          <a href="gallery.html" data-ka lang="ka">გალერეა</a
-          ><a href="gallery.html" data-en lang="en">Gallery</a>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">ღონისძიებები</h4>
-          <h4 data-en lang="en">Events</h4>
-          <a href="events.html" data-ka lang="ka">ყველა ღონისძიება</a
-          ><a href="events.html" data-en lang="en">All events</a>
-          <a href="event.html" data-ka lang="ka">რეგისტრაცია</a
-          ><a href="event.html" data-en lang="en">Registration</a>
-          <a href="news.html" data-ka lang="ka">სიახლეები</a
-          ><a href="news.html" data-en lang="en">News</a>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">კონტაქტი</h4>
-          <h4 data-en lang="en">Contact</h4>
-          <a href="tel:#">+995 XXX XX XX XX</a
-          ><a href="mailto:#">info@iberia.ge</a><a href="#">Facebook</a>
-        </div>
-      </div>
-      <div class="wrap copy">
-        <span>© 20XX Iberia Hunters Club</span
-        ><span data-ka lang="ka">ყველა უფლება დაცულია</span
-        ><span data-en lang="en">All rights reserved</span>
-      </div>
-    </footer>
-    <script src="assets/app.js"></script>
-  </body>
-</html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>სიახლეები · IBERIA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/style.css?v=2">
+</head>
+<body>
+<svg class="grain"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+<svg id="reticle" viewBox="0 0 46 46" fill="none">
+<circle cx="23" cy="23" r="16" stroke="#b8913c" stroke-width="1" opacity=".85"/>
+<circle cx="23" cy="23" r="1.5" fill="#b8913c"/>
+<path d="M23 0v13M23 33v13M0 23h13M33 23h13" stroke="#b8913c" stroke-width="1" opacity=".85"/></svg>
+<nav id="nav">
+<a class="logo" href="index.html"><img class="crest-img" src="assets/logo-bone.png" alt="Iberia — Hunters' Club"></a>
+<ul class="links" id="links">
+<li><a href="index.html" data-ka lang="ka">მთავარი</a><a href="index.html" data-en lang="en">Home</a></li>
+<li><a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a><a href="about.html" data-en lang="en">About</a></li>
+<li><a href="members.html" data-ka lang="ka">წევრები</a><a href="members.html" data-en lang="en">Members</a></li>
+<li><a href="expeditions.html" data-ka lang="ka">ნადირობები</a><a href="expeditions.html" data-en lang="en">Expeditions</a></li>
+<li><a href="events.html" data-ka lang="ka">ღონისძიებები</a><a href="events.html" data-en lang="en">Events</a></li>
+<li><a href="gallery.html" data-ka lang="ka">გალერეა</a><a href="gallery.html" data-en lang="en">Gallery</a></li>
+<li><a href="news.html" data-ka lang="ka">სიახლეები</a><a href="news.html" data-en lang="en">News</a></li>
+<li><a href="contact.html" data-ka lang="ka">კონტაქტი</a><a href="contact.html" data-en lang="en">Contact</a></li>
+</ul>
+<div class="nav-right">
+<div class="lang"><button id="b-ka" class="on" onclick="setLang('ka')">ქარ</button><button id="b-en" onclick="setLang('en')">ENG</button></div>
+<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</nav>
+<header class="banner">
+<div class="wrap">
+<div class="crumb"><a href="index.html" data-ka lang="ka">მთავარი</a><a href="index.html" data-en lang="en">Home</a> — <span data-ka lang="ka">სიახლეები</span><span data-en lang="en">News</span></div>
+<div class="tag" data-ka lang="ka">სიახლეები</div><div class="tag" data-en lang="en">News</div>
+<h1 data-ka lang="ka">კლუბის<br><em>სიახლეები</em></h1><h1 data-en lang="en">Club<br><em>news</em></h1>
+
+</div></header>
+<section><div class="wrap"><div class="evt-grid reveal">
+<a class="card" href="#">
+<div class="ph thumb"><span data-ka lang="ka">ფოტო — სიახლე 01</span><span data-en lang="en">Photo — news 01</span></div>
+<div class="body"><div class="date">XX.XX.20XX</div>
+<h3 data-ka lang="ka">[სათაური 01]</h3><h3 data-en lang="en">[Headline 01]</h3>
+<p data-ka lang="ka">[მოკლე ანონსი.]</p><p data-en lang="en">[Short standfirst.]</p>
+<div class="foot"><span data-ka lang="ka">წაკითხვა</span><span data-en lang="en">Read</span><span class="go">→</span></div></div></a><a class="card" href="#">
+<div class="ph thumb"><span data-ka lang="ka">ფოტო — სიახლე 02</span><span data-en lang="en">Photo — news 02</span></div>
+<div class="body"><div class="date">XX.XX.20XX</div>
+<h3 data-ka lang="ka">[სათაური 02]</h3><h3 data-en lang="en">[Headline 02]</h3>
+<p data-ka lang="ka">[მოკლე ანონსი.]</p><p data-en lang="en">[Short standfirst.]</p>
+<div class="foot"><span data-ka lang="ka">წაკითხვა</span><span data-en lang="en">Read</span><span class="go">→</span></div></div></a><a class="card" href="#">
+<div class="ph thumb"><span data-ka lang="ka">ფოტო — სიახლე 03</span><span data-en lang="en">Photo — news 03</span></div>
+<div class="body"><div class="date">XX.XX.20XX</div>
+<h3 data-ka lang="ka">[სათაური 03]</h3><h3 data-en lang="en">[Headline 03]</h3>
+<p data-ka lang="ka">[მოკლე ანონსი.]</p><p data-en lang="en">[Short standfirst.]</p>
+<div class="foot"><span data-ka lang="ka">წაკითხვა</span><span data-en lang="en">Read</span><span class="go">→</span></div></div></a>
+</div>
+<p class="note reveal" style="margin-top:40px" data-ka lang="ka">შენიშვნა: სიახლეების გვერდი მხოლოდ მაშინ ღირს, თუ ვინმე რეგულარულად განაახლებს. მიტოვებული სიახლეები კლუბს მკვდრად აჩვენებს.</p>
+<p class="note reveal" style="margin-top:40px" data-en lang="en">Note: a news page is only worth having if someone updates it. An abandoned news feed makes the club look dormant.</p>
+</div></section><footer>
+<div class="wrap foot">
+<div>
+<a class="logo-full" href="index.html"><img src="assets/logo-bone.png" alt="Iberia — Hunters' Club"></a>
+<p style="font-size:13px" data-ka lang="ka">[ჩანაცვლებადი] კლუბის მოკლე აღწერა, მისამართი და სამუშაო საათები.</p>
+<p style="font-size:13px" data-en lang="en">[Placeholder] Short club description, address and opening hours.</p>
+</div>
+<div><h4 data-ka lang="ka">კლუბი</h4><h4 data-en lang="en">Club</h4>
+<a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a><a href="about.html" data-en lang="en">About</a>
+<a href="expeditions.html" data-ka lang="ka">ნადირობები</a><a href="expeditions.html" data-en lang="en">Expeditions</a>
+<a href="gallery.html" data-ka lang="ka">გალერეა</a><a href="gallery.html" data-en lang="en">Gallery</a></div>
+<div><h4 data-ka lang="ka">ღონისძიებები</h4><h4 data-en lang="en">Events</h4>
+<a href="events.html" data-ka lang="ka">ყველა ღონისძიება</a><a href="events.html" data-en lang="en">All events</a>
+<a href="event.html" data-ka lang="ka">რეგისტრაცია</a><a href="event.html" data-en lang="en">Registration</a>
+<a href="news.html" data-ka lang="ka">სიახლეები</a><a href="news.html" data-en lang="en">News</a></div>
+<div><h4 data-ka lang="ka">კონტაქტი</h4><h4 data-en lang="en">Contact</h4>
+<a href="tel:#">+995 XXX XX XX XX</a><a href="mailto:#">info@iberia.ge</a><a href="#">Facebook</a></div>
+</div>
+<div class="wrap copy"><span>© 20XX Iberia Hunters Club</span><span data-ka lang="ka">ყველა უფლება დაცულია</span><span data-en lang="en">All rights reserved</span></div>
+</footer>
+<script src="assets/app.js?v=2"></script>
+</body></html>

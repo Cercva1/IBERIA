@@ -1,332 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ka">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>წევრები · IBERIA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="apple-touch-icon" href="assets/favicon.png" />
-    <link rel="stylesheet" href="assets/style.css" />
-  </head>
-  <body>
-    <svg class="grain">
-      <filter id="g">
-        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#g)" />
-    </svg>
-    <svg id="reticle" viewBox="0 0 46 46" fill="none">
-      <circle
-        cx="23"
-        cy="23"
-        r="16"
-        stroke="#b8913c"
-        stroke-width="1"
-        opacity=".85"
-      />
-      <circle cx="23" cy="23" r="1.5" fill="#b8913c" />
-      <path
-        d="M23 0v13M23 33v13M0 23h13M33 23h13"
-        stroke="#b8913c"
-        stroke-width="1"
-        opacity=".85"
-      />
-    </svg>
-    <nav id="nav">
-      <a class="logo" href="index.html"
-        ><img
-          class="crest-img"
-          src="assets/logo-bone.png"
-          alt="Iberia — Hunters' Club"
-      /></a>
-      <ul class="links" id="links">
-        <li>
-          <a href="index.html" data-ka lang="ka">მთავარი</a
-          ><a href="index.html" data-en lang="en">Home</a>
-        </li>
-        <li>
-          <a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a
-          ><a href="about.html" data-en lang="en">About</a>
-        </li>
-        <li>
-          <a href="members.html" data-ka lang="ka">წევრები</a
-          ><a href="members.html" data-en lang="en">Members</a>
-        </li>
-        <li>
-          <a href="expeditions.html" data-ka lang="ka">ნადირობები</a
-          ><a href="expeditions.html" data-en lang="en">Expeditions</a>
-        </li>
-        <li>
-          <a href="events.html" data-ka lang="ka">ღონისძიებები</a
-          ><a href="events.html" data-en lang="en">Events</a>
-        </li>
-        <li>
-          <a href="gallery.html" data-ka lang="ka">გალერეა</a
-          ><a href="gallery.html" data-en lang="en">Gallery</a>
-        </li>
-        <li>
-          <a href="news.html" data-ka lang="ka">სიახლეები</a
-          ><a href="news.html" data-en lang="en">News</a>
-        </li>
-        <li>
-          <a href="contact.html" data-ka lang="ka">კონტაქტი</a
-          ><a href="contact.html" data-en lang="en">Contact</a>
-        </li>
-      </ul>
-      <div class="nav-right">
-        <div class="lang">
-          <button id="b-ka" class="on" onclick="setLang('ka')">ქარ</button
-          ><button id="b-en" onclick="setLang('en')">ENG</button>
-        </div>
-        <button class="burger" id="burger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-    <header class="banner">
-      <div class="wrap">
-        <div class="crumb">
-          <a href="index.html" data-ka lang="ka">მთავარი</a
-          ><a href="index.html" data-en lang="en">Home</a> —
-          <span data-ka lang="ka">წევრები</span
-          ><span data-en lang="en">Members</span>
-        </div>
-        <div class="tag" data-ka lang="ka">წევრები</div>
-        <div class="tag" data-en lang="en">Members</div>
-        <h1 data-ka lang="ka">კლუბის<br /><em>წევრები</em></h1>
-        <h1 data-en lang="en">The people<br />of the <em>club</em></h1>
-        <p style="margin-top: 22px" data-ka lang="ka">
-          [ჩანაცვლებადი] მოკლე შესავალი — ვინ ქმნის კლუბს.
-        </p>
-        <p style="margin-top: 22px" data-en lang="en">
-          [Placeholder] Short intro — who makes up the club.
-        </p>
-      </div>
-    </header>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>წევრები · IBERIA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/style.css?v=2">
+</head>
+<body>
+<svg class="grain"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+<svg id="reticle" viewBox="0 0 46 46" fill="none">
+<circle cx="23" cy="23" r="16" stroke="#b8913c" stroke-width="1" opacity=".85"/>
+<circle cx="23" cy="23" r="1.5" fill="#b8913c"/>
+<path d="M23 0v13M23 33v13M0 23h13M33 23h13" stroke="#b8913c" stroke-width="1" opacity=".85"/></svg>
+<nav id="nav">
+<a class="logo" href="index.html"><img class="crest-img" src="assets/logo-bone.png" alt="Iberia — Hunters' Club"></a>
+<ul class="links" id="links">
+<li><a href="index.html" data-ka lang="ka">მთავარი</a><a href="index.html" data-en lang="en">Home</a></li>
+<li><a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a><a href="about.html" data-en lang="en">About</a></li>
+<li><a href="members.html" data-ka lang="ka">წევრები</a><a href="members.html" data-en lang="en">Members</a></li>
+<li><a href="expeditions.html" data-ka lang="ka">ნადირობები</a><a href="expeditions.html" data-en lang="en">Expeditions</a></li>
+<li><a href="events.html" data-ka lang="ka">ღონისძიებები</a><a href="events.html" data-en lang="en">Events</a></li>
+<li><a href="gallery.html" data-ka lang="ka">გალერეა</a><a href="gallery.html" data-en lang="en">Gallery</a></li>
+<li><a href="news.html" data-ka lang="ka">სიახლეები</a><a href="news.html" data-en lang="en">News</a></li>
+<li><a href="contact.html" data-ka lang="ka">კონტაქტი</a><a href="contact.html" data-en lang="en">Contact</a></li>
+</ul>
+<div class="nav-right">
+<div class="lang"><button id="b-ka" class="on" onclick="setLang('ka')">ქარ</button><button id="b-en" onclick="setLang('en')">ENG</button></div>
+<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</nav><header class="banner">
+<div class="wrap">
+<div class="crumb"><a href="index.html" data-ka lang="ka">მთავარი</a><a href="index.html" data-en lang="en">Home</a> — <span data-ka lang="ka">წევრები</span><span data-en lang="en">Members</span></div>
+<div class="tag" data-ka lang="ka">წევრები</div><div class="tag" data-en lang="en">Members</div>
+<h1 data-ka lang="ka">კლუბის<br><em>წევრები</em></h1><h1 data-en lang="en">The people<br>of the <em>club</em></h1>
+<p style="margin-top:22px" data-ka lang="ka">[ჩანაცვლებადი] მოკლე შესავალი — ვინ ქმნის კლუბს.</p>
+<p style="margin-top:22px" data-en lang="en">[Placeholder] Short intro — who makes up the club.</p>
+</div></header>
 
-    <section>
-      <div class="wrap">
-        <div
-          class="reveal"
-          style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 46px"
-        >
-          <span class="pill open" data-ka lang="ka">ყველა</span
-          ><span class="pill open" data-en lang="en">All</span>
-          <span class="pill" data-ka lang="ka">ხელმძღვანელობა</span
-          ><span class="pill" data-en lang="en">Leadership</span>
-          <span class="pill" data-ka lang="ka">ექსპერტები</span
-          ><span class="pill" data-en lang="en">Experts</span>
-          <span class="pill" data-ka lang="ka">მონადირეები</span
-          ><span class="pill" data-en lang="en">Hunters</span>
-        </div>
-        <div class="mem-grid reveal">
-          <div class="mem">
-            <div class="ph">
-              <span data-ka lang="ka">ფოტო — წევრი 01</span
-              ><span data-en lang="en">Photo — member 01</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი 01]</h3>
-              <h3 data-en lang="en">[Name Surname 01]</h3>
-              <div class="role" data-ka lang="ka">დირექტორი</div>
-              <div class="role" data-en lang="en">Director</div>
-              <p data-ka lang="ka">
-                [ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]
-              </p>
-              <p data-en lang="en">
-                [One line — years in the club, what they're known for.]
-              </p>
-            </div>
-          </div>
-          <div class="mem">
-            <div class="ph">
-              <span data-ka lang="ka">ფოტო — წევრი 02</span
-              ><span data-en lang="en">Photo — member 02</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი 02]</h3>
-              <h3 data-en lang="en">[Name Surname 02]</h3>
-              <div class="role" data-ka lang="ka">იარაღის ექსპერტი</div>
-              <div class="role" data-en lang="en">Firearms expert</div>
-              <p data-ka lang="ka">
-                [ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]
-              </p>
-              <p data-en lang="en">
-                [One line — years in the club, what they're known for.]
-              </p>
-            </div>
-          </div>
-          <div class="mem">
-            <div class="ph">
-              <span data-ka lang="ka">ფოტო — წევრი 03</span
-              ><span data-en lang="en">Photo — member 03</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი 03]</h3>
-              <h3 data-en lang="en">[Name Surname 03]</h3>
-              <div class="role" data-ka lang="ka">მეგზური</div>
-              <div class="role" data-en lang="en">Guide</div>
-              <p data-ka lang="ka">
-                [ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]
-              </p>
-              <p data-en lang="en">
-                [One line — years in the club, what they're known for.]
-              </p>
-            </div>
-          </div>
-          <div class="mem">
-            <div class="ph">
-              <span data-ka lang="ka">ფოტო — წევრი 04</span
-              ><span data-en lang="en">Photo — member 04</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი 04]</h3>
-              <h3 data-en lang="en">[Name Surname 04]</h3>
-              <div class="role" data-ka lang="ka">ტროფეის შემფასებელი</div>
-              <div class="role" data-en lang="en">Trophy evaluator</div>
-              <p data-ka lang="ka">
-                [ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]
-              </p>
-              <p data-en lang="en">
-                [One line — years in the club, what they're known for.]
-              </p>
-            </div>
-          </div>
-          <div class="mem">
-            <div class="ph">
-              <span data-ka lang="ka">ფოტო — წევრი 05</span
-              ><span data-en lang="en">Photo — member 05</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი 05]</h3>
-              <h3 data-en lang="en">[Name Surname 05]</h3>
-              <div class="role" data-ka lang="ka">კინოლოგი</div>
-              <div class="role" data-en lang="en">Dog handler</div>
-              <p data-ka lang="ka">
-                [ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]
-              </p>
-              <p data-en lang="en">
-                [One line — years in the club, what they're known for.]
-              </p>
-            </div>
-          </div>
-          <div class="mem">
-            <div class="ph">
-              <span data-ka lang="ka">ფოტო — წევრი 06</span
-              ><span data-en lang="en">Photo — member 06</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი 06]</h3>
-              <h3 data-en lang="en">[Name Surname 06]</h3>
-              <div class="role" data-ka lang="ka">მონადირე</div>
-              <div class="role" data-en lang="en">Hunter</div>
-              <p data-ka lang="ka">
-                [ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]
-              </p>
-              <p data-en lang="en">
-                [One line — years in the club, what they're known for.]
-              </p>
-            </div>
-          </div>
-          <div class="mem">
-            <div class="ph">
-              <span data-ka lang="ka">ფოტო — წევრი 07</span
-              ><span data-en lang="en">Photo — member 07</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი 07]</h3>
-              <h3 data-en lang="en">[Name Surname 07]</h3>
-              <div class="role" data-ka lang="ka">ვეტერანი წევრი</div>
-              <div class="role" data-en lang="en">Veteran member</div>
-              <p data-ka lang="ka">
-                [ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]
-              </p>
-              <p data-en lang="en">
-                [One line — years in the club, what they're known for.]
-              </p>
-            </div>
-          </div>
-          <div class="mem">
-            <div class="ph">
-              <span data-ka lang="ka">ფოტო — წევრი 08</span
-              ><span data-en lang="en">Photo — member 08</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი 08]</h3>
-              <h3 data-en lang="en">[Name Surname 08]</h3>
-              <div class="role" data-ka lang="ka">მონადირე</div>
-              <div class="role" data-en lang="en">Hunter</div>
-              <p data-ka lang="ka">
-                [ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]
-              </p>
-              <p data-en lang="en">
-                [One line — years in the club, what they're known for.]
-              </p>
-            </div>
-          </div>
-        </div>
-        <p class="note reveal" style="margin-top: 44px" data-ka lang="ka">
-          [დემო] ფოტოები და ტექსტი კლუბმა უნდა მოგვაწოდოს. თითო წევრზე: ფოტო,
-          სახელი, როლი, ერთი წინადადება.
-        </p>
-        <p class="note reveal" style="margin-top: 44px" data-en lang="en">
-          [Demo] Photos and text to come from the club. Per member: photo, name,
-          role, one line.
-        </p>
-      </div>
-    </section>
-    <footer>
-      <div class="wrap foot">
-        <div>
-          <a class="logo-full" href="index.html"
-            ><img src="assets/logo-bone.png" alt="Iberia — Hunters' Club"
-          /></a>
-          <p style="font-size: 13px" data-ka lang="ka">
-            [ჩანაცვლებადი] კლუბის მოკლე აღწერა, მისამართი და სამუშაო საათები.
-          </p>
-          <p style="font-size: 13px" data-en lang="en">
-            [Placeholder] Short club description, address and opening hours.
-          </p>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">კლუბი</h4>
-          <h4 data-en lang="en">Club</h4>
-          <a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a
-          ><a href="about.html" data-en lang="en">About</a>
-          <a href="expeditions.html" data-ka lang="ka">ნადირობები</a
-          ><a href="expeditions.html" data-en lang="en">Expeditions</a>
-          <a href="gallery.html" data-ka lang="ka">გალერეა</a
-          ><a href="gallery.html" data-en lang="en">Gallery</a>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">ღონისძიებები</h4>
-          <h4 data-en lang="en">Events</h4>
-          <a href="events.html" data-ka lang="ka">ყველა ღონისძიება</a
-          ><a href="events.html" data-en lang="en">All events</a>
-          <a href="event.html" data-ka lang="ka">რეგისტრაცია</a
-          ><a href="event.html" data-en lang="en">Registration</a>
-          <a href="news.html" data-ka lang="ka">სიახლეები</a
-          ><a href="news.html" data-en lang="en">News</a>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">კონტაქტი</h4>
-          <h4 data-en lang="en">Contact</h4>
-          <a href="tel:#">+995 XXX XX XX XX</a
-          ><a href="mailto:#">info@iberia.ge</a><a href="#">Facebook</a>
-        </div>
-      </div>
-      <div class="wrap copy">
-        <span>© 20XX Iberia Hunters Club</span
-        ><span data-ka lang="ka">ყველა უფლება დაცულია</span
-        ><span data-en lang="en">All rights reserved</span>
-      </div>
-    </footer>
-    <script src="assets/app.js"></script>
-  </body>
-</html>
+<section><div class="wrap">
+<div class="reveal" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:46px">
+<span class="pill open" data-ka lang="ka">ყველა</span><span class="pill open" data-en lang="en">All</span>
+<span class="pill" data-ka lang="ka">ხელმძღვანელობა</span><span class="pill" data-en lang="en">Leadership</span>
+<span class="pill" data-ka lang="ka">ექსპერტები</span><span class="pill" data-en lang="en">Experts</span>
+<span class="pill" data-ka lang="ka">მონადირეები</span><span class="pill" data-en lang="en">Hunters</span>
+</div>
+<div class="mem-grid reveal">
+<div class="mem">
+<div class="ph"><span data-ka lang="ka">ფოტო — წევრი 01</span><span data-en lang="en">Photo — member 01</span></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">[სახელი გვარი 01]</h3><h3 data-en lang="en">[Name Surname 01]</h3>
+<div class="role" data-ka lang="ka">დირექტორი</div><div class="role" data-en lang="en">Director</div>
+<p data-ka lang="ka">[ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]</p>
+<p data-en lang="en">[One line — years in the club, what they're known for.]</p>
+</div></div>
+<div class="mem">
+<div class="ph"><span data-ka lang="ka">ფოტო — წევრი 02</span><span data-en lang="en">Photo — member 02</span></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">[სახელი გვარი 02]</h3><h3 data-en lang="en">[Name Surname 02]</h3>
+<div class="role" data-ka lang="ka">იარაღის ექსპერტი</div><div class="role" data-en lang="en">Firearms expert</div>
+<p data-ka lang="ka">[ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]</p>
+<p data-en lang="en">[One line — years in the club, what they're known for.]</p>
+</div></div>
+<div class="mem">
+<div class="ph"><span data-ka lang="ka">ფოტო — წევრი 03</span><span data-en lang="en">Photo — member 03</span></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">[სახელი გვარი 03]</h3><h3 data-en lang="en">[Name Surname 03]</h3>
+<div class="role" data-ka lang="ka">მეგზური</div><div class="role" data-en lang="en">Guide</div>
+<p data-ka lang="ka">[ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]</p>
+<p data-en lang="en">[One line — years in the club, what they're known for.]</p>
+</div></div>
+<div class="mem">
+<div class="ph"><span data-ka lang="ka">ფოტო — წევრი 04</span><span data-en lang="en">Photo — member 04</span></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">[სახელი გვარი 04]</h3><h3 data-en lang="en">[Name Surname 04]</h3>
+<div class="role" data-ka lang="ka">ტროფეის შემფასებელი</div><div class="role" data-en lang="en">Trophy evaluator</div>
+<p data-ka lang="ka">[ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]</p>
+<p data-en lang="en">[One line — years in the club, what they're known for.]</p>
+</div></div>
+<div class="mem">
+<div class="ph"><span data-ka lang="ka">ფოტო — წევრი 05</span><span data-en lang="en">Photo — member 05</span></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">[სახელი გვარი 05]</h3><h3 data-en lang="en">[Name Surname 05]</h3>
+<div class="role" data-ka lang="ka">კინოლოგი</div><div class="role" data-en lang="en">Dog handler</div>
+<p data-ka lang="ka">[ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]</p>
+<p data-en lang="en">[One line — years in the club, what they're known for.]</p>
+</div></div>
+<div class="mem">
+<div class="ph"><span data-ka lang="ka">ფოტო — წევრი 06</span><span data-en lang="en">Photo — member 06</span></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">[სახელი გვარი 06]</h3><h3 data-en lang="en">[Name Surname 06]</h3>
+<div class="role" data-ka lang="ka">მონადირე</div><div class="role" data-en lang="en">Hunter</div>
+<p data-ka lang="ka">[ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]</p>
+<p data-en lang="en">[One line — years in the club, what they're known for.]</p>
+</div></div>
+<div class="mem">
+<div class="ph"><span data-ka lang="ka">ფოტო — წევრი 07</span><span data-en lang="en">Photo — member 07</span></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">[სახელი გვარი 07]</h3><h3 data-en lang="en">[Name Surname 07]</h3>
+<div class="role" data-ka lang="ka">ვეტერანი წევრი</div><div class="role" data-en lang="en">Veteran member</div>
+<p data-ka lang="ka">[ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]</p>
+<p data-en lang="en">[One line — years in the club, what they're known for.]</p>
+</div></div>
+<div class="mem">
+<div class="ph"><span data-ka lang="ka">ფოტო — წევრი 08</span><span data-en lang="en">Photo — member 08</span></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">[სახელი გვარი 08]</h3><h3 data-en lang="en">[Name Surname 08]</h3>
+<div class="role" data-ka lang="ka">მონადირე</div><div class="role" data-en lang="en">Hunter</div>
+<p data-ka lang="ka">[ერთი წინადადება — რამდენი წელია კლუბში, რით არის ცნობილი.]</p>
+<p data-en lang="en">[One line — years in the club, what they're known for.]</p>
+</div></div>
+</div>
+<p class="note reveal" style="margin-top:44px" data-ka lang="ka">[დემო] ფოტოები და ტექსტი კლუბმა უნდა მოგვაწოდოს. თითო წევრზე: ფოტო, სახელი, როლი, ერთი წინადადება.</p>
+<p class="note reveal" style="margin-top:44px" data-en lang="en">[Demo] Photos and text to come from the club. Per member: photo, name, role, one line.</p>
+</div></section>
+<footer>
+<div class="wrap foot">
+<div>
+<a class="logo-full" href="index.html"><img src="assets/logo-bone.png" alt="Iberia — Hunters' Club"></a>
+<p style="font-size:13px" data-ka lang="ka">[ჩანაცვლებადი] კლუბის მოკლე აღწერა, მისამართი და სამუშაო საათები.</p>
+<p style="font-size:13px" data-en lang="en">[Placeholder] Short club description, address and opening hours.</p>
+</div>
+<div><h4 data-ka lang="ka">კლუბი</h4><h4 data-en lang="en">Club</h4>
+<a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a><a href="about.html" data-en lang="en">About</a>
+<a href="expeditions.html" data-ka lang="ka">ნადირობები</a><a href="expeditions.html" data-en lang="en">Expeditions</a>
+<a href="gallery.html" data-ka lang="ka">გალერეა</a><a href="gallery.html" data-en lang="en">Gallery</a></div>
+<div><h4 data-ka lang="ka">ღონისძიებები</h4><h4 data-en lang="en">Events</h4>
+<a href="events.html" data-ka lang="ka">ყველა ღონისძიება</a><a href="events.html" data-en lang="en">All events</a>
+<a href="event.html" data-ka lang="ka">რეგისტრაცია</a><a href="event.html" data-en lang="en">Registration</a>
+<a href="news.html" data-ka lang="ka">სიახლეები</a><a href="news.html" data-en lang="en">News</a></div>
+<div><h4 data-ka lang="ka">კონტაქტი</h4><h4 data-en lang="en">Contact</h4>
+<a href="tel:#">+995 XXX XX XX XX</a><a href="mailto:#">info@iberia.ge</a><a href="#">Facebook</a></div>
+</div>
+<div class="wrap copy"><span>© 20XX Iberia Hunters Club</span><span data-ka lang="ka">ყველა უფლება დაცულია</span><span data-en lang="en">All rights reserved</span></div>
+</footer>
+<script src="assets/app.js?v=2"></script>
+</body></html>
