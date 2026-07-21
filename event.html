@@ -12,7 +12,7 @@
     />
     <link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
     <link rel="apple-touch-icon" href="assets/favicon.png?v=2" />
-    <link rel="stylesheet" href="assets/style.css?v=4" />
+    <link rel="stylesheet" href="assets/style.css?v=9" />
   </head>
   <body>
     <svg class="grain">
@@ -99,34 +99,55 @@
         </div>
         <div class="tag" data-ka lang="ka">ღონისძიება</div>
         <div class="tag" data-en lang="en">Event</div>
-        <h1 data-ka lang="ka">[ღონისძიების<br /><em>სახელი</em>]</h1>
-        <h1 data-en lang="en">[Event<br /><em>name</em>]</h1>
+        <h1 data-ka lang="ka">ევსტათი პლაკიდას <em>დღე</em> 2026</h1>
+        <h1 data-en lang="en">St. Eustathius <em>Day</em> 2026</h1>
       </div>
     </header>
     <section>
       <div class="wrap g-event">
         <div class="reveal">
-          <div class="ph" style="aspect-ratio: 16/9; margin-bottom: 40px">
-            <span data-ka lang="ka">ფოტო — ღონისძიების მთავარი სურათი</span
-            ><span data-en lang="en">Photo — event hero image</span>
+          <div
+            class="thumb"
+            style="
+              aspect-ratio: auto;
+              margin-bottom: 40px;
+              border: 1px solid var(--line-lt);
+            "
+          >
+            <img
+              src="assets/photos/icon-full.jpg"
+              alt="წმ. ევსტათი პლაკიდას ხატი"
+              style="width: 100%; display: block"
+            />
           </div>
-          <h2 data-ka lang="ka">რას მოიცავს ღონისძიება</h2>
-          <h2 data-en lang="en">What the event includes</h2>
+          <h2 data-ka lang="ka">ხსენების დღე</h2>
+          <h2 data-en lang="en">The memorial day</h2>
           <p data-ka lang="ka">
-            [ჩანაცვლებადი ტექსტი] სრული აღწერა — რა ხდება, სად, რამდენ ხანს
-            გრძელდება, ვისთვისაა განკუთვნილი.
+            3 ოქტომბერი არის დიდმოწამე ევსტათი პლაკიდას — მონადირეთა და მეომართა
+            მფარველი წმინდანის — ხსენების დღე, რის აღსანიშნავადაც ტარდება
+            წირვა-ლოცვა საგურამოს ბზიანის მამათა მონასტერში, 10:00 საათზე.
+            წირვას დაესწრებიან სამონადირეო კლუბები და მოწვეული სტუმრები.
           </p>
           <p style="margin-top: 16px" data-ka lang="ka">
-            [ჩანაცვლებადი] მეორე აბზაცი — დღის განრიგი, ტრანსპორტი, განთავსება,
-            კვება.
+            შემდგომ, ამავე მონასტერში, 15:00 საათზე სამონადირეო კლუბების
+            წარმომადგენლები შეიკრიბებიან, გაიცნობენ ერთმანეთს, გაიმართება
+            საუბრები სამონადირეო საკითხებზე და სამომავლო ხედვებზე. ნებისმიერ
+            მსურველს შეუძლია მობრძანდეს და ჩვენთან ერთად მიიღოს მონაწილეობა.
+            ვფიქრობთ, კეთილმეგობრული დამოკიდებულება მონადირეებს შორის
+            მნიშვნელოვანია და მსგავსი კომუნიკაცია ყველასთვის პოზიტიურ შედეგებზე
+            იქნება ორიენტირებული.
           </p>
           <p data-en lang="en">
             [Placeholder copy] Full description — what happens, where, how long
             it runs, who it's for.
           </p>
           <p style="margin-top: 16px" data-en lang="en">
-            [Placeholder] Second paragraph — daily schedule, transport,
-            accommodation, meals.
+            Afterwards, at 15:00 at the same monastery, representatives of the
+            hunting clubs gather to meet one another, with talks on hunting
+            matters and plans for the future. Anyone who wishes is welcome to
+            come and take part with us. We believe friendly relations between
+            hunters matter, and that this kind of communication leads to
+            positive results for everyone.
           </p>
           <div style="margin-top: 40px; border-top: 1px solid var(--line-lt)">
             <div class="spec-row">
@@ -140,8 +161,7 @@
                 data-ka
                 lang="ka"
                 >თარიღი</span
-              >
-              <span
+              ><span
                 style="
                   font-size: 10px;
                   letter-spacing: 0.22em;
@@ -151,9 +171,8 @@
                 data-en
                 lang="en"
                 >Date</span
-              >
-              <span style="color: var(--bone-dim); font-size: 14px"
-                >[XX.XX.20XX]</span
+              ><span style="color: var(--bone-dim); font-size: 14px"
+                >03.10.2026</span
               >
             </div>
             <div class="spec-row">
@@ -167,8 +186,7 @@
                 data-ka
                 lang="ka"
                 >ადგილი</span
-              >
-              <span
+              ><span
                 style="
                   font-size: 10px;
                   letter-spacing: 0.22em;
@@ -178,8 +196,10 @@
                 data-en
                 lang="en"
                 >Location</span
+              ><span style="color: var(--bone-dim); font-size: 14px"
+                >საგურამო — ბზიანის მამათა მონასტერი / Saguramo, Bziani
+                monastery</span
               >
-              <span style="color: var(--bone-dim); font-size: 14px">[—]</span>
             </div>
             <div class="spec-row">
               <span
@@ -191,9 +211,8 @@
                 "
                 data-ka
                 lang="ka"
-                >ხანგრძლივობა</span
-              >
-              <span
+                >წირვა-ლოცვა</span
+              ><span
                 style="
                   font-size: 10px;
                   letter-spacing: 0.22em;
@@ -202,9 +221,10 @@
                 "
                 data-en
                 lang="en"
-                >Duration</span
+                >Liturgy</span
+              ><span style="color: var(--bone-dim); font-size: 14px"
+                >10:00</span
               >
-              <span style="color: var(--bone-dim); font-size: 14px">[—]</span>
             </div>
             <div class="spec-row">
               <span
@@ -216,9 +236,8 @@
                 "
                 data-ka
                 lang="ka"
-                >სახეობები</span
-              >
-              <span
+                >კლუბების შეკრება</span
+              ><span
                 style="
                   font-size: 10px;
                   letter-spacing: 0.22em;
@@ -227,9 +246,10 @@
                 "
                 data-en
                 lang="en"
-                >Species</span
+                >Clubs’ gathering</span
+              ><span style="color: var(--bone-dim); font-size: 14px"
+                >15:00</span
               >
-              <span style="color: var(--bone-dim); font-size: 14px">[—]</span>
             </div>
             <div class="spec-row">
               <span
@@ -241,9 +261,8 @@
                 "
                 data-ka
                 lang="ka"
-                >ადგილების რაოდენობა</span
-              >
-              <span
+                >დასწრება</span
+              ><span
                 style="
                   font-size: 10px;
                   letter-spacing: 0.22em;
@@ -252,45 +271,19 @@
                 "
                 data-en
                 lang="en"
-                >Capacity</span
+                >Attendance</span
+              ><span style="color: var(--bone-dim); font-size: 14px"
+                >თავისუფალია — ყველა მსურველისთვის / Open to everyone</span
               >
-              <span style="color: var(--bone-dim); font-size: 14px">[—]</span>
-            </div>
-            <div class="spec-row">
-              <span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.22em;
-                  text-transform: uppercase;
-                  color: var(--brass);
-                "
-                data-ka
-                lang="ka"
-                >ღირებულება</span
-              >
-              <span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.22em;
-                  text-transform: uppercase;
-                  color: var(--brass);
-                "
-                data-en
-                lang="en"
-                >Cost</span
-              >
-              <span style="color: var(--bone-dim); font-size: 14px">[—]</span>
             </div>
           </div>
-          <h2 style="margin-top: 56px" data-ka lang="ka">
-            რა უნდა თან იქონიოთ
-          </h2>
-          <h2 style="margin-top: 56px" data-en lang="en">What to bring</h2>
+          <h2 style="margin-top: 56px" data-ka lang="ka">ვინ ესწრება</h2>
+          <h2 style="margin-top: 56px" data-en lang="en">Who attends</h2>
           <p data-ka lang="ka">
-            [ჩანაცვლებადი] აღჭურვილობის სია, დოკუმენტები, ლიცენზია.
+            სამონადირეო კლუბები, მოწვეული სტუმრები და ყველა დაინტერესებული პირი.
           </p>
           <p data-en lang="en">
-            [Placeholder] Equipment list, documents, licence requirements.
+            Hunting clubs, invited guests, and anyone who is interested.
           </p>
         </div>
 
@@ -373,6 +366,19 @@
 
               <div class="cond" id="c-club">
                 <div class="field">
+                  <label data-ka lang="ka">კლუბის სახელი</label
+                  ><label data-en lang="en">Club name</label>
+                  <select id="club-select">
+                    <option data-ka lang="ka">აირჩიეთ კლუბი…</option>
+                    <option data-en lang="en">Select your club…</option>
+                  </select>
+                </div>
+                <div class="field" id="club-other" style="display: none">
+                  <label data-ka lang="ka">ჩაწერეთ კლუბის სახელი</label
+                  ><label data-en lang="en">Type your club’s name</label
+                  ><input type="text" />
+                </div>
+                <div class="field">
                   <label data-ka lang="ka">სახელი</label
                   ><label data-en lang="en">First name</label
                   ><input type="text" />
@@ -389,14 +395,6 @@
                 <div class="field">
                   <label data-ka lang="ka">ტელეფონი</label
                   ><label data-en lang="en">Phone</label><input type="tel" />
-                </div>
-                <div class="field">
-                  <label data-ka lang="ka">რომელი კლუბიდან</label
-                  ><label data-en lang="en">Which club</label>
-                  <select id="club-select">
-                    <option data-ka lang="ka">აირჩიეთ კლუბი…</option>
-                    <option data-en lang="en">Select your club…</option>
-                  </select>
                 </div>
               </div>
 
@@ -496,6 +494,6 @@
         ><span data-en lang="en">All rights reserved</span>
       </div>
     </footer>
-    <script src="assets/app.js?v=4"></script>
+    <script src="assets/app.js?v=8"></script>
   </body>
 </html>

@@ -126,6 +126,10 @@ function loadClubs() {
     });
     sel.innerHTML = html;
     setLang(document.documentElement.lang);
+    sel.onchange = function () {
+      var other = document.getElementById("club-other");
+      if (other) other.style.display = sel.value === "other" ? "" : "none";
+    };
   }, 500);
 }
 
@@ -190,5 +194,117 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") closeMem();
+  });
+});
+
+/* ── STORY VIEWER (one photo at a time, arrows to move) ── */
+var _vw = { photos: [], i: 0 };
+function openViewer(el) {
+  var mod = document.getElementById("story-viewer");
+  if (!mod) return;
+  _vw.photos = el.getAttribute("data-photos").split(",");
+  _vw.i = 0;
+  _vw.capKa = [];
+  _vw.capEn = [];
+  document.getElementById("vw-title-ka").textContent =
+    el.getAttribute("data-title-ka");
+  document.getElementById("vw-title-en").textContent =
+    el.getAttribute("data-title-en");
+  document.getElementById("vw-meta").textContent = el.getAttribute("data-meta");
+  document.getElementById("vw-text-ka").textContent =
+    el.getAttribute("data-text-ka");
+  document.getElementById("vw-text-en").textContent =
+    el.getAttribute("data-text-en");
+  viewerShow();
+  mod.classList.add("open");
+  document.body.classList.add("modal-open");
+}
+function viewerShow() {
+  var img = document.getElementById("vw-img");
+  img.src = "assets/photos/" + _vw.photos[_vw.i];
+  if (_vw.capKa && _vw.capKa.length) {
+    document.getElementById("vw-title-ka").textContent = _vw.capKa[_vw.i];
+    document.getElementById("vw-title-en").textContent = _vw.capEn[_vw.i];
+  }
+  document.getElementById("vw-count").textContent =
+    _vw.i + 1 + " / " + _vw.photos.length;
+  var one = _vw.photos.length < 2;
+  document.querySelectorAll(".v-arrow").forEach(function (a) {
+    a.style.display = one ? "none" : "";
+  });
+}
+function viewerNav(d) {
+  _vw.i = (_vw.i + d + _vw.photos.length) % _vw.photos.length;
+  viewerShow();
+}
+function closeViewer() {
+  var mod = document.getElementById("story-viewer");
+  if (mod) mod.classList.remove("open");
+  document.body.classList.remove("modal-open");
+}
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".story-open").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      openViewer(el);
+    });
+    el.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openViewer(el);
+      }
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    var open = document.getElementById("story-viewer");
+    if (!open || !open.classList.contains("open")) return;
+    if (e.key === "ArrowLeft") viewerNav(-1);
+    if (e.key === "ArrowRight") viewerNav(1);
+    if (e.key === "Escape") closeViewer();
+  });
+});
+
+/* ── GALLERY: filters + lightbox ── */
+function galFilter(cat, btn) {
+  document.querySelectorAll(".gal-filters .pill").forEach(function (p) {
+    p.classList.remove("open");
+  });
+  if (btn) btn.classList.add("open");
+  document.querySelectorAll(".gal-item").forEach(function (it) {
+    it.style.display =
+      cat === "all" || it.getAttribute("data-cat") === cat ? "" : "none";
+  });
+}
+function visibleGalItems() {
+  return Array.prototype.filter.call(
+    document.querySelectorAll(".gal-item"),
+    function (it) {
+      return it.style.display !== "none";
+    },
+  );
+}
+document.addEventListener("DOMContentLoaded", function () {
+  var items = document.querySelectorAll(".gal-item");
+  if (!items.length) return;
+  items.forEach(function (it) {
+    it.addEventListener("click", function () {
+      var vis = visibleGalItems();
+      _vw.photos = vis.map(function (v) {
+        return v.getAttribute("data-photo");
+      });
+      _vw.capKa = vis.map(function (v) {
+        return v.getAttribute("data-cap-ka");
+      });
+      _vw.capEn = vis.map(function (v) {
+        return v.getAttribute("data-cap-en");
+      });
+      _vw.i = vis.indexOf(it);
+      document.getElementById("vw-meta").textContent = "";
+      document.getElementById("vw-text-ka").textContent = "";
+      document.getElementById("vw-text-en").textContent = "";
+      viewerShow();
+      document.getElementById("story-viewer").classList.add("open");
+      document.body.classList.add("modal-open");
+    });
   });
 });
