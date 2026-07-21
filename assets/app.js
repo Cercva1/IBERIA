@@ -84,7 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
         requestAnimationFrame(loop);
       })();
       document
-        .querySelectorAll("a,button,input,select,textarea,.card,.ph")
+        .querySelectorAll(
+          "a,button,input,select,textarea,.card,.ph,.mem-link,.modal-x",
+        )
         .forEach(function (el) {
           el.addEventListener("mouseenter", function () {
             ret.classList.add("hot");
@@ -148,3 +150,45 @@ function submitReg() {
   });
   return false;
 }
+
+/* ── MEMBER PROFILE MODAL ── */
+function openMem(card) {
+  var mod = document.getElementById("mem-modal");
+  if (!mod) return;
+  document.getElementById("mm-photo").src = card.getAttribute("data-photo");
+  document.getElementById("mm-photo").alt = card.getAttribute("data-name-en");
+  document.getElementById("mm-name-ka").textContent =
+    card.getAttribute("data-name-ka");
+  document.getElementById("mm-name-en").textContent =
+    card.getAttribute("data-name-en");
+  var mail = card.getAttribute("data-mail"),
+    fb = card.getAttribute("data-fb");
+  document.getElementById("mm-mail").href = "mailto:" + mail;
+  document.getElementById("mm-mail-note").textContent = mail;
+  var fbBtn = document.getElementById("mm-fb");
+  fbBtn.href = fb;
+  fbBtn.style.display = fb && fb !== "#" ? "" : "none";
+  mod.classList.add("open");
+  document.body.classList.add("modal-open");
+}
+function closeMem() {
+  var mod = document.getElementById("mem-modal");
+  if (mod) mod.classList.remove("open");
+  document.body.classList.remove("modal-open");
+}
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".mem-link").forEach(function (card) {
+    card.addEventListener("click", function () {
+      openMem(card);
+    });
+    card.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openMem(card);
+      }
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMem();
+  });
+});
