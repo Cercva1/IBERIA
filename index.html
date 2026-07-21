@@ -1,666 +1,232 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ka">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>მთავარი · IBERIA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
-    <link rel="apple-touch-icon" href="assets/favicon.png?v=2" />
-    <link rel="stylesheet" href="assets/style.css?v=12" />
-  </head>
-  <body>
-    <svg class="grain">
-      <filter id="g">
-        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#g)" />
-    </svg>
-    <svg id="reticle" viewBox="0 0 46 46" fill="none">
-      <circle
-        cx="23"
-        cy="23"
-        r="16"
-        stroke="#b8913c"
-        stroke-width="1"
-        opacity=".85"
-      />
-      <circle cx="23" cy="23" r="1.5" fill="#b8913c" />
-      <path
-        d="M23 0v13M23 33v13M0 23h13M33 23h13"
-        stroke="#b8913c"
-        stroke-width="1"
-        opacity=".85"
-      />
-    </svg>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="მონადირეთა კლუბი „იბერია" — ნადირობა საქართველოსა და ევროპაში: ლიტვა, ბელორუსია, პოლონეთი. ექსპედიციები, ღონისძიებები, წევრობა. Georgian hunters’ club Iberia.">
+<link rel="canonical" href="https://iberia.org.ge/">
+<meta property="og:title" content="მონადირეთა კლუბი „იბერია" — IBERIA Hunters’ Club">
+<meta property="og:description" content="მონადირეთა კლუბი „იბერია" — ნადირობა საქართველოსა და ევროპაში: ლიტვა, ბელორუსია, პოლონეთი. ექსპედიციები, ღონისძიებები, წევრობა. Georgian hunters’ club Iberia.">
+<meta property="og:url" content="https://iberia.org.ge/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://iberia.org.ge/assets/logo-bone.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>მონადირეთა კლუბი „იბერია" — IBERIA Hunters’ Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png?v=2">
+<link rel="apple-touch-icon" href="assets/favicon.png?v=2">
+<link rel="stylesheet" href="assets/style.css?v=12">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsClub",
+  "name": "მონადირეთა კლუბი იბერია — IBERIA Hunters' Club",
+  "alternateName": "Iberia Hunters Club",
+  "url": "https://iberia.org.ge",
+  "logo": "https://iberia.org.ge/assets/logo-bone.png",
+  "sport": "Hunting",
+  "areaServed": "Georgia",
+  "sameAs": ["https://www.facebook.com/"]
+}
+</script>
+</head>
+<body>
+<svg class="grain"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+<svg id="reticle" viewBox="0 0 46 46" fill="none">
+<circle cx="23" cy="23" r="16" stroke="#b8913c" stroke-width="1" opacity=".85"/>
+<circle cx="23" cy="23" r="1.5" fill="#b8913c"/>
+<path d="M23 0v13M23 33v13M0 23h13M33 23h13" stroke="#b8913c" stroke-width="1" opacity=".85"/></svg>
 
-    <div id="loader">
-      <div style="text-align: center">
-        <img
-          class="logo-load"
-          src="assets/logo-bone.png"
-          alt="Iberia — Hunters' Club"
-        />
-        <div class="bar"><i></i></div>
-      </div>
-    </div>
+<div id="loader">
+<div style="text-align:center">
+<img class="logo-load" src="assets/logo-bone.png" alt="Iberia — Hunters' Club">
+<div class="bar"><i></i></div>
+</div></div>
 
-    <nav id="nav">
-      <a class="logo" href="index.html"
-        ><img
-          class="crest-img"
-          src="assets/logo-bone.png"
-          alt="Iberia — Hunters' Club"
-      /></a>
-      <ul class="links" id="links">
-        <li>
-          <a href="index.html" data-ka lang="ka">მთავარი</a
-          ><a href="index.html" data-en lang="en">Home</a>
-        </li>
-        <li>
-          <a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a
-          ><a href="about.html" data-en lang="en">About</a>
-        </li>
-        <li>
-          <a href="members.html" data-ka lang="ka">წევრები</a
-          ><a href="members.html" data-en lang="en">Members</a>
-        </li>
-        <li>
-          <a href="expeditions.html" data-ka lang="ka">ნადირობები</a
-          ><a href="expeditions.html" data-en lang="en">Expeditions</a>
-        </li>
-        <li>
-          <a href="events.html" data-ka lang="ka">ღონისძიებები</a
-          ><a href="events.html" data-en lang="en">Events</a>
-        </li>
-        <li>
-          <a href="gallery.html" data-ka lang="ka">გალერეა</a
-          ><a href="gallery.html" data-en lang="en">Gallery</a>
-        </li>
-        <li>
-          <a href="news.html" data-ka lang="ka">სიახლეები</a
-          ><a href="news.html" data-en lang="en">News</a>
-        </li>
-        <li>
-          <a href="contact.html" data-ka lang="ka">კონტაქტი</a
-          ><a href="contact.html" data-en lang="en">Contact</a>
-        </li>
-      </ul>
-      <div class="nav-right">
-        <div class="lang">
-          <button id="b-ka" class="on" onclick="setLang('ka')">ქარ</button
-          ><button id="b-en" onclick="setLang('en')">ENG</button>
-        </div>
-        <button class="burger" id="burger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-    <section
-      id="hero"
-      style="height: 100vh; min-height: 640px; padding: 0; overflow: hidden"
-    >
-      <div style="position: absolute; inset: 0">
-        <svg
-          viewBox="0 0 1600 900"
-          preserveAspectRatio="xMidYMax slice"
-          style="
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1600px;
-            max-width: none;
-            height: 100%;
-          "
-        >
-          <defs>
-            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#0b110c" />
-              <stop offset="55%" stop-color="#16241a" />
-              <stop offset="100%" stop-color="#22331f" />
-            </linearGradient>
-            <linearGradient id="fogg" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#1d2f21" stop-opacity="0" />
-              <stop offset="55%" stop-color="#1d2f21" stop-opacity=".18" />
-              <stop offset="100%" stop-color="#1d2f21" stop-opacity=".34" />
-            </linearGradient>
-          </defs>
-          <rect width="1600" height="900" fill="url(#sky)" />
-          <circle cx="1180" cy="200" r="80" fill="#1e2d1e" opacity=".9" />
-          <g
-            id="birds"
-            stroke="#3c4a36"
-            stroke-width="2"
-            fill="none"
-            stroke-linecap="round"
-          >
-            <path d="M300 180q10-9 20 0q10-9 20 0" />
-            <path d="M360 210q8-7 16 0q8-7 16 0" />
-            <path d="M420 165q9-8 18 0q9-8 18 0" />
-            <path d="M480 200q7-6 14 0q7-6 14 0" />
-          </g>
-          <path
-            id="r3"
-            d="M0 560 L200 460 L340 520 L520 400 L700 500 L900 420 L1100 520 L1300 440 L1600 540 L1600 900 L0 900Z"
-            fill="#16241a"
-          />
-          <path
-            id="r2"
-            d="M0 660 L240 580 L430 640 L640 540 L860 630 L1080 560 L1320 650 L1600 590 L1600 900 L0 900Z"
-            fill="#111d14"
-          />
-          <g id="stag" opacity=".95">
-            <g
-              fill="#0b110c"
-              stroke="#b8913c"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M722 610 C744 594 786 588 834 590 C858 592 870 584 882 562
+<nav id="nav">
+<a class="logo" href="index.html"><img class="crest-img" src="assets/logo-bone.png" alt="Iberia — Hunters' Club"></a>
+<ul class="links" id="links">
+<li><a href="index.html" data-ka lang="ka">მთავარი</a><a href="index.html" data-en lang="en">Home</a></li>
+<li><a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a><a href="about.html" data-en lang="en">About</a></li>
+<li><a href="members.html" data-ka lang="ka">წევრები</a><a href="members.html" data-en lang="en">Members</a></li>
+<li><a href="expeditions.html" data-ka lang="ka">ნადირობები</a><a href="expeditions.html" data-en lang="en">Expeditions</a></li>
+<li><a href="events.html" data-ka lang="ka">ღონისძიებები</a><a href="events.html" data-en lang="en">Events</a></li>
+<li><a href="gallery.html" data-ka lang="ka">გალერეა</a><a href="gallery.html" data-en lang="en">Gallery</a></li>
+<li><a href="news.html" data-ka lang="ka">სიახლეები</a><a href="news.html" data-en lang="en">News</a></li>
+<li><a href="contact.html" data-ka lang="ka">კონტაქტი</a><a href="contact.html" data-en lang="en">Contact</a></li>
+</ul>
+<div class="nav-right">
+<div class="lang"><button id="b-ka" class="on" onclick="setLang('ka')">ქარ</button><button id="b-en" onclick="setLang('en')">ENG</button></div>
+<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</nav>
+<section id="hero" style="height:100vh;min-height:640px;padding:0;overflow:hidden">
+<div style="position:absolute;inset:0">
+<svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:1600px;max-width:none;height:100%">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#0b110c"/><stop offset="55%" stop-color="#16241a"/><stop offset="100%" stop-color="#22331f"/></linearGradient>
+<linearGradient id="fogg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#1d2f21" stop-opacity="0"/>
+<stop offset="55%" stop-color="#1d2f21" stop-opacity=".18"/>
+<stop offset="100%" stop-color="#1d2f21" stop-opacity=".34"/></linearGradient></defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<circle cx="1180" cy="200" r="80" fill="#1e2d1e" opacity=".9"/>
+<g id="birds" stroke="#3c4a36" stroke-width="2" fill="none" stroke-linecap="round">
+<path d="M300 180q10-9 20 0q10-9 20 0"/><path d="M360 210q8-7 16 0q8-7 16 0"/>
+<path d="M420 165q9-8 18 0q9-8 18 0"/><path d="M480 200q7-6 14 0q7-6 14 0"/></g>
+<path id="r3" d="M0 560 L200 460 L340 520 L520 400 L700 500 L900 420 L1100 520 L1300 440 L1600 540 L1600 900 L0 900Z" fill="#16241a"/>
+<path id="r2" d="M0 660 L240 580 L430 640 L640 540 L860 630 L1080 560 L1320 650 L1600 590 L1600 900 L0 900Z" fill="#111d14"/>
+<g id="stag" opacity=".95">
+<g fill="#0b110c" stroke="#b8913c" stroke-width="1.5" stroke-linejoin="round">
+<path d="M722 610 C744 594 786 588 834 590 C858 592 870 584 882 562
 C894 540 908 526 924 518 C942 510 964 510 978 518 C985 522 985 531 978 535
 C964 541 944 543 930 540 C920 551 910 568 902 588 C894 608 888 626 886 646
-C884 660 872 666 848 668 C806 672 758 670 736 662 C722 656 716 634 722 610 Z"
-              />
-              <path
-                d="M862 660 C858 692 858 726 860 756 L868 756 C870 726 872 692 870 660 Z"
-              />
-              <path
-                d="M879 656 C875 690 875 722 877 754 L885 754 C887 722 889 690 887 656 Z"
-              />
-              <path
-                d="M752 662 C754 686 746 700 742 716 C738 732 744 746 748 756 L757 756 C753 744 748 732 751 718 C755 702 764 686 762 664 Z"
-              />
-              <path
-                d="M772 662 C774 686 766 700 762 716 C758 732 764 746 768 756 L777 756 C773 744 768 732 771 718 C775 702 784 686 782 664 Z"
-              />
-              <path
-                d="M722 616 C712 626 708 640 712 652 C718 646 722 634 724 622 Z"
-              />
-            </g>
-            <g
-              stroke="#b8913c"
-              stroke-width="1.5"
-              fill="none"
-              stroke-linecap="round"
-            >
-              <path d="M930 518 C918 492 906 462 902 432" />
-              <path d="M932 506 C942 494 948 480 947 466" />
-              <path d="M920 482 C932 470 938 456 937 442" />
-              <path d="M909 454 C920 444 926 430 925 416" />
-              <path d="M902 432 C897 418 899 404 907 395" />
-              <path d="M902 432 C910 421 920 414 930 412" />
-              <path d="M944 514 C934 488 924 458 921 430" />
-              <path d="M946 502 C956 490 962 477 961 463" />
-              <path d="M934 478 C946 466 952 452 951 438" />
-              <path d="M924 450 C935 440 941 426 940 412" />
-              <path d="M921 430 C916 416 918 402 926 393" />
-            </g>
-          </g>
-          <path
-            id="r1"
-            d="M0 780 L260 730 L520 780 L780 720 L1040 790 L1300 730 L1600 780 L1600 900 L0 900Z"
-            fill="#0b110c"
-          />
-          <rect
-            id="fog"
-            x="0"
-            y="500"
-            width="1600"
-            height="400"
-            fill="url(#fogg)"
-          />
-        </svg>
-      </div>
-      <div
-        style="
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 220px;
-          background: linear-gradient(transparent, #0b110c);
-          z-index: 10;
-          pointer-events: none;
-        "
-      ></div>
-      <div class="hero-copy">
-        <img
-          class="hero-crest"
-          src="assets/logo-bone.png"
-          alt="იბერია — მონადირეთა კლუბი"
-        />
-        <div class="eyebrow" data-ka lang="ka">დაარსდა 19XX · საქართველო</div>
-        <div class="eyebrow" data-en lang="en">Est. 19XX · Georgia</div>
-        <h1 data-ka lang="ka">ტრადიცია,<br /><em>რომელსაც</em> ვატარებთ</h1>
-        <h1 data-en lang="en">A tradition<br />we <em>carry</em></h1>
-      </div>
-      <div class="scroll-hint">
-        <span data-ka lang="ka">გადაახვიეთ</span
-        ><span data-en lang="en">Scroll</span>
-      </div>
-    </section>
+C884 660 872 666 848 668 C806 672 758 670 736 662 C722 656 716 634 722 610 Z"/>
+<path d="M862 660 C858 692 858 726 860 756 L868 756 C870 726 872 692 870 660 Z"/>
+<path d="M879 656 C875 690 875 722 877 754 L885 754 C887 722 889 690 887 656 Z"/>
+<path d="M752 662 C754 686 746 700 742 716 C738 732 744 746 748 756 L757 756 C753 744 748 732 751 718 C755 702 764 686 762 664 Z"/>
+<path d="M772 662 C774 686 766 700 762 716 C758 732 764 746 768 756 L777 756 C773 744 768 732 771 718 C775 702 784 686 782 664 Z"/>
+<path d="M722 616 C712 626 708 640 712 652 C718 646 722 634 724 622 Z"/>
+</g>
+<g stroke="#b8913c" stroke-width="1.5" fill="none" stroke-linecap="round">
+<path d="M930 518 C918 492 906 462 902 432"/>
+<path d="M932 506 C942 494 948 480 947 466"/>
+<path d="M920 482 C932 470 938 456 937 442"/>
+<path d="M909 454 C920 444 926 430 925 416"/>
+<path d="M902 432 C897 418 899 404 907 395"/>
+<path d="M902 432 C910 421 920 414 930 412"/>
+<path d="M944 514 C934 488 924 458 921 430"/>
+<path d="M946 502 C956 490 962 477 961 463"/>
+<path d="M934 478 C946 466 952 452 951 438"/>
+<path d="M924 450 C935 440 941 426 940 412"/>
+<path d="M921 430 C916 416 918 402 926 393"/>
+</g></g>
+<path id="r1" d="M0 780 L260 730 L520 780 L780 720 L1040 790 L1300 730 L1600 780 L1600 900 L0 900Z" fill="#0b110c"/>
+<rect id="fog" x="0" y="500" width="1600" height="400" fill="url(#fogg)"/>
+</svg></div>
+<div style="position:absolute;bottom:0;left:0;right:0;height:220px;background:linear-gradient(transparent,#0b110c);z-index:10;pointer-events:none"></div>
+<div class="hero-copy">
+<img class="hero-crest" src="assets/logo-bone.png" alt="იბერია — მონადირეთა კლუბი">
+<div class="eyebrow" data-ka lang="ka">დაარსდა 19XX · საქართველო</div>
+<div class="eyebrow" data-en lang="en">Est. 19XX · Georgia</div>
+<h1 data-ka lang="ka">ტრადიცია,<br><em>რომელსაც</em> ვატარებთ</h1>
+<h1 data-en lang="en">A tradition<br>we <em>carry</em></h1>
+</div>
+<div class="scroll-hint"><span data-ka lang="ka">გადაახვიეთ</span><span data-en lang="en">Scroll</span></div>
+</section>
 
-    <section class="alt">
-      <div class="wrap reveal g2 v-center">
-        <div>
-          <div class="tag" data-ka lang="ka">ჩვენ შესახებ</div>
-          <div class="tag" data-en lang="en">About</div>
-          <h2 data-ka lang="ka">კლუბი, რომელიც<br />თაობებმა ააშენეს</h2>
-          <h2 data-en lang="en">A club built<br />by generations</h2>
-          <p data-ka lang="ka">
-            [ჩანაცვლებადი] მოკლე შესავალი კლუბის ისტორიაზე. სრული ტექსტი — „ჩვენ
-            შესახებ" გვერდზე.
-          </p>
-          <p data-en lang="en">
-            [Placeholder] Short intro to the club's story. Full text lives on
-            the About page.
-          </p>
-          <div class="stat-row">
-            <div>
-              <b
-                style="
-                  display: block;
-                  font-family: var(--display);
-                  font-size: 38px;
-                  font-weight: 300;
-                  color: var(--brass-lt);
-                  line-height: 1;
-                "
-                >19XX</b
-              ><span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.24em;
-                  text-transform: uppercase;
-                  color: var(--bone-dim);
-                "
-                data-ka
-                lang="ka"
-                >დაარსდა</span
-              ><span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.24em;
-                  text-transform: uppercase;
-                  color: var(--bone-dim);
-                "
-                data-en
-                lang="en"
-                >Founded</span
-              >
-            </div>
-            <div>
-              <b
-                style="
-                  display: block;
-                  font-family: var(--display);
-                  font-size: 38px;
-                  font-weight: 300;
-                  color: var(--brass-lt);
-                  line-height: 1;
-                "
-                >XXX</b
-              ><span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.24em;
-                  text-transform: uppercase;
-                  color: var(--bone-dim);
-                "
-                data-ka
-                lang="ka"
-                >წევრი</span
-              ><span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.24em;
-                  text-transform: uppercase;
-                  color: var(--bone-dim);
-                "
-                data-en
-                lang="en"
-                >Members</span
-              >
-            </div>
-            <div>
-              <b
-                style="
-                  display: block;
-                  font-family: var(--display);
-                  font-size: 38px;
-                  font-weight: 300;
-                  color: var(--brass-lt);
-                  line-height: 1;
-                "
-                >XX</b
-              ><span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.24em;
-                  text-transform: uppercase;
-                  color: var(--bone-dim);
-                "
-                data-ka
-                lang="ka"
-                >ქვეყანა</span
-              ><span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.24em;
-                  text-transform: uppercase;
-                  color: var(--bone-dim);
-                "
-                data-en
-                lang="en"
-                >Countries</span
-              >
-            </div>
-          </div>
-          <div style="margin-top: 38px">
-            <a class="btn ghost" href="about.html" data-ka lang="ka">ისტორია</a
-            ><a class="btn ghost" href="about.html" data-en lang="en"
-              >Read the history</a
-            >
-          </div>
-        </div>
-        <div class="ph" style="aspect-ratio: 4/5">
-          <span data-ka lang="ka">ფოტო — არქივი</span
-          ><span data-en lang="en">Photo — archive</span>
-        </div>
-      </div>
-    </section>
+<section class="alt"><div class="wrap reveal g2 v-center">
+<div>
+<div class="tag" data-ka lang="ka">ჩვენ შესახებ</div><div class="tag" data-en lang="en">About</div>
+<h2 data-ka lang="ka">კლუბი, რომელიც<br>თაობებმა ააშენეს</h2><h2 data-en lang="en">A club built<br>by generations</h2>
+<p data-ka lang="ka">[ჩანაცვლებადი] მოკლე შესავალი კლუბის ისტორიაზე. სრული ტექსტი — „ჩვენ შესახებ" გვერდზე.</p>
+<p data-en lang="en">[Placeholder] Short intro to the club's story. Full text lives on the About page.</p>
+<div class="stat-row">
+<div><b style="display:block;font-family:var(--display);font-size:38px;font-weight:300;color:var(--brass-lt);line-height:1">19XX</b><span style="font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--bone-dim)" data-ka lang="ka">დაარსდა</span><span style="font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--bone-dim)" data-en lang="en">Founded</span></div>
+<div><b style="display:block;font-family:var(--display);font-size:38px;font-weight:300;color:var(--brass-lt);line-height:1">XXX</b><span style="font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--bone-dim)" data-ka lang="ka">წევრი</span><span style="font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--bone-dim)" data-en lang="en">Members</span></div>
+<div><b style="display:block;font-family:var(--display);font-size:38px;font-weight:300;color:var(--brass-lt);line-height:1">XX</b><span style="font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--bone-dim)" data-ka lang="ka">ქვეყანა</span><span style="font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--bone-dim)" data-en lang="en">Countries</span></div>
+</div>
+<div style="margin-top:38px"><a class="btn ghost" href="about.html" data-ka lang="ka">ისტორია</a><a class="btn ghost" href="about.html" data-en lang="en">Read the history</a></div>
+</div>
+<div class="ph" style="aspect-ratio:4/5"><span data-ka lang="ka">ფოტო — არქივი</span><span data-en lang="en">Photo — archive</span></div>
+</div></section>
 
-    <section>
-      <div class="wrap">
-        <div class="reveal">
-          <div class="tag" data-ka lang="ka">მომავალი ღონისძიებები</div>
-          <div class="tag" data-en lang="en">Upcoming events</div>
-          <h2 data-ka lang="ka">შემდეგი გასვლები</h2>
-          <h2 data-en lang="en">What's next</h2>
-        </div>
-        <div class="evt-grid reveal">
-          <a class="card" href="event.html">
-            <div class="thumb">
-              <img
-                src="assets/photos/icon-full.jpg"
-                alt="St. Eustathius Day 2026"
-                loading="lazy"
-                style="object-position: top"
-              />
-            </div>
-            <div class="body">
-              <div class="date">03.10.2026</div>
-              <h3 data-ka lang="ka">ევსტათი პლაკიდას დღე 2026</h3>
-              <h3 data-en lang="en">St. Eustathius Day 2026</h3>
-              <p data-ka lang="ka">ყოველწლიური შეკრება ბზიანის მონასტერთან.</p>
-              <p data-en lang="en">The annual gathering at Bziani monastery.</p>
-              <div class="foot">
-                <span class="pill open" data-ka lang="ka">რეგისტრაცია ღიაა</span
-                ><span class="pill open" data-en lang="en"
-                  >Registration open</span
-                >
-                <span class="go" data-ka lang="ka">რეგისტრაცია →</span
-                ><span class="go" data-en lang="en">Register →</span>
-              </div>
-            </div></a
-          >
-          <a class="card" href="news.html">
-            <div class="thumb">
-              <img
-                src="assets/photos/by-d1.jpg"
-                alt="Belarus — wild goose"
-                loading="lazy"
-              />
-            </div>
-            <div class="body">
-              <div class="date">09.07.2026</div>
-              <h3 data-ka lang="ka">ბელორუსია — გარეული ბატი</h3>
-              <h3 data-en lang="en">Belarus — wild goose</h3>
-              <p data-ka lang="ka">მონადირე: დავით ცერცვაძე.</p>
-              <p data-en lang="en">Hunter: David Tsertsvadze.</p>
-              <div class="foot">
-                <span class="pill" data-ka lang="ka">სიახლე</span
-                ><span class="pill" data-en lang="en">News</span>
-                <span class="go" data-ka lang="ka">ნახვა →</span
-                ><span class="go" data-en lang="en">View →</span>
-              </div>
-            </div></a
-          >
-          <a class="card" href="news.html">
-            <div class="thumb">
-              <img
-                src="assets/photos/dm-3.jpg"
-                alt="Belarus — roebuck"
-                loading="lazy"
-              />
-            </div>
-            <div class="body">
-              <div class="date">08.07.2026</div>
-              <h3 data-ka lang="ka">ბელორუსია — მამალი შველი</h3>
-              <h3 data-en lang="en">Belarus — roebuck</h3>
-              <p data-ka lang="ka">მონადირე: დიმიტრი გოგოხია.</p>
-              <p data-en lang="en">Hunter: Dimitri Gogokhia.</p>
-              <div class="foot">
-                <span class="pill" data-ka lang="ka">სიახლე</span
-                ><span class="pill" data-en lang="en">News</span>
-                <span class="go" data-ka lang="ka">ნახვა →</span
-                ><span class="go" data-en lang="en">View →</span>
-              </div>
-            </div></a
-          >
-        </div>
-        <div class="reveal" style="margin-top: 44px; text-align: center">
-          <a class="btn ghost" href="events.html" data-ka lang="ka"
-            >ყველა ღონისძიება</a
-          ><a class="btn ghost" href="events.html" data-en lang="en"
-            >All events</a
-          >
-        </div>
-      </div>
-    </section>
+<section><div class="wrap">
+<div class="reveal"><div class="tag" data-ka lang="ka">მომავალი ღონისძიებები</div><div class="tag" data-en lang="en">Upcoming events</div>
+<h2 data-ka lang="ka">შემდეგი გასვლები</h2><h2 data-en lang="en">What's next</h2></div>
+<div class="evt-grid reveal">
+<a class="card" href="event.html">
+<div class="thumb"><img src="assets/photos/icon-full.jpg" alt="St. Eustathius Day 2026" loading="lazy" style="object-position:top"></div>
+<div class="body"><div class="date">03.10.2026</div>
+<h3 data-ka lang="ka">ევსტათი პლაკიდას დღე 2026</h3><h3 data-en lang="en">St. Eustathius Day 2026</h3>
+<p data-ka lang="ka">ყოველწლიური შეკრება ბზიანის მონასტერთან.</p><p data-en lang="en">The annual gathering at Bziani monastery.</p>
+<div class="foot"><span class="pill open" data-ka lang="ka">რეგისტრაცია ღიაა</span><span class="pill open" data-en lang="en">Registration open</span>
+<span class="go" data-ka lang="ka">რეგისტრაცია →</span><span class="go" data-en lang="en">Register →</span></div></div></a>
+<a class="card" href="news.html">
+<div class="thumb"><img src="assets/photos/by-d1.jpg" alt="Belarus — wild goose" loading="lazy"></div>
+<div class="body"><div class="date">09.07.2026</div>
+<h3 data-ka lang="ka">ბელორუსია — გარეული ბატი</h3><h3 data-en lang="en">Belarus — wild goose</h3>
+<p data-ka lang="ka">მონადირე: დავით ცერცვაძე.</p><p data-en lang="en">Hunter: David Tsertsvadze.</p>
+<div class="foot"><span class="pill" data-ka lang="ka">სიახლე</span><span class="pill" data-en lang="en">News</span>
+<span class="go" data-ka lang="ka">ნახვა →</span><span class="go" data-en lang="en">View →</span></div></div></a>
+<a class="card" href="news.html">
+<div class="thumb"><img src="assets/photos/dm-3.jpg" alt="Belarus — roebuck" loading="lazy"></div>
+<div class="body"><div class="date">08.07.2026</div>
+<h3 data-ka lang="ka">ბელორუსია — მამალი შველი</h3><h3 data-en lang="en">Belarus — roebuck</h3>
+<p data-ka lang="ka">მონადირე: დიმიტრი გოგოხია.</p><p data-en lang="en">Hunter: Dimitri Gogokhia.</p>
+<div class="foot"><span class="pill" data-ka lang="ka">სიახლე</span><span class="pill" data-en lang="en">News</span>
+<span class="go" data-ka lang="ka">ნახვა →</span><span class="go" data-en lang="en">View →</span></div></div></a>
+</div>
+<div class="reveal" style="margin-top:44px;text-align:center">
+<a class="btn ghost" href="events.html" data-ka lang="ka">ყველა ღონისძიება</a><a class="btn ghost" href="events.html" data-en lang="en">All events</a></div>
+</div></section>
 
-    <section class="alt">
-      <div class="wrap reveal">
-        <div class="tag" data-ka lang="ka">ექსპედიციები</div>
-        <div class="tag" data-en lang="en">Expeditions</div>
-        <h2 data-ka lang="ka">ვნადირობთ საზღვრებს გარეთ</h2>
-        <h2 data-en lang="en">We hunt beyond the border</h2>
-        <p data-ka lang="ka">
-          [ჩანაცვლებადი] ლიტვა, ბელარუსი, პოლონეთი და სხვა — კლუბის საერთაშორისო
-          პროგრამა.
-        </p>
-        <p data-en lang="en">
-          [Placeholder] Lithuania, Belarus, Poland and beyond — the club's
-          international programme.
-        </p>
-        <div class="g3 hair">
-          <div style="background: var(--forest); padding: 34px 28px">
-            <div
-              style="
-                font-family: var(--display);
-                font-size: 11px;
-                color: var(--brass);
-                letter-spacing: 0.2em;
-              "
-            >
-              01
-            </div>
-            <h3 style="margin: 14px 0 6px">Lietuva</h3>
-            <p style="font-size: 13px" data-ka lang="ka">ხოხობი · გნოლი</p>
-            <p style="font-size: 13px" data-en lang="en">
-              Pheasant · Partridge
-            </p>
-          </div>
-          <div style="background: var(--forest); padding: 34px 28px">
-            <div
-              style="
-                font-family: var(--display);
-                font-size: 11px;
-                color: var(--brass);
-                letter-spacing: 0.2em;
-              "
-            >
-              02
-            </div>
-            <h3 style="margin: 14px 0 6px">Беларусь</h3>
-            <p style="font-size: 13px" data-ka lang="ka">
-              შველი · გარეული ბატი
-            </p>
-            <p style="font-size: 13px" data-en lang="en">
-              Roebuck · Wild goose
-            </p>
-          </div>
-          <div style="background: var(--forest); padding: 34px 28px">
-            <div
-              style="
-                font-family: var(--display);
-                font-size: 11px;
-                color: var(--brass);
-                letter-spacing: 0.2em;
-              "
-            >
-              03
-            </div>
-            <h3 style="margin: 14px 0 6px">Polska</h3>
-            <p style="font-size: 13px" data-ka lang="ka">მალე</p>
-            <p style="font-size: 13px" data-en lang="en">Coming soon</p>
-          </div>
-        </div>
-        <div style="margin-top: 38px">
-          <a class="btn ghost" href="expeditions.html" data-ka lang="ka"
-            >ყველა მიმართულება</a
-          ><a class="btn ghost" href="expeditions.html" data-en lang="en"
-            >All destinations</a
-          >
-        </div>
-      </div>
-    </section>
+<section class="alt"><div class="wrap reveal">
+<div class="tag" data-ka lang="ka">ექსპედიციები</div><div class="tag" data-en lang="en">Expeditions</div>
+<h2 data-ka lang="ka">ვნადირობთ საზღვრებს გარეთ</h2><h2 data-en lang="en">We hunt beyond the border</h2>
+<p data-ka lang="ka">[ჩანაცვლებადი] ლიტვა, ბელარუსი, პოლონეთი და სხვა — კლუბის საერთაშორისო პროგრამა.</p>
+<p data-en lang="en">[Placeholder] Lithuania, Belarus, Poland and beyond — the club's international programme.</p>
+<div class="g3 hair">
+<div style="background:var(--forest);padding:34px 28px"><div style="font-family:var(--display);font-size:11px;color:var(--brass);letter-spacing:.2em">01</div><h3 style="margin:14px 0 6px">Lietuva</h3><p style="font-size:13px" data-ka lang="ka">ხოხობი · გნოლი</p><p style="font-size:13px" data-en lang="en">Pheasant · Partridge</p></div>
+<div style="background:var(--forest);padding:34px 28px"><div style="font-family:var(--display);font-size:11px;color:var(--brass);letter-spacing:.2em">02</div><h3 style="margin:14px 0 6px">Беларусь</h3><p style="font-size:13px" data-ka lang="ka">შველი · გარეული ბატი</p><p style="font-size:13px" data-en lang="en">Roebuck · Wild goose</p></div>
+<div style="background:var(--forest);padding:34px 28px"><div style="font-family:var(--display);font-size:11px;color:var(--brass);letter-spacing:.2em">03</div><h3 style="margin:14px 0 6px">Polska</h3><p style="font-size:13px" data-ka lang="ka">მალე</p><p style="font-size:13px" data-en lang="en">Coming soon</p></div>
+</div>
+<div style="margin-top:38px"><a class="btn ghost" href="expeditions.html" data-ka lang="ka">ყველა მიმართულება</a><a class="btn ghost" href="expeditions.html" data-en lang="en">All destinations</a></div>
+</div></section>
 
-    <script>
-      /* The hero copy is hidden until .ready lands, so this must run no matter
+<script>
+/* The hero copy is hidden until .ready lands, so this must run no matter
    what. A stalled image or a failed 'load' event would otherwise leave the
    loader up forever and the hero text permanently invisible. */
-      (function () {
-        var done = false;
-        function reveal() {
-          if (done) return;
-          done = true;
-          var l = document.getElementById("loader");
-          if (l) l.classList.add("gone");
-          /* Hero reveal starts mid-dissolve, so the crest carries across. */
-          setTimeout(function () {
-            document.body.classList.add("ready");
-          }, 300);
-        }
-        window.addEventListener("load", function () {
-          setTimeout(reveal, 1600);
-        });
-        setTimeout(reveal, 4000); // hard failsafe
-      })();
-      (function () {
-        var stag = document.getElementById("stag"),
-          fog = document.getElementById("fog"),
-          r1 = document.getElementById("r1"),
-          r2 = document.getElementById("r2"),
-          r3 = document.getElementById("r3"),
-          birds = document.getElementById("birds"),
-          ticking = false;
-        function onScroll() {
-          var p = Math.min(window.scrollY / 700, 1);
-          if (stag) {
-            stag.setAttribute(
-              "transform",
-              "translate(" +
-                -p * 260 +
-                " " +
-                p * 40 +
-                ") scale(" +
-                (1 + p * 0.28) +
-                ") translate(" +
-                p * 160 +
-                " " +
-                -p * 90 +
-                ")",
-            );
-            stag.style.opacity = (0.95 - p * 0.75).toFixed(2);
-          }
-          if (fog)
-            fog.setAttribute("transform", "translate(0 " + -p * 70 + ")");
-          if (r1) r1.setAttribute("transform", "translate(0 " + p * 90 + ")");
-          if (r2) r2.setAttribute("transform", "translate(0 " + p * 40 + ")");
-          if (r3) r3.setAttribute("transform", "translate(0 " + -p * 30 + ")");
-          if (birds)
-            birds.setAttribute(
-              "transform",
-              "translate(" + p * 420 + " " + -p * 70 + ")",
-            );
-          ticking = false;
-        }
-        window.addEventListener(
-          "scroll",
-          function () {
-            if (!ticking) {
-              requestAnimationFrame(onScroll);
-              ticking = true;
-            }
-          },
-          { passive: true },
-        );
-      })();
-    </script>
-    <footer>
-      <div class="wrap foot">
-        <div>
-          <a class="logo-full" href="index.html"
-            ><img src="assets/logo-bone.png" alt="Iberia — Hunters' Club"
-          /></a>
-          <p style="font-size: 13px" data-ka lang="ka">
-            [ჩანაცვლებადი] კლუბის მოკლე აღწერა, მისამართი და სამუშაო საათები.
-          </p>
-          <p style="font-size: 13px" data-en lang="en">
-            [Placeholder] Short club description, address and opening hours.
-          </p>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">კლუბი</h4>
-          <h4 data-en lang="en">Club</h4>
-          <a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a
-          ><a href="about.html" data-en lang="en">About</a>
-          <a href="expeditions.html" data-ka lang="ka">ნადირობები</a
-          ><a href="expeditions.html" data-en lang="en">Expeditions</a>
-          <a href="gallery.html" data-ka lang="ka">გალერეა</a
-          ><a href="gallery.html" data-en lang="en">Gallery</a>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">ღონისძიებები</h4>
-          <h4 data-en lang="en">Events</h4>
-          <a href="events.html" data-ka lang="ka">ყველა ღონისძიება</a
-          ><a href="events.html" data-en lang="en">All events</a>
-          <a href="event.html" data-ka lang="ka">რეგისტრაცია</a
-          ><a href="event.html" data-en lang="en">Registration</a>
-          <a href="news.html" data-ka lang="ka">სიახლეები</a
-          ><a href="news.html" data-en lang="en">News</a>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">კონტაქტი</h4>
-          <h4 data-en lang="en">Contact</h4>
-          <a href="tel:#">+995 XXX XX XX XX</a
-          ><a href="mailto:#">info@iberia.ge</a><a href="#">Facebook</a>
-        </div>
-      </div>
-      <div class="wrap copy">
-        <span>© 20XX Iberia Hunters Club</span
-        ><span data-ka lang="ka">ყველა უფლება დაცულია</span
-        ><span data-en lang="en">All rights reserved</span>
-      </div>
-    </footer>
-    <script src="assets/app.js?v=8"></script>
-  </body>
-</html>
+(function(){
+  var done=false;
+  function reveal(){
+    if(done) return; done=true;
+    var l=document.getElementById('loader');
+    if(l) l.classList.add('gone');
+    /* Hero reveal starts mid-dissolve, so the crest carries across. */
+    setTimeout(function(){ document.body.classList.add('ready'); },300);
+  }
+  window.addEventListener('load',function(){ setTimeout(reveal,1600); });
+  setTimeout(reveal,4000);            // hard failsafe
+})();
+(function(){
+  var stag=document.getElementById('stag'),fog=document.getElementById('fog'),
+      r1=document.getElementById('r1'),r2=document.getElementById('r2'),r3=document.getElementById('r3'),
+      birds=document.getElementById('birds'),ticking=false;
+  function onScroll(){
+    var p=Math.min(window.scrollY/700,1);
+    if(stag){stag.setAttribute('transform','translate('+(-p*260)+' '+(p*40)+') scale('+(1+p*.28)+') translate('+(p*160)+' '+(-p*90)+')');stag.style.opacity=(0.95-p*0.75).toFixed(2);}
+    if(fog)fog.setAttribute('transform','translate(0 '+(-p*70)+')');
+    if(r1)r1.setAttribute('transform','translate(0 '+(p*90)+')');
+    if(r2)r2.setAttribute('transform','translate(0 '+(p*40)+')');
+    if(r3)r3.setAttribute('transform','translate(0 '+(-p*30)+')');
+    if(birds)birds.setAttribute('transform','translate('+(p*420)+' '+(-p*70)+')');
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(onScroll);ticking=true;}},{passive:true});
+})();
+</script><footer>
+<div class="wrap foot">
+<div>
+<a class="logo-full" href="index.html"><img src="assets/logo-bone.png" alt="Iberia — Hunters' Club"></a>
+<p style="font-size:13px" data-ka lang="ka">[ჩანაცვლებადი] კლუბის მოკლე აღწერა, მისამართი და სამუშაო საათები.</p>
+<p style="font-size:13px" data-en lang="en">[Placeholder] Short club description, address and opening hours.</p>
+</div>
+<div><h4 data-ka lang="ka">კლუბი</h4><h4 data-en lang="en">Club</h4>
+<a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a><a href="about.html" data-en lang="en">About</a>
+<a href="expeditions.html" data-ka lang="ka">ნადირობები</a><a href="expeditions.html" data-en lang="en">Expeditions</a>
+<a href="gallery.html" data-ka lang="ka">გალერეა</a><a href="gallery.html" data-en lang="en">Gallery</a></div>
+<div><h4 data-ka lang="ka">ღონისძიებები</h4><h4 data-en lang="en">Events</h4>
+<a href="events.html" data-ka lang="ka">ყველა ღონისძიება</a><a href="events.html" data-en lang="en">All events</a>
+<a href="event.html" data-ka lang="ka">რეგისტრაცია</a><a href="event.html" data-en lang="en">Registration</a>
+<a href="news.html" data-ka lang="ka">სიახლეები</a><a href="news.html" data-en lang="en">News</a></div>
+<div><h4 data-ka lang="ka">კონტაქტი</h4><h4 data-en lang="en">Contact</h4>
+<a href="tel:#">+995 XXX XX XX XX</a><a href="mailto:#">info@iberia.ge</a><a href="#">Facebook</a></div>
+</div>
+<div class="wrap copy"><span>© 20XX Iberia Hunters Club</span><span data-ka lang="ka">ყველა უფლება დაცულია</span><span data-en lang="en">All rights reserved</span></div>
+</footer>
+<script src="assets/app.js?v=8"></script>
+</body></html>

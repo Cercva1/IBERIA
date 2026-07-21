@@ -1,496 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ka">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ღონისძიება · IBERIA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
-    <link rel="apple-touch-icon" href="assets/favicon.png?v=2" />
-    <link rel="stylesheet" href="assets/style.css?v=12" />
-  </head>
-  <body>
-    <svg class="grain">
-      <filter id="g">
-        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#g)" />
-    </svg>
-    <svg id="reticle" viewBox="0 0 46 46" fill="none">
-      <circle
-        cx="23"
-        cy="23"
-        r="16"
-        stroke="#b8913c"
-        stroke-width="1"
-        opacity=".85"
-      />
-      <circle cx="23" cy="23" r="1.5" fill="#b8913c" />
-      <path
-        d="M23 0v13M23 33v13M0 23h13M33 23h13"
-        stroke="#b8913c"
-        stroke-width="1"
-        opacity=".85"
-      />
-    </svg>
-    <nav id="nav">
-      <a class="logo" href="index.html"
-        ><img
-          class="crest-img"
-          src="assets/logo-bone.png"
-          alt="Iberia — Hunters' Club"
-      /></a>
-      <ul class="links" id="links">
-        <li>
-          <a href="index.html" data-ka lang="ka">მთავარი</a
-          ><a href="index.html" data-en lang="en">Home</a>
-        </li>
-        <li>
-          <a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a
-          ><a href="about.html" data-en lang="en">About</a>
-        </li>
-        <li>
-          <a href="members.html" data-ka lang="ka">წევრები</a
-          ><a href="members.html" data-en lang="en">Members</a>
-        </li>
-        <li>
-          <a href="expeditions.html" data-ka lang="ka">ნადირობები</a
-          ><a href="expeditions.html" data-en lang="en">Expeditions</a>
-        </li>
-        <li>
-          <a href="events.html" data-ka lang="ka">ღონისძიებები</a
-          ><a href="events.html" data-en lang="en">Events</a>
-        </li>
-        <li>
-          <a href="gallery.html" data-ka lang="ka">გალერეა</a
-          ><a href="gallery.html" data-en lang="en">Gallery</a>
-        </li>
-        <li>
-          <a href="news.html" data-ka lang="ka">სიახლეები</a
-          ><a href="news.html" data-en lang="en">News</a>
-        </li>
-        <li>
-          <a href="contact.html" data-ka lang="ka">კონტაქტი</a
-          ><a href="contact.html" data-en lang="en">Contact</a>
-        </li>
-      </ul>
-      <div class="nav-right">
-        <div class="lang">
-          <button id="b-ka" class="on" onclick="setLang('ka')">ქარ</button
-          ><button id="b-en" onclick="setLang('en')">ENG</button>
-        </div>
-        <button class="burger" id="burger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-    <header class="banner">
-      <div class="wrap">
-        <div class="crumb">
-          <a href="index.html" data-ka lang="ka">მთავარი</a
-          ><a href="index.html" data-en lang="en">Home</a> /
-          <span data-ka lang="ka">ღონისძიება</span
-          ><span data-en lang="en">Event</span>
-        </div>
-        <h1 data-ka lang="ka">ევსტათი პლაკიდას <em>დღე</em> 2026</h1>
-        <h1 data-en lang="en">St. Eustathius <em>Day</em> 2026</h1>
-      </div>
-    </header>
-    <section>
-      <div class="wrap g-event">
-        <div class="reveal">
-          <div style="margin-bottom: 40px; text-align: center">
-            <img
-              src="assets/photos/icon-full.jpg"
-              alt="წმ. ევსტათი პლაკიდას ხატი"
-              style="
-                max-height: 430px;
-                width: auto;
-                max-width: 100%;
-                display: inline-block;
-                border: 1px solid var(--line-lt);
-              "
-            />
-          </div>
-          <h2 data-ka lang="ka">ხსენების დღე</h2>
-          <h2 data-en lang="en">The memorial day</h2>
-          <p data-ka lang="ka">
-            3 ოქტომბერი არის დიდმოწამე ევსტათი პლაკიდას — მონადირეთა და მეომართა
-            მფარველი წმინდანის — ხსენების დღე, რის აღსანიშნავადაც ტარდება
-            წირვა-ლოცვა საგურამოს ბზიანის მამათა მონასტერში, 10:00 საათზე.
-            წირვას დაესწრებიან სამონადირეო კლუბები და მოწვეული სტუმრები.
-          </p>
-          <p style="margin-top: 16px" data-ka lang="ka">
-            შემდგომ, ამავე მონასტერში, 15:00 საათზე სამონადირეო კლუბების
-            წარმომადგენლები შეიკრიბებიან, გაიცნობენ ერთმანეთს, გაიმართება
-            საუბრები სამონადირეო საკითხებზე და სამომავლო ხედვებზე. ნებისმიერ
-            მსურველს შეუძლია მობრძანდეს და ჩვენთან ერთად მიიღოს მონაწილეობა.
-            ვფიქრობთ, კეთილმეგობრული დამოკიდებულება მონადირეებს შორის
-            მნიშვნელოვანია და მსგავსი კომუნიკაცია ყველასთვის პოზიტიურ შედეგებზე
-            იქნება ორიენტირებული.
-          </p>
-          <p data-en lang="en">
-            [Placeholder copy] Full description — what happens, where, how long
-            it runs, who it's for.
-          </p>
-          <p style="margin-top: 16px" data-en lang="en">
-            Afterwards, at 15:00 at the same monastery, representatives of the
-            hunting clubs gather to meet one another, with talks on hunting
-            matters and plans for the future. Anyone who wishes is welcome to
-            come and take part with us. We believe friendly relations between
-            hunters matter, and that this kind of communication leads to
-            positive results for everyone.
-          </p>
-          <div style="margin-top: 40px; border-top: 1px solid var(--line-lt)">
-            <div class="spec-row">
-              <span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.22em;
-                  text-transform: uppercase;
-                  color: var(--brass);
-                "
-                data-ka
-                lang="ka"
-                >თარიღი</span
-              ><span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.22em;
-                  text-transform: uppercase;
-                  color: var(--brass);
-                "
-                data-en
-                lang="en"
-                >Date</span
-              ><span style="color: var(--bone-dim); font-size: 14px"
-                >03.10.2026</span
-              >
-            </div>
-            <div class="spec-row">
-              <span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.22em;
-                  text-transform: uppercase;
-                  color: var(--brass);
-                "
-                data-ka
-                lang="ka"
-                >ადგილი</span
-              ><span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.22em;
-                  text-transform: uppercase;
-                  color: var(--brass);
-                "
-                data-en
-                lang="en"
-                >Location</span
-              ><span style="color: var(--bone-dim); font-size: 14px"
-                >საგურამო — ბზიანის მამათა მონასტერი / Saguramo, Bziani
-                monastery</span
-              >
-            </div>
-            <div class="spec-row">
-              <span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.22em;
-                  text-transform: uppercase;
-                  color: var(--brass);
-                "
-                data-ka
-                lang="ka"
-                >წირვა-ლოცვა</span
-              ><span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.22em;
-                  text-transform: uppercase;
-                  color: var(--brass);
-                "
-                data-en
-                lang="en"
-                >Liturgy</span
-              ><span style="color: var(--bone-dim); font-size: 14px"
-                >10:00</span
-              >
-            </div>
-            <div class="spec-row">
-              <span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.22em;
-                  text-transform: uppercase;
-                  color: var(--brass);
-                "
-                data-ka
-                lang="ka"
-                >კლუბების შეკრება</span
-              ><span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.22em;
-                  text-transform: uppercase;
-                  color: var(--brass);
-                "
-                data-en
-                lang="en"
-                >Clubs’ gathering</span
-              ><span style="color: var(--bone-dim); font-size: 14px"
-                >15:00</span
-              >
-            </div>
-            <div class="spec-row">
-              <span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.22em;
-                  text-transform: uppercase;
-                  color: var(--brass);
-                "
-                data-ka
-                lang="ka"
-                >დასწრება</span
-              ><span
-                style="
-                  font-size: 10px;
-                  letter-spacing: 0.22em;
-                  text-transform: uppercase;
-                  color: var(--brass);
-                "
-                data-en
-                lang="en"
-                >Attendance</span
-              ><span style="color: var(--bone-dim); font-size: 14px"
-                >თავისუფალია — ყველა მსურველისთვის / Open to everyone</span
-              >
-            </div>
-          </div>
-          <h2 style="margin-top: 56px" data-ka lang="ka">ვინ ესწრება</h2>
-          <h2 style="margin-top: 56px" data-en lang="en">Who attends</h2>
-          <p data-ka lang="ka">
-            სამონადირეო კლუბები, მოწვეული სტუმრები და ყველა დაინტერესებული პირი.
-          </p>
-          <p data-en lang="en">
-            Hunting clubs, invited guests, and anyone who is interested.
-          </p>
-        </div>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="3 ოქტომბერი — მონადირეთა მფარველის ხსენების დღე ბზიანის მონასტერში. რეგისტრაცია ღიაა ყველასთვის.">
+<link rel="canonical" href="https://iberia.org.ge/event.html">
+<meta property="og:title" content="ევსტათი პლაკიდას დღე 2026 — რეგისტრაცია · იბერია">
+<meta property="og:description" content="3 ოქტომბერი — მონადირეთა მფარველის ხსენების დღე ბზიანის მონასტერში. რეგისტრაცია ღიაა ყველასთვის.">
+<meta property="og:url" content="https://iberia.org.ge/event.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://iberia.org.ge/assets/photos/icon-full.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ევსტათი პლაკიდას დღე 2026 — რეგისტრაცია · იბერია</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png?v=2">
+<link rel="apple-touch-icon" href="assets/favicon.png?v=2">
+<link rel="stylesheet" href="assets/style.css?v=12">
+</head>
+<body>
+<svg class="grain"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+<svg id="reticle" viewBox="0 0 46 46" fill="none">
+<circle cx="23" cy="23" r="16" stroke="#b8913c" stroke-width="1" opacity=".85"/>
+<circle cx="23" cy="23" r="1.5" fill="#b8913c"/>
+<path d="M23 0v13M23 33v13M0 23h13M33 23h13" stroke="#b8913c" stroke-width="1" opacity=".85"/></svg>
+<nav id="nav">
+<a class="logo" href="index.html"><img class="crest-img" src="assets/logo-bone.png" alt="Iberia — Hunters' Club"></a>
+<ul class="links" id="links">
+<li><a href="index.html" data-ka lang="ka">მთავარი</a><a href="index.html" data-en lang="en">Home</a></li>
+<li><a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a><a href="about.html" data-en lang="en">About</a></li>
+<li><a href="members.html" data-ka lang="ka">წევრები</a><a href="members.html" data-en lang="en">Members</a></li>
+<li><a href="expeditions.html" data-ka lang="ka">ნადირობები</a><a href="expeditions.html" data-en lang="en">Expeditions</a></li>
+<li><a href="events.html" data-ka lang="ka">ღონისძიებები</a><a href="events.html" data-en lang="en">Events</a></li>
+<li><a href="gallery.html" data-ka lang="ka">გალერეა</a><a href="gallery.html" data-en lang="en">Gallery</a></li>
+<li><a href="news.html" data-ka lang="ka">სიახლეები</a><a href="news.html" data-en lang="en">News</a></li>
+<li><a href="contact.html" data-ka lang="ka">კონტაქტი</a><a href="contact.html" data-en lang="en">Contact</a></li>
+</ul>
+<div class="nav-right">
+<div class="lang"><button id="b-ka" class="on" onclick="setLang('ka')">ქარ</button><button id="b-en" onclick="setLang('en')">ENG</button></div>
+<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</nav>
+<header class="banner">
+<div class="wrap">
+<div class="crumb"><a href="index.html" data-ka lang="ka">მთავარი</a><a href="index.html" data-en lang="en">Home</a> / <span data-ka lang="ka">ღონისძიება</span><span data-en lang="en">Event</span></div>
+<h1 data-ka lang="ka">ევსტათი პლაკიდას <em>დღე</em> 2026</h1><h1 data-en lang="en">St. Eustathius <em>Day</em> 2026</h1>
 
-        <div class="reveal sticky-panel">
-          <div class="panel">
-            <div class="steps">
-              <div class="step on" data-ka lang="ka">1 · ვინ ხართ</div>
-              <div class="step on" data-en lang="en">1 · Who you are</div>
-              <div class="step" data-ka lang="ka">2 · დეტალები</div>
-              <div class="step" data-en lang="en">2 · Details</div>
-              <div class="step" data-ka lang="ka">3 · გაგზავნა</div>
-              <div class="step" data-en lang="en">3 · Submit</div>
-            </div>
+</div></header>
+<section><div class="wrap g-event">
+<div class="reveal">
+<div style="margin-bottom:40px;text-align:center"><img src="assets/photos/icon-full.jpg" alt="წმ. ევსტათი პლაკიდას ხატი" style="max-height:430px;width:auto;max-width:100%;display:inline-block;border:1px solid var(--line-lt)"></div>
+<h2 data-ka lang="ka">ხსენების დღე</h2><h2 data-en lang="en">The memorial day</h2>
+<p data-ka lang="ka">3 ოქტომბერი არის დიდმოწამე ევსტათი პლაკიდას — მონადირეთა და მეომართა მფარველი წმინდანის — ხსენების დღე, რის აღსანიშნავადაც ტარდება წირვა-ლოცვა საგურამოს ბზიანის მამათა მონასტერში, 10:00 საათზე. წირვას დაესწრებიან სამონადირეო კლუბები და მოწვეული სტუმრები.</p>
+<p style="margin-top:16px" data-ka lang="ka">შემდგომ, ამავე მონასტერში, 15:00 საათზე სამონადირეო კლუბების წარმომადგენლები შეიკრიბებიან, გაიცნობენ ერთმანეთს, გაიმართება საუბრები სამონადირეო საკითხებზე და სამომავლო ხედვებზე. ნებისმიერ მსურველს შეუძლია მობრძანდეს და ჩვენთან ერთად მიიღოს მონაწილეობა. ვფიქრობთ, კეთილმეგობრული დამოკიდებულება მონადირეებს შორის მნიშვნელოვანია და მსგავსი კომუნიკაცია ყველასთვის პოზიტიურ შედეგებზე იქნება ორიენტირებული.</p>
+<p data-en lang="en">[Placeholder copy] Full description — what happens, where, how long it runs, who it's for.</p>
+<p style="margin-top:16px" data-en lang="en">Afterwards, at 15:00 at the same monastery, representatives of the hunting clubs gather to meet one another, with talks on hunting matters and plans for the future. Anyone who wishes is welcome to come and take part with us. We believe friendly relations between hunters matter, and that this kind of communication leads to positive results for everyone.</p>
+<div style="margin-top:40px;border-top:1px solid var(--line-lt)"><div class="spec-row"><span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)" data-ka lang="ka">თარიღი</span><span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)" data-en lang="en">Date</span><span style="color:var(--bone-dim);font-size:14px">03.10.2026</span></div><div class="spec-row"><span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)" data-ka lang="ka">ადგილი</span><span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)" data-en lang="en">Location</span><span style="color:var(--bone-dim);font-size:14px">საგურამო — ბზიანის მამათა მონასტერი / Saguramo, Bziani monastery</span></div><div class="spec-row"><span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)" data-ka lang="ka">წირვა-ლოცვა</span><span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)" data-en lang="en">Liturgy</span><span style="color:var(--bone-dim);font-size:14px">10:00</span></div><div class="spec-row"><span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)" data-ka lang="ka">კლუბების შეკრება</span><span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)" data-en lang="en">Clubs’ gathering</span><span style="color:var(--bone-dim);font-size:14px">15:00</span></div><div class="spec-row"><span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)" data-ka lang="ka">დასწრება</span><span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)" data-en lang="en">Attendance</span><span style="color:var(--bone-dim);font-size:14px">თავისუფალია — ყველა მსურველისთვის / Open to everyone</span></div></div>
+<h2 style="margin-top:56px" data-ka lang="ka">ვინ ესწრება</h2><h2 style="margin-top:56px" data-en lang="en">Who attends</h2>
+<p data-ka lang="ka">სამონადირეო კლუბები, მოწვეული სტუმრები და ყველა დაინტერესებული პირი.</p>
+<p data-en lang="en">Hunting clubs, invited guests, and anyone who is interested.</p>
+</div>
 
-            <div id="reg-form">
-              <h3 style="margin-bottom: 6px" data-ka lang="ka">რეგისტრაცია</h3>
-              <h3 style="margin-bottom: 6px" data-en lang="en">Register</h3>
-              <p style="font-size: 13px; margin-bottom: 30px" data-ka lang="ka">
-                აირჩიეთ, რომელი აღწერს თქვენ.
-              </p>
-              <p style="font-size: 13px; margin-bottom: 30px" data-en lang="en">
-                Choose which describes you.
-              </p>
+<div class="reveal sticky-panel">
+<div class="panel">
+<div class="steps">
+<div class="step on" data-ka lang="ka">1 · ვინ ხართ</div><div class="step on" data-en lang="en">1 · Who you are</div>
+<div class="step" data-ka lang="ka">2 · დეტალები</div><div class="step" data-en lang="en">2 · Details</div>
+<div class="step" data-ka lang="ka">3 · გაგზავნა</div><div class="step" data-en lang="en">3 · Submit</div>
+</div>
 
-              <div class="choice">
-                <div>
-                  <input
-                    type="radio"
-                    name="aff"
-                    id="aff-solo"
-                    onchange="affil('solo')"
-                  />
-                  <label for="aff-solo"
-                    ><b data-ka lang="ka">ფიზიკური პირი</b
-                    ><b data-en lang="en">Individual</b>
-                    <span data-ka lang="ka">არ ვარ კლუბის წევრი</span
-                    ><span data-en lang="en"
-                      >Not a member of any club</span
-                    ></label
-                  >
-                </div>
-                <div>
-                  <input
-                    type="radio"
-                    name="aff"
-                    id="aff-club"
-                    onchange="affil('club')"
-                  />
-                  <label for="aff-club"
-                    ><b data-ka lang="ka">კლუბიდან</b
-                    ><b data-en lang="en">From a club</b>
-                    <span data-ka lang="ka">წარმოვადგენ სამონადირეო კლუბს</span
-                    ><span data-en lang="en"
-                      >I represent a hunting club</span
-                    ></label
-                  >
-                </div>
-              </div>
+<div id="reg-form">
+<h3 style="margin-bottom:6px" data-ka lang="ka">რეგისტრაცია</h3><h3 style="margin-bottom:6px" data-en lang="en">Register</h3>
+<p style="font-size:13px;margin-bottom:30px" data-ka lang="ka">აირჩიეთ, რომელი აღწერს თქვენ.</p>
+<p style="font-size:13px;margin-bottom:30px" data-en lang="en">Choose which describes you.</p>
 
-              <div class="cond" id="c-solo">
-                <div class="field">
-                  <label data-ka lang="ka">სახელი</label
-                  ><label data-en lang="en">First name</label
-                  ><input type="text" />
-                </div>
-                <div class="field">
-                  <label data-ka lang="ka">გვარი</label
-                  ><label data-en lang="en">Last name</label
-                  ><input type="text" />
-                </div>
-                <div class="field">
-                  <label data-ka lang="ka">ელ. ფოსტა</label
-                  ><label data-en lang="en">Email</label><input type="email" />
-                </div>
-                <div class="field">
-                  <label data-ka lang="ka">ტელეფონი</label
-                  ><label data-en lang="en">Phone</label><input type="tel" />
-                </div>
-              </div>
+<div class="choice">
+<div><input type="radio" name="aff" id="aff-solo" onchange="affil('solo')">
+<label for="aff-solo"><b data-ka lang="ka">ფიზიკური პირი</b><b data-en lang="en">Individual</b>
+<span data-ka lang="ka">არ ვარ კლუბის წევრი</span><span data-en lang="en">Not a member of any club</span></label></div>
+<div><input type="radio" name="aff" id="aff-club" onchange="affil('club')">
+<label for="aff-club"><b data-ka lang="ka">კლუბიდან</b><b data-en lang="en">From a club</b>
+<span data-ka lang="ka">წარმოვადგენ სამონადირეო კლუბს</span><span data-en lang="en">I represent a hunting club</span></label></div>
+</div>
 
-              <div class="cond" id="c-club">
-                <div class="field">
-                  <label data-ka lang="ka">კლუბის სახელი</label
-                  ><label data-en lang="en">Club name</label>
-                  <select id="club-select">
-                    <option data-ka lang="ka">აირჩიეთ კლუბი…</option>
-                    <option data-en lang="en">Select your club…</option>
-                  </select>
-                </div>
-                <div class="field" id="club-other" style="display: none">
-                  <label data-ka lang="ka">ჩაწერეთ კლუბის სახელი</label
-                  ><label data-en lang="en">Type your club’s name</label
-                  ><input type="text" />
-                </div>
-                <div class="field">
-                  <label data-ka lang="ka">სახელი</label
-                  ><label data-en lang="en">First name</label
-                  ><input type="text" />
-                </div>
-                <div class="field">
-                  <label data-ka lang="ka">გვარი</label
-                  ><label data-en lang="en">Last name</label
-                  ><input type="text" />
-                </div>
-                <div class="field">
-                  <label data-ka lang="ka">ელ. ფოსტა</label
-                  ><label data-en lang="en">Email</label><input type="email" />
-                </div>
-                <div class="field">
-                  <label data-ka lang="ka">ტელეფონი</label
-                  ><label data-en lang="en">Phone</label><input type="tel" />
-                </div>
-              </div>
+<div class="cond" id="c-solo">
+<div class="field"><label data-ka lang="ka">სახელი</label><label data-en lang="en">First name</label><input type="text"></div>
+<div class="field"><label data-ka lang="ka">გვარი</label><label data-en lang="en">Last name</label><input type="text"></div>
+<div class="field"><label data-ka lang="ka">ელ. ფოსტა</label><label data-en lang="en">Email</label><input type="email"></div>
+<div class="field"><label data-ka lang="ka">ტელეფონი</label><label data-en lang="en">Phone</label><input type="tel"></div>
+</div>
 
-              <button
-                class="btn"
-                style="width: 100%; margin-top: 26px"
-                onclick="return submitReg();"
-                data-ka
-                lang="ka"
-              >
-                რეგისტრაცია
-              </button>
-              <button
-                class="btn"
-                style="width: 100%; margin-top: 26px"
-                onclick="return submitReg();"
-                data-en
-                lang="en"
-              >
-                Register
-              </button>
-              <p class="note" data-ka lang="ka">
-                [დემო] ფორმა ვიზუალურია — მონაცემები არსად იგზავნება.
-              </p>
-              <p class="note" data-en lang="en">
-                [Demo] Visual only — nothing is submitted anywhere yet.
-              </p>
-            </div>
+<div class="cond" id="c-club">
+<div class="field"><label data-ka lang="ka">კლუბის სახელი</label><label data-en lang="en">Club name</label>
+<select id="club-select"><option data-ka lang="ka">აირჩიეთ კლუბი…</option><option data-en lang="en">Select your club…</option></select></div>
+<div class="field" id="club-other" style="display:none"><label data-ka lang="ka">ჩაწერეთ კლუბის სახელი</label><label data-en lang="en">Type your club’s name</label><input type="text"></div>
+<div class="field"><label data-ka lang="ka">სახელი</label><label data-en lang="en">First name</label><input type="text"></div>
+<div class="field"><label data-ka lang="ka">გვარი</label><label data-en lang="en">Last name</label><input type="text"></div>
+<div class="field"><label data-ka lang="ka">ელ. ფოსტა</label><label data-en lang="en">Email</label><input type="email"></div>
+<div class="field"><label data-ka lang="ka">ტელეფონი</label><label data-en lang="en">Phone</label><input type="tel"></div>
+</div>
 
-            <div class="ok" id="reg-ok">
-              <svg
-                viewBox="0 0 46 46"
-                fill="none"
-                stroke="#b8913c"
-                stroke-width="1.2"
-              >
-                <circle cx="23" cy="23" r="22" />
-                <path d="M14 23l6 6 12-14" />
-              </svg>
-              <h3 data-ka lang="ka">განაცხადი მიღებულია</h3>
-              <h3 data-en lang="en">Application received</h3>
-              <p style="font-size: 13px; margin: 0 auto" data-ka lang="ka">
-                [დემო] რეალურ საიტზე კლუბი მიიღებს შეტყობინებას და
-                დაგიკავშირდებათ.
-              </p>
-              <p style="font-size: 13px; margin: 0 auto" data-en lang="en">
-                [Demo] On the live site the club gets notified and contacts you.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <div class="wrap foot">
-        <div>
-          <a class="logo-full" href="index.html"
-            ><img src="assets/logo-bone.png" alt="Iberia — Hunters' Club"
-          /></a>
-          <p style="font-size: 13px" data-ka lang="ka">
-            [ჩანაცვლებადი] კლუბის მოკლე აღწერა, მისამართი და სამუშაო საათები.
-          </p>
-          <p style="font-size: 13px" data-en lang="en">
-            [Placeholder] Short club description, address and opening hours.
-          </p>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">კლუბი</h4>
-          <h4 data-en lang="en">Club</h4>
-          <a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a
-          ><a href="about.html" data-en lang="en">About</a>
-          <a href="expeditions.html" data-ka lang="ka">ნადირობები</a
-          ><a href="expeditions.html" data-en lang="en">Expeditions</a>
-          <a href="gallery.html" data-ka lang="ka">გალერეა</a
-          ><a href="gallery.html" data-en lang="en">Gallery</a>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">ღონისძიებები</h4>
-          <h4 data-en lang="en">Events</h4>
-          <a href="events.html" data-ka lang="ka">ყველა ღონისძიება</a
-          ><a href="events.html" data-en lang="en">All events</a>
-          <a href="event.html" data-ka lang="ka">რეგისტრაცია</a
-          ><a href="event.html" data-en lang="en">Registration</a>
-          <a href="news.html" data-ka lang="ka">სიახლეები</a
-          ><a href="news.html" data-en lang="en">News</a>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">კონტაქტი</h4>
-          <h4 data-en lang="en">Contact</h4>
-          <a href="tel:#">+995 XXX XX XX XX</a
-          ><a href="mailto:#">info@iberia.ge</a><a href="#">Facebook</a>
-        </div>
-      </div>
-      <div class="wrap copy">
-        <span>© 20XX Iberia Hunters Club</span
-        ><span data-ka lang="ka">ყველა უფლება დაცულია</span
-        ><span data-en lang="en">All rights reserved</span>
-      </div>
-    </footer>
-    <script src="assets/app.js?v=8"></script>
-  </body>
-</html>
+<button class="btn" style="width:100%;margin-top:26px" onclick="return submitReg()" data-ka lang="ka">რეგისტრაცია</button>
+<button class="btn" style="width:100%;margin-top:26px" onclick="return submitReg()" data-en lang="en">Register</button>
+<p class="note" data-ka lang="ka">[დემო] ფორმა ვიზუალურია — მონაცემები არსად იგზავნება.</p>
+<p class="note" data-en lang="en">[Demo] Visual only — nothing is submitted anywhere yet.</p>
+</div>
+
+<div class="ok" id="reg-ok">
+<svg viewBox="0 0 46 46" fill="none" stroke="#b8913c" stroke-width="1.2"><circle cx="23" cy="23" r="22"/><path d="M14 23l6 6 12-14"/></svg>
+<h3 data-ka lang="ka">განაცხადი მიღებულია</h3><h3 data-en lang="en">Application received</h3>
+<p style="font-size:13px;margin:0 auto" data-ka lang="ka">[დემო] რეალურ საიტზე კლუბი მიიღებს შეტყობინებას და დაგიკავშირდებათ.</p>
+<p style="font-size:13px;margin:0 auto" data-en lang="en">[Demo] On the live site the club gets notified and contacts you.</p>
+</div>
+</div>
+</div>
+</div></section><footer>
+<div class="wrap foot">
+<div>
+<a class="logo-full" href="index.html"><img src="assets/logo-bone.png" alt="Iberia — Hunters' Club"></a>
+<p style="font-size:13px" data-ka lang="ka">[ჩანაცვლებადი] კლუბის მოკლე აღწერა, მისამართი და სამუშაო საათები.</p>
+<p style="font-size:13px" data-en lang="en">[Placeholder] Short club description, address and opening hours.</p>
+</div>
+<div><h4 data-ka lang="ka">კლუბი</h4><h4 data-en lang="en">Club</h4>
+<a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a><a href="about.html" data-en lang="en">About</a>
+<a href="expeditions.html" data-ka lang="ka">ნადირობები</a><a href="expeditions.html" data-en lang="en">Expeditions</a>
+<a href="gallery.html" data-ka lang="ka">გალერეა</a><a href="gallery.html" data-en lang="en">Gallery</a></div>
+<div><h4 data-ka lang="ka">ღონისძიებები</h4><h4 data-en lang="en">Events</h4>
+<a href="events.html" data-ka lang="ka">ყველა ღონისძიება</a><a href="events.html" data-en lang="en">All events</a>
+<a href="event.html" data-ka lang="ka">რეგისტრაცია</a><a href="event.html" data-en lang="en">Registration</a>
+<a href="news.html" data-ka lang="ka">სიახლეები</a><a href="news.html" data-en lang="en">News</a></div>
+<div><h4 data-ka lang="ka">კონტაქტი</h4><h4 data-en lang="en">Contact</h4>
+<a href="tel:#">+995 XXX XX XX XX</a><a href="mailto:#">info@iberia.ge</a><a href="#">Facebook</a></div>
+</div>
+<div class="wrap copy"><span>© 20XX Iberia Hunters Club</span><span data-ka lang="ka">ყველა უფლება დაცულია</span><span data-en lang="en">All rights reserved</span></div>
+</footer>
+<script src="assets/app.js?v=8"></script>
+</body></html>

@@ -1,656 +1,227 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ka">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>წევრები · IBERIA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
-    <link rel="apple-touch-icon" href="assets/favicon.png?v=2" />
-    <link rel="stylesheet" href="assets/style.css?v=12" />
-  </head>
-  <body>
-    <svg class="grain">
-      <filter id="g">
-        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#g)" />
-    </svg>
-    <svg id="reticle" viewBox="0 0 46 46" fill="none">
-      <circle
-        cx="23"
-        cy="23"
-        r="16"
-        stroke="#b8913c"
-        stroke-width="1"
-        opacity=".85"
-      />
-      <circle cx="23" cy="23" r="1.5" fill="#b8913c" />
-      <path
-        d="M23 0v13M23 33v13M0 23h13M33 23h13"
-        stroke="#b8913c"
-        stroke-width="1"
-        opacity=".85"
-      />
-    </svg>
-    <nav id="nav">
-      <a class="logo" href="index.html"
-        ><img
-          class="crest-img"
-          src="assets/logo-bone.png"
-          alt="Iberia — Hunters' Club"
-      /></a>
-      <ul class="links" id="links">
-        <li>
-          <a href="index.html" data-ka lang="ka">მთავარი</a
-          ><a href="index.html" data-en lang="en">Home</a>
-        </li>
-        <li>
-          <a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a
-          ><a href="about.html" data-en lang="en">About</a>
-        </li>
-        <li>
-          <a href="members.html" data-ka lang="ka">წევრები</a
-          ><a href="members.html" data-en lang="en">Members</a>
-        </li>
-        <li>
-          <a href="expeditions.html" data-ka lang="ka">ნადირობები</a
-          ><a href="expeditions.html" data-en lang="en">Expeditions</a>
-        </li>
-        <li>
-          <a href="events.html" data-ka lang="ka">ღონისძიებები</a
-          ><a href="events.html" data-en lang="en">Events</a>
-        </li>
-        <li>
-          <a href="gallery.html" data-ka lang="ka">გალერეა</a
-          ><a href="gallery.html" data-en lang="en">Gallery</a>
-        </li>
-        <li>
-          <a href="news.html" data-ka lang="ka">სიახლეები</a
-          ><a href="news.html" data-en lang="en">News</a>
-        </li>
-        <li>
-          <a href="contact.html" data-ka lang="ka">კონტაქტი</a
-          ><a href="contact.html" data-en lang="en">Contact</a>
-        </li>
-      </ul>
-      <div class="nav-right">
-        <div class="lang">
-          <button id="b-ka" class="on" onclick="setLang('ka')">ქარ</button
-          ><button id="b-en" onclick="setLang('en')">ENG</button>
-        </div>
-        <button class="burger" id="burger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-    <header class="banner">
-      <div class="wrap">
-        <a class="promo" href="event.html">
-          <img src="assets/photos/ic-icon.jpg" alt="ევსტათი პლაკიდას დღე" />
-          <span class="promo-body">
-            <b data-ka lang="ka">მომავალი ღონისძიება</b
-            ><b data-en lang="en">Upcoming event</b>
-            <span data-ka lang="ka">ევსტათი პლაკიდას დღე</span
-            ><span data-en lang="en">St. Eustathius Day</span>
-            <i>03.10.2026 →</i>
-          </span></a
-        >
+<head>
+<meta charset="utf-8">
+<meta name="description" content="კლუბ „იბერიას" წევრები — მონადირეები საქართველოდან.">
+<link rel="canonical" href="https://iberia.org.ge/members.html">
+<meta property="og:title" content="წევრები · იბერია — მონადირეთა კლუბი">
+<meta property="og:description" content="კლუბ „იბერიას" წევრები — მონადირეები საქართველოდან.">
+<meta property="og:url" content="https://iberia.org.ge/members.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://iberia.org.ge/assets/logo-bone.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>წევრები · იბერია — მონადირეთა კლუბი</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png?v=2">
+<link rel="apple-touch-icon" href="assets/favicon.png?v=2">
+<link rel="stylesheet" href="assets/style.css?v=12">
+</head>
+<body>
+<svg class="grain"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+<svg id="reticle" viewBox="0 0 46 46" fill="none">
+<circle cx="23" cy="23" r="16" stroke="#b8913c" stroke-width="1" opacity=".85"/>
+<circle cx="23" cy="23" r="1.5" fill="#b8913c"/>
+<path d="M23 0v13M23 33v13M0 23h13M33 23h13" stroke="#b8913c" stroke-width="1" opacity=".85"/></svg>
+<nav id="nav">
+<a class="logo" href="index.html"><img class="crest-img" src="assets/logo-bone.png" alt="Iberia — Hunters' Club"></a>
+<ul class="links" id="links">
+<li><a href="index.html" data-ka lang="ka">მთავარი</a><a href="index.html" data-en lang="en">Home</a></li>
+<li><a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a><a href="about.html" data-en lang="en">About</a></li>
+<li><a href="members.html" data-ka lang="ka">წევრები</a><a href="members.html" data-en lang="en">Members</a></li>
+<li><a href="expeditions.html" data-ka lang="ka">ნადირობები</a><a href="expeditions.html" data-en lang="en">Expeditions</a></li>
+<li><a href="events.html" data-ka lang="ka">ღონისძიებები</a><a href="events.html" data-en lang="en">Events</a></li>
+<li><a href="gallery.html" data-ka lang="ka">გალერეა</a><a href="gallery.html" data-en lang="en">Gallery</a></li>
+<li><a href="news.html" data-ka lang="ka">სიახლეები</a><a href="news.html" data-en lang="en">News</a></li>
+<li><a href="contact.html" data-ka lang="ka">კონტაქტი</a><a href="contact.html" data-en lang="en">Contact</a></li>
+</ul>
+<div class="nav-right">
+<div class="lang"><button id="b-ka" class="on" onclick="setLang('ka')">ქარ</button><button id="b-en" onclick="setLang('en')">ENG</button></div>
+<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</nav><header class="banner">
+<div class="wrap">
+<a class="promo" href="event.html">
+<img src="assets/photos/ic-icon.jpg" alt="ევსტათი პლაკიდას დღე">
+<span class="promo-body">
+<b data-ka lang="ka">მომავალი ღონისძიება</b><b data-en lang="en">Upcoming event</b>
+<span data-ka lang="ka">ევსტათი პლაკიდას დღე</span><span data-en lang="en">St. Eustathius Day</span>
+<i>03.10.2026 →</i>
+</span></a>
 
-        <div class="crumb">
-          <a href="index.html" data-ka lang="ka">მთავარი</a
-          ><a href="index.html" data-en lang="en">Home</a> /
-          <span data-ka lang="ka">წევრები</span
-          ><span data-en lang="en">Members</span>
-        </div>
-        <h1 data-ka lang="ka">კლუბის <em>წევრები</em></h1>
-        <h1 data-en lang="en">Club <em>Members</em></h1>
-      </div>
-    </header>
+<div class="crumb"><a href="index.html" data-ka lang="ka">მთავარი</a><a href="index.html" data-en lang="en">Home</a> / <span data-ka lang="ka">წევრები</span><span data-en lang="en">Members</span></div>
+<h1 data-ka lang="ka">კლუბის <em>წევრები</em></h1><h1 data-en lang="en">The people of the <em>club</em></h1>
+</div></header>
 
-    <section>
-      <div class="wrap">
-        <div class="mem-grid reveal">
-          <div
-            class="mem mem-link"
-            role="button"
-            tabindex="0"
-            data-photo="assets/members/m7.jpg"
-            data-name-ka="ბესიკ ბერძენიშვილი"
-            data-name-en="Besik Berdzenishvili"
-            data-mail="b.berdzenishvili@iberia.org.ge"
-            data-fb="https://www.facebook.com/besik.berdzenishvili"
-          >
-            <div class="mem-photo">
-              <img
-                src="assets/members/m7.jpg"
-                alt="Besik Berdzenishvili"
-                loading="lazy"
-              />
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">ბესიკ ბერძენიშვილი</h3>
-              <h3 data-en lang="en">Besik Berdzenishvili</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-              <div class="mem-contacts">
-                <a
-                  href="mailto:b.berdzenishvili@iberia.org.ge"
-                  onclick="event.stopPropagation()"
-                  title="b.berdzenishvili@iberia.org.ge"
-                  >✉ <span data-ka lang="ka">ფოსტა</span
-                  ><span data-en lang="en">Email</span></a
-                >
-                <a
-                  href="https://www.facebook.com/besik.berdzenishvili"
-                  target="_blank"
-                  rel="noopener"
-                  onclick="event.stopPropagation()"
-                  >ⓕ Facebook</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="mem mem-link"
-            role="button"
-            tabindex="0"
-            data-photo="assets/members/m3.jpg"
-            data-name-ka="ბექა სამხარაძე"
-            data-name-en="Beka Samkharadze"
-            data-mail="b.samkharadze@iberia.org.ge"
-            data-fb="https://www.facebook.com/beka.samkharadze.7"
-          >
-            <div class="mem-photo">
-              <img
-                src="assets/members/m3.jpg"
-                alt="Beka Samkharadze"
-                loading="lazy"
-              />
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">ბექა სამხარაძე</h3>
-              <h3 data-en lang="en">Beka Samkharadze</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-              <div class="mem-contacts">
-                <a
-                  href="mailto:b.samkharadze@iberia.org.ge"
-                  onclick="event.stopPropagation()"
-                  title="b.samkharadze@iberia.org.ge"
-                  >✉ <span data-ka lang="ka">ფოსტა</span
-                  ><span data-en lang="en">Email</span></a
-                >
-                <a
-                  href="https://www.facebook.com/beka.samkharadze.7"
-                  target="_blank"
-                  rel="noopener"
-                  onclick="event.stopPropagation()"
-                  >ⓕ Facebook</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="mem mem-link"
-            role="button"
-            tabindex="0"
-            data-photo="assets/members/m2.jpg"
-            data-name-ka="გიორგი ალიაშვილი"
-            data-name-en="Giorgi Aliashvili"
-            data-mail="g.aliashvili@iberia.org.ge"
-            data-fb="https://www.facebook.com/giorgi.aliashvili.1"
-          >
-            <div class="mem-photo">
-              <img
-                src="assets/members/m2.jpg"
-                alt="Giorgi Aliashvili"
-                loading="lazy"
-              />
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">გიორგი ალიაშვილი</h3>
-              <h3 data-en lang="en">Giorgi Aliashvili</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-              <div class="mem-contacts">
-                <a
-                  href="mailto:g.aliashvili@iberia.org.ge"
-                  onclick="event.stopPropagation()"
-                  title="g.aliashvili@iberia.org.ge"
-                  >✉ <span data-ka lang="ka">ფოსტა</span
-                  ><span data-en lang="en">Email</span></a
-                >
-                <a
-                  href="https://www.facebook.com/giorgi.aliashvili.1"
-                  target="_blank"
-                  rel="noopener"
-                  onclick="event.stopPropagation()"
-                  >ⓕ Facebook</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="mem mem-link"
-            role="button"
-            tabindex="0"
-            data-photo="assets/members/m1.jpg"
-            data-name-ka="გიორგი გოგლიძე"
-            data-name-en="Giorgi Goglidze"
-            data-mail="g.goglidze@iberia.org.ge"
-            data-fb="https://www.facebook.com/vako.kostava"
-          >
-            <div class="mem-photo">
-              <img
-                src="assets/members/m1.jpg"
-                alt="Giorgi Goglidze"
-                loading="lazy"
-              />
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">გიორგი გოგლიძე</h3>
-              <h3 data-en lang="en">Giorgi Goglidze</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-              <div class="mem-contacts">
-                <a
-                  href="mailto:g.goglidze@iberia.org.ge"
-                  onclick="event.stopPropagation()"
-                  title="g.goglidze@iberia.org.ge"
-                  >✉ <span data-ka lang="ka">ფოსტა</span
-                  ><span data-en lang="en">Email</span></a
-                >
-                <a
-                  href="https://www.facebook.com/vako.kostava"
-                  target="_blank"
-                  rel="noopener"
-                  onclick="event.stopPropagation()"
-                  >ⓕ Facebook</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="mem mem-link"
-            role="button"
-            tabindex="0"
-            data-photo="assets/members/m8.jpg"
-            data-name-ka="დავით კერესელიძე"
-            data-name-en="Davit Kereselidze"
-            data-mail="d.kereselidze@iberia.org.ge"
-            data-fb="https://www.facebook.com/dato.kereselidze.7"
-          >
-            <div class="mem-photo">
-              <img
-                src="assets/members/m8.jpg"
-                alt="Davit Kereselidze"
-                loading="lazy"
-              />
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">დავით კერესელიძე</h3>
-              <h3 data-en lang="en">Davit Kereselidze</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-              <div class="mem-contacts">
-                <a
-                  href="mailto:d.kereselidze@iberia.org.ge"
-                  onclick="event.stopPropagation()"
-                  title="d.kereselidze@iberia.org.ge"
-                  >✉ <span data-ka lang="ka">ფოსტა</span
-                  ><span data-en lang="en">Email</span></a
-                >
-                <a
-                  href="https://www.facebook.com/dato.kereselidze.7"
-                  target="_blank"
-                  rel="noopener"
-                  onclick="event.stopPropagation()"
-                  >ⓕ Facebook</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="mem mem-link"
-            role="button"
-            tabindex="0"
-            data-photo="assets/members/m9.jpg"
-            data-name-ka="დავით ცერცვაძე"
-            data-name-en="David Tsertsvadze"
-            data-mail="d.tsertsvadze@iberia.org.ge"
-            data-fb="https://www.facebook.com/david.tsertsvadze.5"
-          >
-            <div class="mem-photo">
-              <img
-                src="assets/members/m9.jpg"
-                alt="David Tsertsvadze"
-                loading="lazy"
-              />
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">დავით ცერცვაძე</h3>
-              <h3 data-en lang="en">David Tsertsvadze</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-              <div class="mem-contacts">
-                <a
-                  href="mailto:d.tsertsvadze@iberia.org.ge"
-                  onclick="event.stopPropagation()"
-                  title="d.tsertsvadze@iberia.org.ge"
-                  >✉ <span data-ka lang="ka">ფოსტა</span
-                  ><span data-en lang="en">Email</span></a
-                >
-                <a
-                  href="https://www.facebook.com/david.tsertsvadze.5"
-                  target="_blank"
-                  rel="noopener"
-                  onclick="event.stopPropagation()"
-                  >ⓕ Facebook</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="mem mem-link"
-            role="button"
-            tabindex="0"
-            data-photo="assets/members/m4.jpg"
-            data-name-ka="დიმიტრი გოგოხია"
-            data-name-en="Dimitri Gogokhia"
-            data-mail="d.gogokhia@iberia.org.ge"
-            data-fb="https://www.facebook.com/dimitri.gogokhia"
-          >
-            <div class="mem-photo">
-              <img
-                src="assets/members/m4.jpg"
-                alt="Dimitri Gogokhia"
-                loading="lazy"
-              />
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">დიმიტრი გოგოხია</h3>
-              <h3 data-en lang="en">Dimitri Gogokhia</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-              <div class="mem-contacts">
-                <a
-                  href="mailto:d.gogokhia@iberia.org.ge"
-                  onclick="event.stopPropagation()"
-                  title="d.gogokhia@iberia.org.ge"
-                  >✉ <span data-ka lang="ka">ფოსტა</span
-                  ><span data-en lang="en">Email</span></a
-                >
-                <a
-                  href="https://www.facebook.com/dimitri.gogokhia"
-                  target="_blank"
-                  rel="noopener"
-                  onclick="event.stopPropagation()"
-                  >ⓕ Facebook</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="mem mem-link"
-            role="button"
-            tabindex="0"
-            data-photo="assets/members/m6.jpg"
-            data-name-ka="ვარლამ ხაჭაპურიძე"
-            data-name-en="Varlam Khachapuridze"
-            data-mail="v.khachapuridze@iberia.org.ge"
-            data-fb="https://www.facebook.com/vako.kostava"
-          >
-            <div class="mem-photo">
-              <img
-                src="assets/members/m6.jpg"
-                alt="Varlam Khachapuridze"
-                loading="lazy"
-              />
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">ვარლამ ხაჭაპურიძე</h3>
-              <h3 data-en lang="en">Varlam Khachapuridze</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-              <div class="mem-contacts">
-                <a
-                  href="mailto:v.khachapuridze@iberia.org.ge"
-                  onclick="event.stopPropagation()"
-                  title="v.khachapuridze@iberia.org.ge"
-                  >✉ <span data-ka lang="ka">ფოსტა</span
-                  ><span data-en lang="en">Email</span></a
-                >
-                <a
-                  href="https://www.facebook.com/vako.kostava"
-                  target="_blank"
-                  rel="noopener"
-                  onclick="event.stopPropagation()"
-                  >ⓕ Facebook</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="mem mem-link"
-            role="button"
-            tabindex="0"
-            data-photo="assets/members/m5.jpg"
-            data-name-ka="კონსტანტინე ოჩიგავა"
-            data-name-en="Konstantine Ochigava"
-            data-mail="k.ochigava@iberia.org.ge"
-            data-fb="https://www.facebook.com/konstantin.ochigava"
-          >
-            <div class="mem-photo">
-              <img
-                src="assets/members/m5.jpg"
-                alt="Konstantine Ochigava"
-                loading="lazy"
-              />
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">კონსტანტინე ოჩიგავა</h3>
-              <h3 data-en lang="en">Konstantine Ochigava</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-              <div class="mem-contacts">
-                <a
-                  href="mailto:k.ochigava@iberia.org.ge"
-                  onclick="event.stopPropagation()"
-                  title="k.ochigava@iberia.org.ge"
-                  >✉ <span data-ka lang="ka">ფოსტა</span
-                  ><span data-en lang="en">Email</span></a
-                >
-                <a
-                  href="https://www.facebook.com/konstantin.ochigava"
-                  target="_blank"
-                  rel="noopener"
-                  onclick="event.stopPropagation()"
-                  >ⓕ Facebook</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="mem mem-empty">
-            <div class="ph mem-photo-ph">
-              <span data-ka lang="ka">ფოტო — წევრი 10</span
-              ><span data-en lang="en">Photo — member 10</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი]</h3>
-              <h3 data-en lang="en">[Name Surname]</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-            </div>
-          </div>
-          <div class="mem mem-empty">
-            <div class="ph mem-photo-ph">
-              <span data-ka lang="ka">ფოტო — წევრი 11</span
-              ><span data-en lang="en">Photo — member 11</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი]</h3>
-              <h3 data-en lang="en">[Name Surname]</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-            </div>
-          </div>
-          <div class="mem mem-empty">
-            <div class="ph mem-photo-ph">
-              <span data-ka lang="ka">ფოტო — წევრი 12</span
-              ><span data-en lang="en">Photo — member 12</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი]</h3>
-              <h3 data-en lang="en">[Name Surname]</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-            </div>
-          </div>
-          <div class="mem mem-empty">
-            <div class="ph mem-photo-ph">
-              <span data-ka lang="ka">ფოტო — წევრი 13</span
-              ><span data-en lang="en">Photo — member 13</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი]</h3>
-              <h3 data-en lang="en">[Name Surname]</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-            </div>
-          </div>
-          <div class="mem mem-empty">
-            <div class="ph mem-photo-ph">
-              <span data-ka lang="ka">ფოტო — წევრი 14</span
-              ><span data-en lang="en">Photo — member 14</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი]</h3>
-              <h3 data-en lang="en">[Name Surname]</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-            </div>
-          </div>
-          <div class="mem mem-empty">
-            <div class="ph mem-photo-ph">
-              <span data-ka lang="ka">ფოტო — წევრი 15</span
-              ><span data-en lang="en">Photo — member 15</span>
-            </div>
-            <div class="mem-body">
-              <h3 data-ka lang="ka">[სახელი გვარი]</h3>
-              <h3 data-en lang="en">[Name Surname]</h3>
-              <div class="role" data-ka lang="ka">[როლი]</div>
-              <div class="role" data-en lang="en">[Role]</div>
-            </div>
-          </div>
-        </div>
-        <p class="note reveal" style="margin-top: 44px" data-ka lang="ka">
-          [დემო] როლები და ბიოგრაფიები ჩანაცვლებადია — რეალურ ტექსტს კლუბი
-          მოგვაწვდის. ელ. ფოსტის მისამართები ჯერ არ არის შექმნილი სერვერზე.
-        </p>
-        <p class="note reveal" style="margin-top: 44px" data-en lang="en">
-          [Demo] Roles and biographies are placeholders — real text to come from
-          the club. The email addresses are not yet created on the server.
-        </p>
-      </div>
-    </section>
+<section><div class="wrap">
+<div class="mem-grid reveal">
+<div class="mem mem-link" role="button" tabindex="0"
+  data-photo="assets/members/m7.jpg" data-name-ka="ბესიკ ბერძენიშვილი" data-name-en="Besik Berdzenishvili"
+  data-mail="b.berdzenishvili@iberia.org.ge" data-fb="https://www.facebook.com/besik.berdzenishvili">
+<div class="mem-photo"><img src="assets/members/m7.jpg" alt="Besik Berdzenishvili" loading="lazy"></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">ბესიკ ბერძენიშვილი</h3><h3 data-en lang="en">Besik Berdzenishvili</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div>
+<div class="mem-contacts">
+<a href="mailto:b.berdzenishvili@iberia.org.ge" onclick="event.stopPropagation()" title="b.berdzenishvili@iberia.org.ge">✉ <span data-ka lang="ka">ფოსტა</span><span data-en lang="en">Email</span></a>
+<a href="https://www.facebook.com/besik.berdzenishvili" target="_blank" rel="noopener" onclick="event.stopPropagation()">ⓕ Facebook</a>
+</div></div></div>
+<div class="mem mem-link" role="button" tabindex="0"
+  data-photo="assets/members/m3.jpg" data-name-ka="ბექა სამხარაძე" data-name-en="Beka Samkharadze"
+  data-mail="b.samkharadze@iberia.org.ge" data-fb="https://www.facebook.com/beka.samkharadze.7">
+<div class="mem-photo"><img src="assets/members/m3.jpg" alt="Beka Samkharadze" loading="lazy"></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">ბექა სამხარაძე</h3><h3 data-en lang="en">Beka Samkharadze</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div>
+<div class="mem-contacts">
+<a href="mailto:b.samkharadze@iberia.org.ge" onclick="event.stopPropagation()" title="b.samkharadze@iberia.org.ge">✉ <span data-ka lang="ka">ფოსტა</span><span data-en lang="en">Email</span></a>
+<a href="https://www.facebook.com/beka.samkharadze.7" target="_blank" rel="noopener" onclick="event.stopPropagation()">ⓕ Facebook</a>
+</div></div></div>
+<div class="mem mem-link" role="button" tabindex="0"
+  data-photo="assets/members/m2.jpg" data-name-ka="გიორგი ალიაშვილი" data-name-en="Giorgi Aliashvili"
+  data-mail="g.aliashvili@iberia.org.ge" data-fb="https://www.facebook.com/giorgi.aliashvili.1">
+<div class="mem-photo"><img src="assets/members/m2.jpg" alt="Giorgi Aliashvili" loading="lazy"></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">გიორგი ალიაშვილი</h3><h3 data-en lang="en">Giorgi Aliashvili</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div>
+<div class="mem-contacts">
+<a href="mailto:g.aliashvili@iberia.org.ge" onclick="event.stopPropagation()" title="g.aliashvili@iberia.org.ge">✉ <span data-ka lang="ka">ფოსტა</span><span data-en lang="en">Email</span></a>
+<a href="https://www.facebook.com/giorgi.aliashvili.1" target="_blank" rel="noopener" onclick="event.stopPropagation()">ⓕ Facebook</a>
+</div></div></div>
+<div class="mem mem-link" role="button" tabindex="0"
+  data-photo="assets/members/m1.jpg" data-name-ka="გიორგი გოგლიძე" data-name-en="Giorgi Goglidze"
+  data-mail="g.goglidze@iberia.org.ge" data-fb="https://www.facebook.com/vako.kostava">
+<div class="mem-photo"><img src="assets/members/m1.jpg" alt="Giorgi Goglidze" loading="lazy"></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">გიორგი გოგლიძე</h3><h3 data-en lang="en">Giorgi Goglidze</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div>
+<div class="mem-contacts">
+<a href="mailto:g.goglidze@iberia.org.ge" onclick="event.stopPropagation()" title="g.goglidze@iberia.org.ge">✉ <span data-ka lang="ka">ფოსტა</span><span data-en lang="en">Email</span></a>
+<a href="https://www.facebook.com/vako.kostava" target="_blank" rel="noopener" onclick="event.stopPropagation()">ⓕ Facebook</a>
+</div></div></div>
+<div class="mem mem-link" role="button" tabindex="0"
+  data-photo="assets/members/m8.jpg" data-name-ka="დავით კერესელიძე" data-name-en="Davit Kereselidze"
+  data-mail="d.kereselidze@iberia.org.ge" data-fb="https://www.facebook.com/dato.kereselidze.7">
+<div class="mem-photo"><img src="assets/members/m8.jpg" alt="Davit Kereselidze" loading="lazy"></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">დავით კერესელიძე</h3><h3 data-en lang="en">Davit Kereselidze</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div>
+<div class="mem-contacts">
+<a href="mailto:d.kereselidze@iberia.org.ge" onclick="event.stopPropagation()" title="d.kereselidze@iberia.org.ge">✉ <span data-ka lang="ka">ფოსტა</span><span data-en lang="en">Email</span></a>
+<a href="https://www.facebook.com/dato.kereselidze.7" target="_blank" rel="noopener" onclick="event.stopPropagation()">ⓕ Facebook</a>
+</div></div></div>
+<div class="mem mem-link" role="button" tabindex="0"
+  data-photo="assets/members/m9.jpg" data-name-ka="დავით ცერცვაძე" data-name-en="David Tsertsvadze"
+  data-mail="d.tsertsvadze@iberia.org.ge" data-fb="https://www.facebook.com/david.tsertsvadze.5">
+<div class="mem-photo"><img src="assets/members/m9.jpg" alt="David Tsertsvadze" loading="lazy"></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">დავით ცერცვაძე</h3><h3 data-en lang="en">David Tsertsvadze</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div>
+<div class="mem-contacts">
+<a href="mailto:d.tsertsvadze@iberia.org.ge" onclick="event.stopPropagation()" title="d.tsertsvadze@iberia.org.ge">✉ <span data-ka lang="ka">ფოსტა</span><span data-en lang="en">Email</span></a>
+<a href="https://www.facebook.com/david.tsertsvadze.5" target="_blank" rel="noopener" onclick="event.stopPropagation()">ⓕ Facebook</a>
+</div></div></div>
+<div class="mem mem-link" role="button" tabindex="0"
+  data-photo="assets/members/m4.jpg" data-name-ka="დიმიტრი გოგოხია" data-name-en="Dimitri Gogokhia"
+  data-mail="d.gogokhia@iberia.org.ge" data-fb="https://www.facebook.com/dimitri.gogokhia">
+<div class="mem-photo"><img src="assets/members/m4.jpg" alt="Dimitri Gogokhia" loading="lazy"></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">დიმიტრი გოგოხია</h3><h3 data-en lang="en">Dimitri Gogokhia</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div>
+<div class="mem-contacts">
+<a href="mailto:d.gogokhia@iberia.org.ge" onclick="event.stopPropagation()" title="d.gogokhia@iberia.org.ge">✉ <span data-ka lang="ka">ფოსტა</span><span data-en lang="en">Email</span></a>
+<a href="https://www.facebook.com/dimitri.gogokhia" target="_blank" rel="noopener" onclick="event.stopPropagation()">ⓕ Facebook</a>
+</div></div></div>
+<div class="mem mem-link" role="button" tabindex="0"
+  data-photo="assets/members/m6.jpg" data-name-ka="ვარლამ ხაჭაპურიძე" data-name-en="Varlam Khachapuridze"
+  data-mail="v.khachapuridze@iberia.org.ge" data-fb="https://www.facebook.com/vako.kostava">
+<div class="mem-photo"><img src="assets/members/m6.jpg" alt="Varlam Khachapuridze" loading="lazy"></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">ვარლამ ხაჭაპურიძე</h3><h3 data-en lang="en">Varlam Khachapuridze</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div>
+<div class="mem-contacts">
+<a href="mailto:v.khachapuridze@iberia.org.ge" onclick="event.stopPropagation()" title="v.khachapuridze@iberia.org.ge">✉ <span data-ka lang="ka">ფოსტა</span><span data-en lang="en">Email</span></a>
+<a href="https://www.facebook.com/vako.kostava" target="_blank" rel="noopener" onclick="event.stopPropagation()">ⓕ Facebook</a>
+</div></div></div>
+<div class="mem mem-link" role="button" tabindex="0"
+  data-photo="assets/members/m5.jpg" data-name-ka="კონსტანტინე ოჩიგავა" data-name-en="Konstantine Ochigava"
+  data-mail="k.ochigava@iberia.org.ge" data-fb="https://www.facebook.com/konstantin.ochigava">
+<div class="mem-photo"><img src="assets/members/m5.jpg" alt="Konstantine Ochigava" loading="lazy"></div>
+<div class="mem-body">
+<h3 data-ka lang="ka">კონსტანტინე ოჩიგავა</h3><h3 data-en lang="en">Konstantine Ochigava</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div>
+<div class="mem-contacts">
+<a href="mailto:k.ochigava@iberia.org.ge" onclick="event.stopPropagation()" title="k.ochigava@iberia.org.ge">✉ <span data-ka lang="ka">ფოსტა</span><span data-en lang="en">Email</span></a>
+<a href="https://www.facebook.com/konstantin.ochigava" target="_blank" rel="noopener" onclick="event.stopPropagation()">ⓕ Facebook</a>
+</div></div></div>
+<div class="mem mem-empty">
+<div class="ph mem-photo-ph"><span data-ka lang="ka">ფოტო — წევრი 10</span><span data-en lang="en">Photo — member 10</span></div>
+<div class="mem-body"><h3 data-ka lang="ka">[სახელი გვარი]</h3><h3 data-en lang="en">[Name Surname]</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div></div></div>
+<div class="mem mem-empty">
+<div class="ph mem-photo-ph"><span data-ka lang="ka">ფოტო — წევრი 11</span><span data-en lang="en">Photo — member 11</span></div>
+<div class="mem-body"><h3 data-ka lang="ka">[სახელი გვარი]</h3><h3 data-en lang="en">[Name Surname]</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div></div></div>
+<div class="mem mem-empty">
+<div class="ph mem-photo-ph"><span data-ka lang="ka">ფოტო — წევრი 12</span><span data-en lang="en">Photo — member 12</span></div>
+<div class="mem-body"><h3 data-ka lang="ka">[სახელი გვარი]</h3><h3 data-en lang="en">[Name Surname]</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div></div></div>
+<div class="mem mem-empty">
+<div class="ph mem-photo-ph"><span data-ka lang="ka">ფოტო — წევრი 13</span><span data-en lang="en">Photo — member 13</span></div>
+<div class="mem-body"><h3 data-ka lang="ka">[სახელი გვარი]</h3><h3 data-en lang="en">[Name Surname]</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div></div></div>
+<div class="mem mem-empty">
+<div class="ph mem-photo-ph"><span data-ka lang="ka">ფოტო — წევრი 14</span><span data-en lang="en">Photo — member 14</span></div>
+<div class="mem-body"><h3 data-ka lang="ka">[სახელი გვარი]</h3><h3 data-en lang="en">[Name Surname]</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div></div></div>
+<div class="mem mem-empty">
+<div class="ph mem-photo-ph"><span data-ka lang="ka">ფოტო — წევრი 15</span><span data-en lang="en">Photo — member 15</span></div>
+<div class="mem-body"><h3 data-ka lang="ka">[სახელი გვარი]</h3><h3 data-en lang="en">[Name Surname]</h3>
+<div class="role" data-ka lang="ka">[როლი]</div><div class="role" data-en lang="en">[Role]</div></div></div>
+</div>
+<p class="note reveal" style="margin-top:44px" data-ka lang="ka">[დემო] როლები და ბიოგრაფიები ჩანაცვლებადია — რეალურ ტექსტს კლუბი მოგვაწვდის. ელ. ფოსტის მისამართები ჯერ არ არის შექმნილი სერვერზე.</p>
+<p class="note reveal" style="margin-top:44px" data-en lang="en">[Demo] Roles and biographies are placeholders — real text to come from the club. The email addresses are not yet created on the server.</p>
+</div></section>
 
-    <!-- ── MEMBER PROFILE MODAL ── -->
-    <div class="modal" id="mem-modal" aria-hidden="true">
-      <div class="modal-back" onclick="closeMem()"></div>
-      <div class="modal-card" role="dialog" aria-modal="true">
-        <button class="modal-x" onclick="closeMem()" aria-label="Close">
-          ✕
-        </button>
-        <div class="modal-photo"><img id="mm-photo" src="" alt="" /></div>
-        <div class="modal-info">
-          <div class="tag" data-ka lang="ka">კლუბის წევრი</div>
-          <div class="tag" data-en lang="en">Club member</div>
-          <h2 id="mm-name-ka" data-ka lang="ka"></h2>
-          <h2 id="mm-name-en" data-en lang="en"></h2>
-          <div class="role" id="mm-role" style="margin-bottom: 18px">
-            <span data-ka lang="ka">[როლი]</span
-            ><span data-en lang="en">[Role]</span>
-          </div>
-          <p data-ka lang="ka">
-            [სადემონსტრაციო ტექსტი] კლუბის ერთგული წევრი მრავალწლიანი
-            გამოცდილებით. მონაწილეობს კლუბის ექსპედიციებში საქართველოსა და
-            ევროპაში. რეალურ ბიოგრაფიას კლუბი მოგვაწვდის.
-          </p>
-          <p data-en lang="en">
-            [Demo text] A devoted member of the club with many seasons of
-            experience, taking part in expeditions across Georgia and Europe.
-            The real biography will be supplied by the club.
-          </p>
-          <div class="modal-actions">
-            <a class="btn" id="mm-mail" href="#"
-              ><span data-ka lang="ka">ელ. ფოსტა</span
-              ><span data-en lang="en">Email</span></a
-            >
-            <a
-              class="btn ghost"
-              id="mm-fb"
-              href="#"
-              target="_blank"
-              rel="noopener"
-              >Facebook</a
-            >
-          </div>
-          <div class="note" id="mm-mail-note"></div>
-        </div>
-      </div>
-    </div>
-    <footer>
-      <div class="wrap foot">
-        <div>
-          <a class="logo-full" href="index.html"
-            ><img src="assets/logo-bone.png" alt="Iberia — Hunters' Club"
-          /></a>
-          <p style="font-size: 13px" data-ka lang="ka">
-            [ჩანაცვლებადი] კლუბის მოკლე აღწერა, მისამართი და სამუშაო საათები.
-          </p>
-          <p style="font-size: 13px" data-en lang="en">
-            [Placeholder] Short club description, address and opening hours.
-          </p>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">კლუბი</h4>
-          <h4 data-en lang="en">Club</h4>
-          <a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a
-          ><a href="about.html" data-en lang="en">About</a>
-          <a href="expeditions.html" data-ka lang="ka">ნადირობები</a
-          ><a href="expeditions.html" data-en lang="en">Expeditions</a>
-          <a href="gallery.html" data-ka lang="ka">გალერეა</a
-          ><a href="gallery.html" data-en lang="en">Gallery</a>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">ღონისძიებები</h4>
-          <h4 data-en lang="en">Events</h4>
-          <a href="events.html" data-ka lang="ka">ყველა ღონისძიება</a
-          ><a href="events.html" data-en lang="en">All events</a>
-          <a href="event.html" data-ka lang="ka">რეგისტრაცია</a
-          ><a href="event.html" data-en lang="en">Registration</a>
-          <a href="news.html" data-ka lang="ka">სიახლეები</a
-          ><a href="news.html" data-en lang="en">News</a>
-        </div>
-        <div>
-          <h4 data-ka lang="ka">კონტაქტი</h4>
-          <h4 data-en lang="en">Contact</h4>
-          <a href="tel:#">+995 XXX XX XX XX</a
-          ><a href="mailto:#">info@iberia.ge</a><a href="#">Facebook</a>
-        </div>
-      </div>
-      <div class="wrap copy">
-        <span>© 20XX Iberia Hunters Club</span
-        ><span data-ka lang="ka">ყველა უფლება დაცულია</span
-        ><span data-en lang="en">All rights reserved</span>
-      </div>
-    </footer>
-    <script src="assets/app.js?v=8"></script>
-  </body>
-</html>
+<!-- ── MEMBER PROFILE MODAL ── -->
+<div class="modal" id="mem-modal" aria-hidden="true">
+<div class="modal-back" onclick="closeMem()"></div>
+<div class="modal-card" role="dialog" aria-modal="true">
+<button class="modal-x" onclick="closeMem()" aria-label="Close">✕</button>
+<div class="modal-photo"><img id="mm-photo" src="" alt=""></div>
+<div class="modal-info">
+<div class="tag" data-ka lang="ka">კლუბის წევრი</div><div class="tag" data-en lang="en">Club member</div>
+<h2 id="mm-name-ka" data-ka lang="ka"></h2><h2 id="mm-name-en" data-en lang="en"></h2>
+<div class="role" id="mm-role" style="margin-bottom:18px"><span data-ka lang="ka">[როლი]</span><span data-en lang="en">[Role]</span></div>
+<p data-ka lang="ka">[სადემონსტრაციო ტექსტი] კლუბის ერთგული წევრი მრავალწლიანი გამოცდილებით. მონაწილეობს კლუბის ექსპედიციებში საქართველოსა და ევროპაში. რეალურ ბიოგრაფიას კლუბი მოგვაწვდის.</p>
+<p data-en lang="en">[Demo text] A devoted member of the club with many seasons of experience, taking part in expeditions across Georgia and Europe. The real biography will be supplied by the club.</p>
+<div class="modal-actions">
+<a class="btn" id="mm-mail" href="#"><span data-ka lang="ka">ელ. ფოსტა</span><span data-en lang="en">Email</span></a>
+<a class="btn ghost" id="mm-fb" href="#" target="_blank" rel="noopener">Facebook</a>
+</div>
+<div class="note" id="mm-mail-note"></div>
+</div></div></div>
+<footer>
+<div class="wrap foot">
+<div>
+<a class="logo-full" href="index.html"><img src="assets/logo-bone.png" alt="Iberia — Hunters' Club"></a>
+<p style="font-size:13px" data-ka lang="ka">[ჩანაცვლებადი] კლუბის მოკლე აღწერა, მისამართი და სამუშაო საათები.</p>
+<p style="font-size:13px" data-en lang="en">[Placeholder] Short club description, address and opening hours.</p>
+</div>
+<div><h4 data-ka lang="ka">კლუბი</h4><h4 data-en lang="en">Club</h4>
+<a href="about.html" data-ka lang="ka">ჩვენ შესახებ</a><a href="about.html" data-en lang="en">About</a>
+<a href="expeditions.html" data-ka lang="ka">ნადირობები</a><a href="expeditions.html" data-en lang="en">Expeditions</a>
+<a href="gallery.html" data-ka lang="ka">გალერეა</a><a href="gallery.html" data-en lang="en">Gallery</a></div>
+<div><h4 data-ka lang="ka">ღონისძიებები</h4><h4 data-en lang="en">Events</h4>
+<a href="events.html" data-ka lang="ka">ყველა ღონისძიება</a><a href="events.html" data-en lang="en">All events</a>
+<a href="event.html" data-ka lang="ka">რეგისტრაცია</a><a href="event.html" data-en lang="en">Registration</a>
+<a href="news.html" data-ka lang="ka">სიახლეები</a><a href="news.html" data-en lang="en">News</a></div>
+<div><h4 data-ka lang="ka">კონტაქტი</h4><h4 data-en lang="en">Contact</h4>
+<a href="tel:#">+995 XXX XX XX XX</a><a href="mailto:#">info@iberia.ge</a><a href="#">Facebook</a></div>
+</div>
+<div class="wrap copy"><span>© 20XX Iberia Hunters Club</span><span data-ka lang="ka">ყველა უფლება დაცულია</span><span data-en lang="en">All rights reserved</span></div>
+</footer>
+<script src="assets/app.js?v=8"></script>
+</body></html>
