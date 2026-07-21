@@ -235,15 +235,22 @@ nav.veiled {
   text-decoration: none;
   color: var(--bone);
 }
-.logo .mark-img {
-  height: 36px;
+/* Full crest in the menu (client request). Sized so the rams / mountain /
+   IBERIA wordmark read clearly; shrinks when the bar sticks on scroll. */
+.logo .crest-img {
+  height: 54px;
   width: auto;
   flex: none;
   opacity: 0.95;
-  transition: opacity 0.3s;
+  transition:
+    opacity 0.3s,
+    height 0.4s;
 }
-.logo:hover .mark-img {
+.logo:hover .crest-img {
   opacity: 1;
+}
+nav.stuck .crest-img {
+  height: 42px;
 }
 .logo-full {
   display: block;
@@ -955,8 +962,8 @@ html[lang="en"] [data-ka] {
       padding: 14px 20px;
     }
     .links {
-      position: fixed;
-      top: 60px;
+      position: absolute;
+      top: 100%;
       left: 0;
       right: 0;
       background: rgba(11, 17, 12, 0.98);
@@ -1004,6 +1011,12 @@ html[lang="en"] [data-ka] {
     }
     .logo-full img {
       width: 190px;
+    }
+    .logo .crest-img {
+      height: 44px;
+    }
+    nav.stuck .crest-img {
+      height: 38px;
     }
   }
 }
