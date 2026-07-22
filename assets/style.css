@@ -973,6 +973,7 @@ body.modal-open {
 .sticky-panel {
   position: sticky;
   top: 100px;
+  scroll-margin-top: 96px;
 }
 .spec-row {
   display: grid;
@@ -1121,6 +1122,10 @@ body.modal-open {
   .viewer-stage {
     min-height: 260px;
     max-height: 48vh;
+    overflow: hidden;
+  }
+  .viewer-stage img {
+    max-height: 48vh;
   }
   .viewer-info {
     padding: 26px 20px;
@@ -1193,6 +1198,123 @@ body.modal-open {
     margin-top: 26px;
     max-width: 340px;
   }
+}
+
+/* ── VIDEOS ── */
+.vid-card {
+  cursor: pointer;
+}
+.vid-thumb {
+  position: relative;
+}
+.vid-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.play-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(11, 17, 12, 0.72);
+  border: 1px solid var(--brass);
+  color: var(--brass-lt);
+  font-size: 18px;
+  padding-left: 4px;
+  transition: 0.35s;
+}
+.vid-card:hover .play-badge {
+  background: var(--brass);
+  color: var(--deep);
+}
+.vid-title {
+  margin: 0 0 14px;
+  font-size: 17px;
+  line-height: 1.35;
+  transition: color 0.3s;
+}
+.vid-card:hover .vid-title {
+  color: var(--brass-lt);
+}
+.vid-card .foot a {
+  color: var(--bone-dim);
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+.vid-card .foot a:hover {
+  color: var(--brass-lt);
+}
+.vmodal-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(1060px, 95vw);
+  background: #000;
+  border: 1px solid var(--line-lt);
+  animation: modal-in 0.45s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.vmodal-frame {
+  aspect-ratio: 16/9;
+}
+.vmodal-frame iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 560px) {
+  .vmodal-card {
+    width: 100vw;
+    border-left: 0;
+    border-right: 0;
+  }
+  .vid-title {
+    font-size: 15px;
+  }
+  .play-badge {
+    width: 46px;
+    height: 46px;
+    font-size: 15px;
+  }
+}
+
+/* ── SLIDESHOW (About + member cards) ── */
+.slideshow {
+  position: relative;
+  overflow: hidden;
+}
+.slideshow img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.1s ease;
+}
+.slideshow img.on {
+  opacity: 1;
+}
+.mem-photo.slideshow img {
+  filter: saturate(0.96) contrast(1.02);
+}
+.mem:hover .mem-photo.slideshow img.on {
+  transform: scale(1.04);
+}
+.mem-photo.slideshow img {
+  transition:
+    opacity 1.1s ease,
+    transform 0.6s ease;
 }
 
 /* ── FOOTER ── */

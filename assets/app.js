@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.isIntersecting) e.target.classList.add("in");
       });
     },
-    { threshold: 0.12 },
+    { threshold: 0, rootMargin: "0px 0px -40px 0px" },
   );
   document.querySelectorAll(".reveal").forEach(function (el) {
     io.observe(el);
@@ -156,11 +156,49 @@ function submitReg() {
 }
 
 /* ── MEMBER PROFILE MODAL ── */
+var _mmTimer = null;
 function openMem(card) {
   var mod = document.getElementById("mem-modal");
   if (!mod) return;
-  document.getElementById("mm-photo").src = card.getAttribute("data-photo");
-  document.getElementById("mm-photo").alt = card.getAttribute("data-name-en");
+  var box = document.querySelector("#mem-modal .modal-photo");
+  var photos = (
+    card.getAttribute("data-photos") || card.getAttribute("data-photo")
+  ).split(",");
+  if (_mmTimer) {
+    clearInterval(_mmTimer);
+    _mmTimer = null;
+  }
+  if (box && photos.length > 1) {
+    box.classList.add("slideshow");
+    box.innerHTML = photos
+      .map(function (p, k) {
+        return (
+          '<img src="' +
+          p +
+          '" alt="' +
+          card.getAttribute("data-name-en") +
+          '"' +
+          (k === 0 ? ' class="on"' : "") +
+          ">"
+        );
+      })
+      .join("");
+    var imgs = box.querySelectorAll("img"),
+      i = 0;
+    _mmTimer = setInterval(function () {
+      imgs[i].classList.remove("on");
+      i = (i + 1) % imgs.length;
+      imgs[i].classList.add("on");
+    }, 3500);
+  } else if (box) {
+    box.classList.remove("slideshow");
+    box.innerHTML =
+      '<img id="mm-photo" src="' +
+      photos[0] +
+      '" alt="' +
+      card.getAttribute("data-name-en") +
+      '">';
+  }
   document.getElementById("mm-name-ka").textContent =
     card.getAttribute("data-name-ka");
   document.getElementById("mm-name-en").textContent =
@@ -178,6 +216,10 @@ function openMem(card) {
 function closeMem() {
   var mod = document.getElementById("mem-modal");
   if (mod) mod.classList.remove("open");
+  if (_mmTimer) {
+    clearInterval(_mmTimer);
+    _mmTimer = null;
+  }
   document.body.classList.remove("modal-open");
 }
 document.addEventListener("DOMContentLoaded", function () {
@@ -306,5 +348,74 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("story-viewer").classList.add("open");
       document.body.classList.add("modal-open");
     });
+  });
+});
+
+/* ── VIDEOS: player + auto titles ── */
+function openVideo(id) {
+  var m = document.getElementById("video-modal");
+  if (!m) return;
+  document.getElementById("vm-frame").src =
+    "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+  m.classList.add("open");
+  document.body.classList.add("modal-open");
+}
+function closeVideo() {
+  var m = document.getElementById("video-modal");
+  if (!m) return;
+  document.getElementById("vm-frame").src = ""; /* stops playback */
+  m.classList.remove("open");
+  document.body.classList.remove("modal-open");
+}
+document.addEventListener("DOMContentLoaded", function () {
+  var cards = document.querySelectorAll(".vid-card");
+  if (!cards.length) return;
+  cards.forEach(function (card) {
+    card.addEventListener("click", function () {
+      openVideo(card.getAttribute("data-vid"));
+    });
+    card.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openVideo(card.getAttribute("data-vid"));
+      }
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    var m = document.getElementById("video-modal");
+    if (m && m.classList.contains("open") && e.key === "Escape") closeVideo();
+  });
+  /* real titles from YouTube via a CORS-friendly oEmbed proxy; fallback stays */
+  document
+    .querySelectorAll(".vid-title[data-vid-title]")
+    .forEach(function (el) {
+      var id = el.getAttribute("data-vid-title");
+      fetch(
+        "https://noembed.com/embed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D" +
+          id,
+      )
+        .then(function (r) {
+          return r.json();
+        })
+        .then(function (d) {
+          if (d && d.title) el.textContent = d.title;
+        })
+        .catch(function () {});
+    });
+});
+
+/* ── SLIDESHOWS: auto-cycle any .slideshow container ── */
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".slideshow").forEach(function (box, n) {
+    var imgs = box.querySelectorAll("img");
+    if (imgs.length < 2) return;
+    var i = 0;
+    setTimeout(function () {
+      setInterval(function () {
+        imgs[i].classList.remove("on");
+        i = (i + 1) % imgs.length;
+        imgs[i].classList.add("on");
+      }, 3500);
+    }, n * 600); /* stagger so cards don't flip in unison */
   });
 });
