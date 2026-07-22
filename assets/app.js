@@ -146,12 +146,67 @@ function affil(kind) {
 
 function submitReg() {
   var form = document.getElementById("reg-form");
-  var ok = document.getElementById("reg-ok");
-  if (form) form.style.display = "none";
-  if (ok) ok.classList.add("show");
-  document.querySelectorAll(".step").forEach(function (s) {
-    s.classList.add("on");
-  });
+  if (!form) return false;
+  var type =
+    document.getElementById("aff-club") &&
+    document.getElementById("aff-club").checked
+      ? "club"
+      : "individual";
+  var branch = document.getElementById(type === "club" ? "c-club" : "c-solo");
+  function val(f) {
+    var el = branch.querySelector('[data-f="' + f + '"]');
+    return el ? el.value.trim() : "";
+  }
+  var data = new FormData();
+  data.append("action", "register");
+  data.append("type", type);
+  var evSel = document.getElementById("reg-event");
+  data.append("event", evSel ? evSel.options[evSel.selectedIndex].text : "");
+  data.append("first", val("first"));
+  data.append("last", val("last"));
+  data.append("email", val("email"));
+  data.append("phone", val("phone"));
+  if (type === "club") {
+    var cs = document.getElementById("club-select");
+    data.append("club", cs ? cs.value : "");
+    data.append("club_other", val("club_other"));
+  }
+  var hp = document.getElementById("reg-hp");
+  data.append("website", hp ? hp.value : "");
+  var err = document.getElementById("reg-err");
+  if (!val("first") || !val("last") || !/.+@.+\..+/.test(val("email"))) {
+    if (err) {
+      err.textContent =
+        document.documentElement.lang === "en"
+          ? "Please fill in all fields correctly."
+          : "გთხოვთ შეავსოთ ყველა ველი სწორად.";
+      err.style.display = "";
+    }
+    return false;
+  }
+  if (err) err.style.display = "none";
+  fetch("handler.php", { method: "POST", body: data })
+    .then(function (r) {
+      return r.json();
+    })
+    .then(function (d) {
+      if (!d.ok) throw 0;
+      form.style.display = "none";
+      var ok = document.getElementById("reg-ok");
+      if (ok) ok.classList.add("show");
+      document.querySelectorAll(".step").forEach(function (s) {
+        s.classList.add("on");
+      });
+    })
+    .catch(function () {
+      if (err) {
+        err.textContent =
+          document.documentElement.lang === "en"
+            ? "Could not reach the server — this works only on the live site (iberia.org.ge)."
+            : "სერვერთან დაკავშირება ვერ მოხერხდა — ფორმა მუშაობს მხოლოდ საიტზე (iberia.org.ge).";
+        err.style.display = "";
+      }
+    });
   return false;
 }
 
@@ -419,3 +474,72 @@ document.addEventListener("DOMContentLoaded", function () {
     }, n * 600); /* stagger so cards don't flip in unison */
   });
 });
+
+/* ── CONTACT FORM ── */
+function sendContact() {
+  var panel = document.querySelector(".panel");
+  if (!panel) return false;
+  function val(f) {
+    var el = panel.querySelector('[data-f="' + f + '"]');
+    return el ? el.value.trim() : "";
+  }
+  var msg = document.getElementById("ct-msg");
+  function note(t, bad) {
+    if (!msg) return;
+    msg.textContent = t;
+    msg.style.display = "";
+    msg.style.color = bad ? "#c96a4a" : "var(--brass-lt)";
+  }
+  if (
+    !val("first") ||
+    !val("last") ||
+    !/.+@.+\..+/.test(val("email")) ||
+    !val("message")
+  ) {
+    note(
+      document.documentElement.lang === "en"
+        ? "Please fill in all fields."
+        : "გთხოვთ შეავსოთ ყველა ველი.",
+      true,
+    );
+    return false;
+  }
+  var data = new FormData();
+  data.append("action", "contact");
+  ["first", "last", "email", "phone", "message"].forEach(function (f) {
+    data.append(f, val(f));
+  });
+  var hp = document.getElementById("ct-hp");
+  data.append("website", hp ? hp.value : "");
+  note(
+    document.documentElement.lang === "en" ? "Sending…" : "იგზავნება…",
+    false,
+  );
+  fetch("handler.php", { method: "POST", body: data })
+    .then(function (r) {
+      return r.json();
+    })
+    .then(function (d) {
+      if (!d.ok) throw 0;
+      note(
+        document.documentElement.lang === "en"
+          ? "Message sent — thank you!"
+          : "შეტყობინება გაიგზავნა — გმადლობთ!",
+        false,
+      );
+      panel
+        .querySelectorAll("input:not([type=hidden]),textarea")
+        .forEach(function (el) {
+          if (el.id !== "ct-hp") el.value = "";
+        });
+    })
+    .catch(function () {
+      note(
+        document.documentElement.lang === "en"
+          ? "Could not send — try again."
+          : "ვერ გაიგზავნა — სცადეთ თავიდან.",
+        true,
+      );
+    });
+  return false;
+}

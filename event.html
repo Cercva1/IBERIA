@@ -32,7 +32,7 @@
     />
     <link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
     <link rel="apple-touch-icon" href="assets/favicon.png?v=2" />
-    <link rel="stylesheet" href="assets/style.css?v=16" />
+    <link rel="stylesheet" href="assets/style.css?v=20" />
   </head>
   <body>
     <svg class="grain">
@@ -364,20 +364,22 @@
                 <div class="field">
                   <label data-ka lang="ka">სახელი</label
                   ><label data-en lang="en">First name</label
-                  ><input type="text" />
+                  ><input type="text" data-f="first" />
                 </div>
                 <div class="field">
                   <label data-ka lang="ka">გვარი</label
                   ><label data-en lang="en">Last name</label
-                  ><input type="text" />
+                  ><input type="text" data-f="last" />
                 </div>
                 <div class="field">
                   <label data-ka lang="ka">ელ. ფოსტა</label
-                  ><label data-en lang="en">Email</label><input type="email" />
+                  ><label data-en lang="en">Email</label
+                  ><input type="email" data-f="email" />
                 </div>
                 <div class="field">
                   <label data-ka lang="ka">ტელეფონი</label
-                  ><label data-en lang="en">Phone</label><input type="tel" />
+                  ><label data-en lang="en">Phone</label
+                  ><input type="tel" data-f="phone" />
                 </div>
               </div>
 
@@ -393,28 +395,38 @@
                 <div class="field" id="club-other" style="display: none">
                   <label data-ka lang="ka">ჩაწერეთ კლუბის სახელი</label
                   ><label data-en lang="en">Type your club’s name</label
-                  ><input type="text" />
+                  ><input type="text" data-f="club_other" />
                 </div>
                 <div class="field">
                   <label data-ka lang="ka">სახელი</label
                   ><label data-en lang="en">First name</label
-                  ><input type="text" />
+                  ><input type="text" data-f="first" />
                 </div>
                 <div class="field">
                   <label data-ka lang="ka">გვარი</label
                   ><label data-en lang="en">Last name</label
-                  ><input type="text" />
+                  ><input type="text" data-f="last" />
                 </div>
                 <div class="field">
                   <label data-ka lang="ka">ელ. ფოსტა</label
-                  ><label data-en lang="en">Email</label><input type="email" />
+                  ><label data-en lang="en">Email</label
+                  ><input type="email" data-f="email" />
                 </div>
                 <div class="field">
                   <label data-ka lang="ka">ტელეფონი</label
-                  ><label data-en lang="en">Phone</label><input type="tel" />
+                  ><label data-en lang="en">Phone</label
+                  ><input type="tel" data-f="phone" />
                 </div>
               </div>
 
+              <input
+                type="text"
+                name="website"
+                id="reg-hp"
+                style="display: none"
+                tabindex="-1"
+                autocomplete="off"
+              />
               <button
                 class="btn"
                 style="width: 100%; margin-top: 26px"
@@ -433,11 +445,23 @@
               >
                 Register
               </button>
-              <p class="note" data-ka lang="ka">
-                [დემო] ფორმა ვიზუალურია — მონაცემები არსად იგზავნება.
+              <p
+                class="note"
+                id="reg-err"
+                style="display: none; color: #c96a4a"
+                data-ka
+                lang="ka"
+              >
+                გთხოვთ შეავსოთ ყველა ველი სწორად.
               </p>
-              <p class="note" data-en lang="en">
-                [Demo] Visual only — nothing is submitted anywhere yet.
+              <p
+                class="note"
+                style="display: none; color: #c96a4a"
+                data-en
+                lang="en"
+                id="reg-err-en"
+              >
+                Please fill in all fields correctly.
               </p>
             </div>
 
@@ -511,6 +535,6 @@
         ><span data-en lang="en">All rights reserved</span>
       </div>
     </footer>
-    <script src="assets/app.js?v=12"></script>
+    <script src="assets/app.js?v=21"></script>
   </body>
 </html>

@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/favicon.png?v=2">
 <link rel="apple-touch-icon" href="assets/favicon.png?v=2">
-<link rel="stylesheet" href="assets/style.css?v=16">
+<link rel="stylesheet" href="assets/style.css?v=20">
 </head>
 <body>
 <svg class="grain"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
@@ -79,14 +79,15 @@
 <div class="reveal"><div class="panel">
 <h3 data-ka lang="ka">შეტყობინების გაგზავნა</h3><h3 data-en lang="en">Send a message</h3>
 <div style="margin-top:28px">
-<div class="row"><div class="field"><label data-ka lang="ka">სახელი</label><label data-en lang="en">First name</label><input type="text"></div>
-<div class="field"><label data-ka lang="ka">გვარი</label><label data-en lang="en">Last name</label><input type="text"></div></div>
-<div class="field"><label data-ka lang="ka">ელ. ფოსტა</label><label data-en lang="en">Email</label><input type="email"></div>
-<div class="field"><label data-ka lang="ka">ტელეფონი</label><label data-en lang="en">Phone</label><input type="tel"></div>
-<div class="field"><label data-ka lang="ka">შეტყობინება</label><label data-en lang="en">Message</label><textarea rows="4"></textarea></div>
-<button class="btn" style="width:100%" onclick="return false" data-ka lang="ka">გაგზავნა</button>
-<button class="btn" style="width:100%" onclick="return false" data-en lang="en">Send</button>
-<p class="note" data-ka lang="ka">[დემო] ფორმა ვიზუალურია.</p><p class="note" data-en lang="en">[Demo] Visual only.</p>
+<div class="row"><div class="field"><label data-ka lang="ka">სახელი</label><label data-en lang="en">First name</label><input type="text" data-f="first"></div>
+<div class="field"><label data-ka lang="ka">გვარი</label><label data-en lang="en">Last name</label><input type="text" data-f="last"></div></div>
+<div class="field"><label data-ka lang="ka">ელ. ფოსტა</label><label data-en lang="en">Email</label><input type="email" data-f="email"></div>
+<div class="field"><label data-ka lang="ka">ტელეფონი</label><label data-en lang="en">Phone</label><input type="tel" data-f="phone"></div>
+<div class="field"><label data-ka lang="ka">შეტყობინება</label><label data-en lang="en">Message</label><textarea rows="4" data-f="message"></textarea></div>
+<input type="text" name="website" id="ct-hp" style="display:none" tabindex="-1" autocomplete="off">
+<button class="btn" style="width:100%" onclick="return sendContact()" data-ka lang="ka">გაგზავნა</button>
+<button class="btn" style="width:100%" onclick="return sendContact()" data-en lang="en">Send</button>
+<p class="note" id="ct-msg" style="display:none"></p>
 </div></div></div>
 </div></section><footer>
 <div class="wrap foot">
@@ -108,5 +109,5 @@
 </div>
 <div class="wrap copy"><span>© 20XX Iberia Hunters Club</span><span data-ka lang="ka">ყველა უფლება დაცულია</span><span data-en lang="en">All rights reserved</span></div>
 </footer>
-<script src="assets/app.js?v=12"></script>
+<script src="assets/app.js?v=21"></script>
 </body></html>
