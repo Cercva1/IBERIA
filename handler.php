@@ -15,6 +15,11 @@ $FROM       = 'noreply@iberia.org.ge';
 function respond($ok, $extra = []){ echo json_encode(array_merge(['ok'=>$ok], $extra)); exit; }
 function clean($v){ return trim(str_replace(["\r","\n","%0a","%0d"], ' ', (string)$v)); }
 
+/* Excel and Sheets execute a cell that opens with = + - @ , so a submitted
+   "=HYPERLINK(...)" would run when the club opens the sheet. Neutralise it. */
+function csvSafe($v){ $v = (string)$v; return preg_match('/^[=+\-@\t\r]/', $v) ? "'" . $v : $v; }
+function csvRow($fh, array $row){ fputcsv($fh, array_map('csvSafe', $row)); }
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     respond(false, ['error'=>'method']);
 }
@@ -55,7 +60,7 @@ if ($action === 'register') {
     $fh = @fopen($csv, 'a');
     if (!$fh) respond(false, ['error'=>'open_failed', 'path'=>$csv]);
     if ($isNew) fputcsv($fh, ['Date','Event','Type','Club','First name','Last name','Email','Phone']);
-    fputcsv($fh, [$stamp, $event, $type, $club, $first, $last, $email, $phone]);
+    csvRow($fh, [$stamp, $event, $type, $club, $first, $last, $email, $phone]);
     fclose($fh);
 
     $subject = "ახალი რეგისტრაცია — $event";
@@ -72,7 +77,7 @@ if ($action === 'register') {
     $fh = @fopen($csv, 'a');
     if (!$fh) respond(false, ['error'=>'open_failed', 'path'=>$csv]);
     if ($isNew) fputcsv($fh, ['Date','First name','Last name','Email','Phone','Message']);
-    fputcsv($fh, [$stamp, $first, $last, $email, $phone, $message]);
+    csvRow($fh, [$stamp, $first, $last, $email, $phone, $message]);
     fclose($fh);
 
     $subject = "ახალი შეტყობინება საიტიდან — $first $last";
@@ -83,8 +88,11 @@ if ($action === 'register') {
     respond(false, ['error'=>'action']);
 }
 
+/* a name carrying < > , ; " would break out of the Reply-To address */
+$replyName = trim(str_replace(['<','>',',',';','"'], ' ', "$first $last"));
+
 $headers = "From: IBERIA <$FROM>\r\n"
-         . "Reply-To: $first $last <$email>\r\n"
+         . "Reply-To: $replyName <$email>\r\n"
          . "MIME-Version: 1.0\r\n"
          . "Content-Type: text/plain; charset=utf-8\r\n";
 

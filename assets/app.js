@@ -138,10 +138,30 @@ function affil(kind) {
   var solo = document.getElementById("c-solo");
   if (club) club.classList.toggle("open", kind === "club");
   if (solo) solo.classList.toggle("open", kind === "solo");
+  /* every step exists twice — one node per language — so two DOM nodes make
+     up one real step. Light steps 1 and 2 once an affiliation is chosen. */
   document.querySelectorAll(".step").forEach(function (s, i) {
-    s.classList.toggle("on", i <= 1);
+    s.classList.toggle("on", Math.floor(i / 2) <= 1);
   });
   if (kind === "club") loadClubs();
+}
+
+/* The error line also exists twice, and the lang CSS hides the inactive one
+   with !important — so write and show BOTH, never just the Georgian node. */
+function regErr(ka, en) {
+  [
+    ["reg-err", ka],
+    ["reg-err-en", en],
+  ].forEach(function (p) {
+    var el = document.getElementById(p[0]);
+    if (!el) return;
+    if (!p[1]) {
+      el.style.display = "none";
+      return;
+    }
+    el.textContent = p[1];
+    el.style.display = "";
+  });
 }
 
 function submitReg() {
@@ -160,8 +180,14 @@ function submitReg() {
   var data = new FormData();
   data.append("action", "register");
   data.append("type", type);
+  /* Multi-event pages carry a picker; a single-event page names the event on
+     the form itself. Without the fallback the Event column lands empty. */
   var evSel = document.getElementById("reg-event");
-  data.append("event", evSel ? evSel.options[evSel.selectedIndex].text : "");
+  var evName =
+    evSel && evSel.selectedIndex >= 0
+      ? evSel.options[evSel.selectedIndex].text
+      : form.getAttribute("data-event") || document.title;
+  data.append("event", evName);
   data.append("first", val("first"));
   data.append("last", val("last"));
   data.append("email", val("email"));
@@ -173,18 +199,14 @@ function submitReg() {
   }
   var hp = document.getElementById("reg-hp");
   data.append("website", hp ? hp.value : "");
-  var err = document.getElementById("reg-err");
   if (!val("first") || !val("last") || !/.+@.+\..+/.test(val("email"))) {
-    if (err) {
-      err.textContent =
-        document.documentElement.lang === "en"
-          ? "Please fill in all fields correctly."
-          : "გთხოვთ შეავსოთ ყველა ველი სწორად.";
-      err.style.display = "";
-    }
+    regErr(
+      "გთხოვთ შეავსოთ ყველა ველი სწორად.",
+      "Please fill in all fields correctly.",
+    );
     return false;
   }
-  if (err) err.style.display = "none";
+  regErr();
   fetch("handler.php", { method: "POST", body: data })
     .then(function (r) {
       return r.json();
@@ -199,13 +221,10 @@ function submitReg() {
       });
     })
     .catch(function () {
-      if (err) {
-        err.textContent =
-          document.documentElement.lang === "en"
-            ? "Could not reach the server — this works only on the live site (iberia.org.ge)."
-            : "სერვერთან დაკავშირება ვერ მოხერხდა — ფორმა მუშაობს მხოლოდ საიტზე (iberia.org.ge).";
-        err.style.display = "";
-      }
+      regErr(
+        "სერვერთან დაკავშირება ვერ მოხერხდა — ფორმა მუშაობს მხოლოდ საიტზე (iberia.org.ge).",
+        "Could not reach the server — this works only on the live site (iberia.org.ge).",
+      );
     });
   return false;
 }
@@ -216,9 +235,9 @@ function openMem(card) {
   var mod = document.getElementById("mem-modal");
   if (!mod) return;
   var box = document.querySelector("#mem-modal .modal-photo");
-  var photos = (
-    card.getAttribute("data-photos") || card.getAttribute("data-photo")
-  ).split(",");
+  var raw =
+    card.getAttribute("data-photos") || card.getAttribute("data-photo") || "";
+  var photos = raw ? raw.split(",") : [];
   if (_mmTimer) {
     clearInterval(_mmTimer);
     _mmTimer = null;
@@ -245,7 +264,7 @@ function openMem(card) {
       i = (i + 1) % imgs.length;
       imgs[i].classList.add("on");
     }, 3500);
-  } else if (box) {
+  } else if (box && photos.length) {
     box.classList.remove("slideshow");
     box.innerHTML =
       '<img id="mm-photo" src="' +
@@ -266,11 +285,15 @@ function openMem(card) {
   fbBtn.href = fb;
   fbBtn.style.display = fb && fb !== "#" ? "" : "none";
   mod.classList.add("open");
+  mod.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
 }
 function closeMem() {
   var mod = document.getElementById("mem-modal");
-  if (mod) mod.classList.remove("open");
+  if (mod) {
+    mod.classList.remove("open");
+    mod.setAttribute("aria-hidden", "true");
+  }
   if (_mmTimer) {
     clearInterval(_mmTimer);
     _mmTimer = null;
@@ -314,6 +337,7 @@ function openViewer(el) {
     el.getAttribute("data-text-en");
   viewerShow();
   mod.classList.add("open");
+  mod.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
 }
 function viewerShow() {
@@ -336,7 +360,10 @@ function viewerNav(d) {
 }
 function closeViewer() {
   var mod = document.getElementById("story-viewer");
-  if (mod) mod.classList.remove("open");
+  if (mod) {
+    mod.classList.remove("open");
+    mod.setAttribute("aria-hidden", "true");
+  }
   document.body.classList.remove("modal-open");
 }
 document.addEventListener("DOMContentLoaded", function () {
@@ -399,8 +426,10 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("vw-meta").textContent = "";
       document.getElementById("vw-text-ka").textContent = "";
       document.getElementById("vw-text-en").textContent = "";
+      var vm = document.getElementById("story-viewer");
       viewerShow();
-      document.getElementById("story-viewer").classList.add("open");
+      vm.classList.add("open");
+      vm.setAttribute("aria-hidden", "false");
       document.body.classList.add("modal-open");
     });
   });
@@ -413,6 +442,7 @@ function openVideo(id) {
   document.getElementById("vm-frame").src =
     "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
   m.classList.add("open");
+  m.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
 }
 function closeVideo() {
@@ -420,6 +450,7 @@ function closeVideo() {
   if (!m) return;
   document.getElementById("vm-frame").src = ""; /* stops playback */
   m.classList.remove("open");
+  m.setAttribute("aria-hidden", "true");
   document.body.classList.remove("modal-open");
 }
 document.addEventListener("DOMContentLoaded", function () {
